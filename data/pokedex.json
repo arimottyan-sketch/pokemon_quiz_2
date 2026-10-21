@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "pokemon": {
+    "494": {
+      "id": 494,
+      "name": "ビクティニ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター Ｘ』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0494",
+          "text": "しょうりを　もたらす　ポケモン。　ビクティニを　つれた　トレーナーは　どんな　しょうぶにも　かてるという。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ビクティニ／SV11B 012/086・ワザ「Vフォース」／拡張パック「ブラックボルト」",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47548",
+          "text": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-21"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "495": {
+      "id": 495,
+      "name": "ツタージャ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0495",
+          "text": "尻尾の　葉っぱで　日差しを　受けて　エネルギーを　作りだすと　動きが　素早くなり　技の　きれも　増す。",
+          "verified_on": "2026-10-21",
+          "review_status": "previous_curated_not_live_checked"
+        }
+      ],
+      "data_status": "legacy_manual_review_required"
+    },
+    "497": {
+      "id": 497,
+      "name": "ジャローダ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0497",
+          "text": "相手を　すくませる　眼光と　威風堂々たる　その　姿から　森の君主　と　呼ばれている。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "500": {
+      "id": 500,
+      "name": "エンブオー",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『Pokémon LEGENDS Z-A』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0500",
+          "text": "炎の　あごひげを　たくわえる。　パワーと　スピードを　兼ね備えた　格闘の　技を　身につけている。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "906": {
+      "id": 906,
+      "name": "ニャオハ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0906",
+          "text": "フワフワの　体毛は　植物に　近い　成分。　こまめに　顔を　洗って　乾燥を　防ぐ。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター スカーレット・バイオレット』公式サイト・ニャオハ",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "きまぐれで甘えん坊。トレーナーが自分以外のポケモンをかわいがっていると拗ねてしまうこともあるようです。",
+          "verified_on": "2026-10-21"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "909": {
+      "id": 909,
+      "name": "ホゲータ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0909",
+          "text": "温かい　岩の上で　寝転び　四角い　うろこから　取り込んだ　熱で　炎エネルギーを　作る。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "912": {
+      "id": 912,
+      "name": "クワッス",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0912",
+          "text": "昔　遠い　土地から　やって来て　棲みついた。　羽から　分泌する　ジェルは　水と　汚れを　弾く。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ],
+      "data_status": "official_index_excerpt_reviewed"
+    },
+    "921": {
+      "id": 921,
+      "name": "パモ",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0921",
+          "text": "頬の　電気袋は　未発達。　前脚の　肉球で　懸命に　擦ると　ようやく　発電できる。",
+          "verified_on": "2026-10-21",
+          "review_status": "previous_curated_not_live_checked"
+        }
+      ],
+      "data_status": "legacy_manual_review_required"
+    },
+    "939": {
+      "id": 939,
+      "name": "ハラバリー",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0939",
+          "text": "目玉に　見えるが　じつは　お腹の　へそダイナモで　作った　電気を　撃ちだす　放電器官なのだ。",
+          "verified_on": "2026-10-21",
+          "review_status": "previous_curated_not_live_checked"
+        }
+      ],
+      "data_status": "legacy_manual_review_required"
+    },
+    "498": {
+      "id": 498,
+      "name": "ポカブ",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『Pokémon LEGENDS Z-A』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0498",
+          "text": "敵の　攻撃を　身軽に　避けて　鼻から　火の玉を　撃ち出す。　炎で　木の実を　焼いて　食べる。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    },
+    "499": {
+      "id": 499,
+      "name": "チャオブー",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『Pokémon LEGENDS Z-A』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0499",
+          "text": "食べるほどに　燃やすものが　増えて　胃袋内の　炎が　強まり　パワーも　どんどん　あふれ出すのだ。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    },
+    "502": {
+      "id": 502,
+      "name": "フタチマル",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0502",
+          "text": "流れる　水の如く　２枚の　ホタチを　扱う　動きを　人は　剣術の　手本にしたという。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    },
+    "503": {
+      "id": 503,
+      "name": "ダイケンキ",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0503",
+          "text": "居合抜きの　手練れ。　前脚の　鎧に　仕込まれた　大太刀の　一振りで　勝負を　決める。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    },
+    "504": {
+      "id": 504,
+      "name": "ミネズミ",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『Pokémon LEGENDS Z-A』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0504",
+          "text": "頬の　袋に　エサを　溜めこみ　何日も　見張りを　続ける。　尻尾で　仲間に　合図する。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    },
+    "949": {
+      "id": 949,
+      "name": "リククラゲ",
+      "data_status": "official_index_excerpt_reviewed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0949",
+          "text": "１０本の　触手で　絡みつき　養分を　吸い取って　苦しめる。　裾の　ヒダは　珍味で　人気。",
+          "verified_on": "2026-10-21",
+          "review_status": "official_index_excerpt_reviewed"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "906": [
+    {
+      "kind": "ゲーム公式HP",
+      "source_title": "『ポケットモンスター スカーレット・バイオレット』公式サイト「ニャオハ」",
+      "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/220227_01/",
+      "text": "ふわふわの体毛の成分は植物に近く、日光を吸収してエネルギーを作ることができます。毛づくろいをして体毛に水分を与え、光合成をしやすくしているようです。"
+    }
+  ],
+  "494": [
+    {
+      "kind": "ポケカ公式",
+      "source_title": "ビクティニ SV11B 012/086 「Vフォース」",
+      "url": "https://www.pokemon-card.com/card-search/details.php/card/47548",
+      "text": "自分のベンチポケモンが4匹以下なら、このワザは失敗。",
+      "first_release_on": "2025-06-06"
+    }
+  ]
+}
