@@ -1,260 +1,303 @@
-"""独立した図鑑知識クイズ。問題文はGitHubに保存した公式資料だけを使用。"""
-from __future__ import annotations
-
-import html
+"""Pokémon quiz. Static official quotes; no website scraping at app runtime."""
 import random
 
+import requests
 import streamlit as st
+import streamlit.components.v1 as components
 
-from quiz_core import (
-    REGIONS, TARGET_IDS, coverage, dex_entries, eligible_supplement,
-    load_data, load_supplements, make_session,
-)
+from quiz_engine import (REGIONS as KNOWLEDGE_REGIONS, read_db, missing_ids,
+                         make_questions, pokedex_records, supplementary_records,
+                         three_year_cutoff)
 
-st.set_page_config(
-    page_title='ポケモン生態クイズ | ずかんノート',
-    page_icon='📖',
-    layout='centered',
-    initial_sidebar_state='collapsed',
-)
-
-st.markdown('''
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap');
-:root {--ink:#18373a; --mint:#176e70; --muted:#657b7c; --line:#dce8e5}
-html, body, [class*="css"], .stApp {font-family: "Noto Sans JP", sans-serif;}
-.stApp {background: linear-gradient(180deg,#edf5f2 0,#f8faf8 320px,#f8faf8 100%);}
-.block-container {padding-top: 2.2rem !important;max-width:850px;padding-bottom:4rem !important;}
-header[data-testid="stHeader"] {background:transparent}
-[data-testid="stAppViewBlockContainer"] > div {gap:1rem;}
-.stButton>button {min-height:3.0rem;border:1px solid #cddedb;border-radius:13px;
-  background:white;color:#1d3d40;font-weight:700;box-shadow:0 2px 10px #254a420b;
-  white-space:normal; height:auto; padding:14px 18px; transition: all 140ms ease;}
-.stButton>button:not(:disabled):hover {border-color:#16817c;background:#eff8f5;color:#095b57;transform:translateY(-1px)}
-.stButton>button[kind="primary"] {background:#0d6d6b;color:white;border-color:#0d6d6b;}
-.stButton>button[kind="primary"]:hover{background:#095c5b;color:white;}
-[data-testid="stRadio"] div[role="radiogroup"] {gap:12px;}
-[data-testid="stRadio"] label {padding:5px 0}
-[data-testid="stProgressBar"] div[role="progressbar"] > div {background:#14877e}
-[data-testid="stMetric"] {background:white;border:1px solid #deebe8;border-radius:14px;padding:12px 16px;}
-[data-testid="stMetricValue"] {font-size:1.6rem;}
-[data-testid="stAlert"] {border-radius:14px;}
-[data-testid="stImage"] img {max-height:235px; object-fit:contain;filter:drop-shadow(0 18px 14px #2749411f);}
-.hero {border-radius:25px; background:linear-gradient(126deg,#103d46 0%,#125b60 58%,#167a76 100%);
-    padding:35px 38px;color:#fff; position:relative;overflow:hidden; box-shadow:0 15px 30px #143f4424;}
-.hero:after {content:'◓'; position:absolute;right:-13px;top:-70px;font-size:240px;color:#ffffff13;transform:rotate(27deg)}
-.eyebrow {font-size:11px;letter-spacing:.21em;font-weight:800;color:#a8e2cf;margin-bottom:14px}
-.hero h1 {font-size:clamp(27px,6vw,44px);font-weight:800;letter-spacing:.02em;line-height:1.3;margin:0 0 10px;color:#fff}
-.hero p {font-size:14px;color:#d7f0ea;line-height:1.8;margin-bottom:0;max-width:480px}
-.section-title {font-size:17px;font-weight:800;color:var(--ink);margin:18px 0 7px}
-.note {color:#587576;font-size:13px;line-height:1.9;margin:4px 0 9px}
-.question {padding:23px 26px;border-radius:19px;background:white;border:1px solid #d6e5e2;
- box-shadow:0 12px 30px #1c4d4111;margin:10px 0 18px}
-.qcaption {font-size:12px;letter-spacing:.13em;font-weight:800;color:#147a74;margin-bottom:14px}
-.qbody {font-size:clamp(17px,3vw,22px);color:#203a3c;line-height:2.05;font-weight:700;white-space:pre-wrap;overflow-wrap:anywhere}
-.qname {font-size:31px;font-weight:800;color:#19484a;line-height:1.4;margin:2px 0 7px}
-.card-topline {display:flex;justify-content:space-between;align-items:center; color:#506a6d;font-size:12px;font-weight:700}
-.roundel {background:#ebf5f1;border:1px solid #cbdfd9;color:#196f65;border-radius:50px;padding:6px 12px;font-size:12px;font-weight:800}
-.reveal {padding:20px 24px;border-radius:18px;background:#ebf5f2;border:1px solid #c7e1d8;margin:14px 0 18px}
-.reveal .title {font-weight:800;color:#206a62;margin-bottom:6px}
-.reveal .body {font-size:15px;line-height:1.9;overflow-wrap:anywhere}
-.reveal a {color:#176e70;text-decoration:underline;text-underline-offset:3px;word-break:break-all}
-.tiny {color:#627679;font-size:12px;line-height:1.7}
-.footer {font-size:11px;color:#77918d;text-align:center;padding-top:30px;}
-@media(max-width:640px){.hero{padding:25px 24px}.block-container{padding:1.1rem 1rem 3rem !important}.question{padding:17px 18px}}
-</style>
-''', unsafe_allow_html=True)
+ALL_REGIONS = {
+    'カントー (1–151)': range(1, 152),
+    'ジョウト (152–251)': range(152, 252),
+    'ホウエン (252–386)': range(252, 387),
+    'シンオウ (387–493)': range(387, 494),
+    'イッシュ (494–649)': range(494, 650),
+    'カロス (650–721)': range(650, 722),
+    'アローラ (722–809)': range(722, 810),
+    'ガラル (810–898)': range(810, 899),
+    'ヒスイ (899–905)': range(899, 906),
+    'パルデア (906–1025)': range(906, 1026),
+}
+TYPE_MAP = {
+    'normal': 'ノーマル', 'fire': 'ほのお', 'water': 'みず', 'grass': 'くさ',
+    'electric': 'でんき', 'ice': 'こおり', 'fighting': 'かくとう', 'poison': 'どく',
+    'ground': 'じめん', 'flying': 'ひこう', 'psychic': 'エスパー', 'bug': 'むし',
+    'rock': 'いわ', 'ghost': 'ゴースト', 'dragon': 'ドラゴン', 'dark': 'あく',
+    'steel': 'はがね', 'fairy': 'フェアリー',
+}
+SPECIALS = {
+    'ピカチュウ': '10まんボルトだ！', 'トリトドン': 'ぽわ～ぐちょぐちょ',
+    'ミカルゲ': 'おんみょ～ん', 'ポッチャマ': 'ぽちゃぽっちゃ！',
+    'ノココッチ': 'にげあしドロー', 'ヘラクロス': 'むし！',
+    'ドラパルト': 'ファントムダイブ！', 'サマヨール': 'カースドボム！',
+    'ヨノワール': 'カースドボム！', 'マシマシラ': 'アドレナブレイン！',
+'スボミー': 'むずむずかふん！',
+    'ビクティニ': '無限のパワー！', 'ゲッコウガ': 'へんげんじざい！',
+    'ニャスパー': 'もこお！', 'ミミッキュ': 'ラス１なんやかんやできるミミッキュで',
+    'パモ': '床の隙間の汚れwatching．かわいいかわいいね',
+    'パルキア': 'パルキアのばかやろー！',
+}
+NAME_MODE = '名前当て（従来）'
+PICTURE_MODE = '公式知識四択（画像→説明文）'
+TEXT_MODE = '公式知識四択（説明文→名前）'
 
 
-def safe(s):
-    return html.escape(str(s), quote=True)
+@st.cache_data(ttl=86400, show_spinner=False)
+def get_name_and_art(pid):
+    """Retain the original image/name quiz's PokeAPI dependency.
+    Official quote text is NEVER obtained through the API.
+    """
+    try:
+        pok = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pid}', timeout=15)
+        pok.raise_for_status()
+        a = pok.json()
+        sp = requests.get(f'https://pokeapi.co/api/v2/pokemon-species/{pid}', timeout=15)
+        sp.raise_for_status()
+        b = sp.json()
+        name = next((n['name'] for lang in ('ja-Hrkt', 'ja-hrkt', 'ja')
+                     for n in b['names'] if n['language']['name'] == lang), None)
+        art = (a.get('sprites', {}).get('other', {}).get('official-artwork') or {}).get('front_default')
+        art = art or a.get('sprites', {}).get('front_default')
+        types = [TYPE_MAP.get(t['type']['name'], t['type']['name']) for t in a.get('types', [])]
+        return name, art, types
+    except (requests.RequestException, KeyError, ValueError, TypeError):
+        return None, None, []
 
 
-def display_hero():
-    st.markdown('''<div class="hero"><div class="eyebrow">POKÉDEX · FIELD NOTES</div>
-    <h1>そのポケモンの、<br>知らない一面。</h1>
-    <p>名前の向こうにある、生態と物語を知ろう。<br>ゲーム内の図鑑原文だけで挑む、4択の知識クイズ。</p></div>''', unsafe_allow_html=True)
+def begin(ids, mode, region_key=None, review=False, preview=False):
+    specs = []
+    if mode == NAME_MODE:
+        random.shuffle(ids)
+        specs = [{'id': p} for p in ids]
+    else:
+        specs = make_questions(db, region_key,
+                               'picture' if mode == PICTURE_MODE else 'description',
+                               ids=ids)
+    if not review:
+        st.session_state.missed = []
+    st.session_state.specs = specs
+    st.session_state.index = 0
+    st.session_state.score = 0
+    st.session_state.result = None
+    st.session_state.finished = False
+    st.session_state.review = review
+    st.session_state.mode = mode
+    st.session_state.region_key = region_key
+    st.session_state.preview = preview
 
 
-def source_block(quote):
-    st.markdown(
-        f'<div class="reveal"><div class="title">公式図鑑の原文</div>'
-        f'<div class="body">{safe(quote["text"])}</div>'
-        f'<div class="tiny" style="margin-top:10px">出典：{safe(quote["source_title"])}</div>'
-        f'<div class="tiny"><a href="{safe(quote["url"])}" target="_blank" rel="noopener">公式図鑑で確かめる ↗</a></div></div>',
-        unsafe_allow_html=True,
-    )
+def show_source(rec):
+    st.caption(f"出典：{rec['source_title']}（{rec['kind']}）")
+    st.markdown(f"[公式の出典ページを開く]({rec['url']})")
 
 
-def art_url(row):
-    # HTML内の公式画像URLを優先。未取得の先行体験データには公開アートワークを利用。
-    return row.get('image_url') or (
-        f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{row['id']}.png"
-    )
+def show_extra_for_name(pid):
+    data = db['pokemon'].get(str(pid))
+    if not data:
+        st.caption('このポケモンの公式原文解説は、固定データへの収録がまだ完了していません。')
+        return
+    # 解説は「ゲーム内図鑑」→「補足」の順を固定。カードは直近3年のみ。
+    for r in pokedex_records(data):
+        st.markdown(f"**ゲーム内図鑑：** {r['text']}")
+        show_source(r)
+    extras = supplementary_records(data)
+    if extras:
+        with st.expander('その他の公式情報（補足）'):
+            for r in extras:
+                st.write(r['text'])
+                show_source(r)
 
 
-def start_game(db, region, mode, count, preview=False, chosen=None, review=False):
-    region_ids = TARGET_IDS if region == '両地方' else REGIONS[region]
-    chosen = chosen if chosen is not None else list(region_ids)
-    questions = make_session(db, region, mode, count, preview=preview, target_ids=chosen)
-    st.session_state.quiz = {'questions': questions, 'i': 0, 'answer': None,
-                             'score': 0, 'missed': st.session_state.quiz['missed'] if review else [],
-                             'region': region, 'mode': mode, 'preview': preview, 'review': review}
+def end_now():
+    if st.session_state.review:
+        idx = st.session_state.index
+        start = idx if st.session_state.result is None else idx + 1
+        for spec in st.session_state.specs[start:]:
+            if spec['id'] not in st.session_state.missed:
+                st.session_state.missed.append(spec['id'])
+    st.session_state.finished = True
     st.rerun()
 
 
-def show_landing(db):
-    display_hero()
-    st.markdown('<div class="section-title">冒険の準備</div>', unsafe_allow_html=True)
-    left, right = st.columns(2)
-    with left:
-        region = st.selectbox('出題する地方', ['イッシュ','パルデア','両地方'], index=0)
-    with right:
-        count = st.selectbox('問題数', [10,20,30,50,'全問'], index=0)
-    st.markdown('<div class="section-title">クイズのスタイル</div>', unsafe_allow_html=True)
-    mode_label = st.radio('形式', ['図鑑の文章から当てる','ポケモンの名前から選ぶ','おまかせミックス'], index=0,
-                          help='本文を伏せたり改変したりしません。文章に名前が含まれるときは逆向きに自動調整します。')
-    mode = {'図鑑の文章から当てる':'who','ポケモンの名前から選ぶ':'which','おまかせミックス':'mix'}[mode_label]
-    cov = coverage(db, region)
-    st.markdown('<div class="section-title">公式図鑑の収録状況</div>', unsafe_allow_html=True)
-    a,b,c = st.columns(3)
-    a.metric('対象', f'{cov["target"]} 匹')
-    b.metric('図鑑原文を登録', f'{len(cov["present"])} 匹')
-    c.metric('公式HTMLから自動取得', f'{len(cov["fetched"])} 匹')
-    st.progress(len(cov['present']) / cov['target'])
-    if cov['missing']:
-        st.info('現在のデータは収集中です。全種モードでは1匹も省略しません。データが揃うまで、下の体験モードで収録済みの問題を試せます。')
-        with st.expander(f'未収録 {len(cov["missing"])}匹の番号を見る'):
-            st.write('、'.join(f'{i:04d}' for i in cov['missing']))
-        can_sample = len(cov['present']) >= 4
-        if st.button('収録済みで体験する →', type='primary', disabled=not can_sample, use_container_width=True):
-            start_game(db,region,mode,count,preview=True,chosen=cov['present'])
-        st.caption('この体験モードは276匹完成版ではありません。図鑑原文が未収録の番号を自動的に埋めたり、公式以外の文章で代用したりしません。')
-    else:
-        if st.button('クイズをはじめる →', type='primary', use_container_width=True):
-            start_game(db,region,mode,count)
-    st.markdown('<div class="note">答え合わせでは作品名と公式出典へのリンクを表示。公式HPやポケカの情報は図鑑とは区別し、補足としてのみ紹介します。</div>', unsafe_allow_html=True)
+def record(ok, msg, pid):
+    st.session_state.result = (ok, msg)
+    if ok:
+        st.session_state.score += 1
+        if st.session_state.review and pid in st.session_state.missed:
+            st.session_state.missed.remove(pid)
+    elif pid not in st.session_state.missed:
+        st.session_state.missed.append(pid)
 
 
-def show_question(db, supplements):
-    game=st.session_state.quiz
-    idx=game['i']; questions=game['questions']
-    if idx >= len(questions):
-        show_end(db)
-        return
-    q=questions[idx]; pid=q['pokemon_id']; row=db['pokemon'][str(pid)]
-    st.markdown('<div class="card-topline"><span>POKÉDEX QUIZ</span><span class="roundel">{} / {}</span></div>'.format(idx+1,len(questions)),unsafe_allow_html=True)
-    st.progress(idx / len(questions))
-    c1,c2=st.columns([3,1])
-    c1.markdown(f'**{game["region"]}**  ・  {"図鑑 → ポケモン" if q["mode"] == "who" else "ポケモン → 図鑑"}')
-    c2.markdown(f'<div class="tiny" style="text-align:right">正解 {game["score"]} 問</div>',unsafe_allow_html=True)
-
-    if q['mode']=='who':
-        st.markdown('<div class="question"><div class="qcaption">QUESTION · 生態を手掛かりに</div><div class="qbody">{}</div></div>'.format(safe(q['quote']['text'])),unsafe_allow_html=True)
-        st.markdown('**この説明に当てはまるのは、どのポケモン？**')
-    else:
-        top_left,top_right=st.columns([2,1])
-        with top_left:
-            st.markdown('<div class="question"><div class="qcaption">QUESTION · 図鑑の文章を探そう</div><div class="qname">{}</div><div class="tiny">全国図鑑 No.{:04d}</div></div>'.format(safe(q['name']),pid),unsafe_allow_html=True)
-        with top_right:
-            st.image(art_url(row),width=185)
-        st.markdown('**このポケモンの公式図鑑に書かれているのは、どの文章？**')
-
-    if q['mode']=='who':
-        rows=[st.columns(2),st.columns(2)]
-        for choice_index,opt in enumerate(q['choices']):
-            with rows[choice_index//2][choice_index%2]:
-                label = f'{"ABCD"[choice_index]}   {db["pokemon"][str(opt["id"])]["name"]}'
-                if st.button(label,key=f'choice_{idx}_{choice_index}',use_container_width=True,disabled=game['answer'] is not None):
-                    game['answer']=choice_index
-                    if choice_index == q['correct_index']:
-                        game['score']+=1
-                        if pid in game['missed'] and game['review']:
-                            game['missed'].remove(pid)
-                    elif pid not in game['missed']:
-                        game['missed'].append(pid)
-                    st.rerun()
-    else:
-        for choice_index,opt in enumerate(q['choices']):
-            label=f'{"ABCD"[choice_index]}   {opt["text"]}'
-            if st.button(label,key=f'choice_{idx}_{choice_index}',use_container_width=True,disabled=game['answer'] is not None):
-                game['answer']=choice_index
-                if choice_index==q['correct_index']:
-                    game['score']+=1
-                    if pid in game['missed'] and game['review']:
-                        game['missed'].remove(pid)
-                elif pid not in game['missed']:
-                    game['missed'].append(pid)
-                st.rerun()
-
-    if game['answer'] is not None:
-        correct=game['answer']==q['correct_index']
-        (st.success if correct else st.error)(('正解！ ' if correct else '不正解。正解は ') + q['name'])
-        if q['mode']=='who':
-            reveal_left,reveal_right=st.columns([1,3])
-            with reveal_left:
-                st.image(art_url(row),width=180)
-            with reveal_right:
-                st.markdown(f'### No.{pid:04d} {q["name"]}')
-                st.caption('ポケモンの見た目と図鑑の記述を一緒に覚えよう。')
-        source_block(q['quote'])
-        with st.expander('ほかの選択肢の公式出典を見る'):
-            for j,opt in enumerate(q['choices']):
-                if j==q['correct_index']:
-                    continue
-                st.markdown(f'**{db["pokemon"][str(opt["id"])]["name"]}** · {opt["quote"]["source_title"]}')
-                st.caption(opt['quote']['text'])
-                st.link_button('出典を開く ↗',opt['quote']['url'])
-        extras=[s for s in supplements.get(str(pid),[]) if eligible_supplement(s)]
-        if extras:
-            with st.expander('もっと知る · 公式サイト / ポケカの補足'):
-                for n,s in enumerate(extras):
-                    st.markdown(f'**{s["kind"]}** · {s["source_title"]}')
-                    st.write(s['text'])
-                    if s['kind'] in {'ポケカ公式','公式大会'}:
-                        st.caption('※大会環境やカード評価は当時の情報。直近3年の情報だけを表示。')
-                    st.link_button('公式の原文を見る ↗',s['url'])
-        if st.button('次の問題へ →' if idx+1<len(questions) else '結果を見る →',type='primary',use_container_width=True):
-            game['i']+=1
-            game['answer']=None
-            st.rerun()
-    else:
-        st.markdown('<div class="note">回答後に公式原文の出典が表示されます。</div>',unsafe_allow_html=True)
-    if st.button('終了して結果を見る',key=f'quit_{idx}'):
-        game['i']=len(questions)
-        st.rerun()
+def next_on_enter():
+    components.html('''<script>
+    (function(){
+      if (/iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent)) return;
+      const d = window.parent.document;
+      if (d.__officialPokemonQuizNextInstalled) return;
+      d.__officialPokemonQuizNextInstalled = true;
+      let t = 0;
+      d.addEventListener('keydown', function(e){
+        if(e.key !== 'Enter' || e.repeat || e.shiftKey || e.ctrlKey || e.metaKey) return;
+        const b = Array.from(d.querySelectorAll('button')).find(x => x.innerText.trim() === '次の問題へ');
+        if(!b || Date.now() - t < 500) return;
+        t = Date.now(); e.preventDefault(); b.click();
+      });
+    })();
+    </script>''', height=0)
 
 
-def show_end(db):
-    game=st.session_state.quiz
-    display_hero()
-    total=len(game['questions'])
-    st.markdown('### おつかれさまでした！')
-    a,b,c=st.columns(3)
-    a.metric('正解',f'{game["score"]} / {total}')
-    b.metric('正答率',f'{game["score"]/total*100:.0f}%' if total else '–')
-    c.metric('復習対象',f'{len(game["missed"])} 匹')
-    if game['missed']:
-        st.markdown('**もう一度覚えたいポケモン**')
-        st.caption('、'.join(db['pokemon'][str(i)]['name'] for i in game['missed']))
-        if st.button('間違えた問題を復習する →',type='primary',use_container_width=True):
-            start_game(db,game['region'],game['mode'],'全問',preview=game['preview'],chosen=list(game['missed']),review=True)
-    else:
-        st.success('復習対象はありません。すべて正解です！')
-    if st.button('コース選択に戻る',use_container_width=True):
-        del st.session_state.quiz
-        st.rerun()
-
-
+st.set_page_config(page_title='ポケモンクイズ', page_icon='⚡')
+st.title('ポケモンクイズ')
+st.caption('公式出典付き固定データを使用。全件の公式原文との再照合は未完了です。')
 try:
-    DB=load_data()
-    EXTRA=load_supplements()
-except (OSError, ValueError, KeyError) as exc:
-    st.error(f'固定問題ファイルが壊れているか未配置です。data/ フォルダを確認してください。詳細: {exc}')
+    db = read_db()
+except (OSError, ValueError) as exc:
+    st.error(f'固定問題データを読み込めません。GitHub の data/official_quotes.json を確認してください。詳細: {exc}')
     st.stop()
 
-if 'quiz' not in st.session_state:
-    show_landing(DB)
+if 'specs' not in st.session_state:
+    region_name = st.selectbox('地方を選ぶ', list(ALL_REGIONS), index=4)
+    mode = st.radio('クイズ形式', [NAME_MODE, PICTURE_MODE, TEXT_MODE])
+    num = st.selectbox('問題数', [10, 20, 30, 50, '全問'], index=1)
+    region_key = 'イッシュ' if region_name.startswith('イッシュ') else (
+        'パルデア' if region_name.startswith('パルデア') else None)
+    if mode == NAME_MODE:
+        st.caption('名前当ての名前・画像・タイプ取得には、元アプリと同じPokeAPIを使用します。')
+        if st.button('開始', type='primary'):
+            ids = list(ALL_REGIONS[region_name])
+            if isinstance(num, int):
+                ids = random.sample(ids, min(num, len(ids)))
+            begin(ids, mode)
+            st.rerun()
+    elif region_key is None:
+        st.warning('公式知識四択は現在、イッシュ・パルデア用のデータ形式です。')
+    else:
+        missing = missing_ids(db, region_key)
+        n = len(KNOWLEDGE_REGIONS[region_key])
+        st.write(f'**ゲーム内図鑑の収録：{n-len(missing)} / {n}匹**')
+        if missing:
+            st.warning('全匹のゲーム内図鑑原文がまだ揃っていません。未収録のポケモンを除外せず、全種モードを停止しています。')
+            with st.expander('未収録の図鑑番号'):
+                st.write('、'.join(f'{p:04d}' for p in missing))
+            st.caption('ゲーム内図鑑が必須です。公式HP・アニメ・ポケカは回答後の補足だけに使用。GitHub上の data/official_quotes.json を更新すると反映されます。')
+            preview = st.checkbox('開発用：収録済みの問題だけ試す（全種対応の完成版ではありません）')
+        else:
+            preview = False
+        available = [p for p in KNOWLEDGE_REGIONS[region_key]
+                     if str(p) in db['pokemon'] and pokedex_records(db['pokemon'][str(p)])]
+        can_begin = (not missing or (preview and len(available) >= 4))
+        st.caption(f'カード・大会情報は過去約3年（{three_year_cutoff().isoformat()}以降）に限定。図鑑情報には期限を設けません。')
+        if st.button('クイズ開始' if not preview else '試作問題をプレイ',
+                     disabled=not can_begin, type='primary'):
+            ids = available if preview else list(KNOWLEDGE_REGIONS[region_key])
+            if isinstance(num, int):
+                ids = random.sample(ids, min(num, len(ids)))
+            begin(ids, mode, region_key, preview=preview)
+            st.rerun()
+
 else:
-    show_question(DB,EXTRA)
-st.markdown('<div class="footer">非公式ファン制作 · ゲーム内図鑑の出典は各解説から確認できます</div>',unsafe_allow_html=True)
+    specs = st.session_state.specs
+    i = st.session_state.index
+    if i >= len(specs):
+        st.session_state.finished = True
+    if not st.session_state.finished:
+        spec = specs[i]
+        pid = spec['id']
+        mode = st.session_state.mode
+        st.markdown(f'### 問題 {i+1} / {len(specs)}')
+        st.write(f'正解数：{st.session_state.score} / {len(specs)}')
+        if st.session_state.preview:
+            st.caption('開発用試作問題：全種完成版ではありません')
+        if mode == NAME_MODE:
+            name, picture, types = get_name_and_art(pid)
+            if not name:
+                st.error(f'No.{pid:04d} の名前データを取得できませんでした。通信状態を確認し、再読み込みしてください。別のポケモンには進まず、同じ問題に留まります。')
+                st.stop()
+            if picture:
+                st.image(picture, width=300)
+            with st.form(f'name_{i}'):
+                ans = st.text_input('名前をカタカナで入力', key=f'input_{i}')
+                submitted = st.form_submit_button('送信', disabled=st.session_state.result is not None)
+                stopped = st.form_submit_button('途中終了')
+            if submitted and st.session_state.result is None:
+                if ans == name:
+                    msg = 'そ～なんす！' if name == 'ソーナンス' else ('そ～なの！' if name == 'ソーナノ' else ('正解！ ' + SPECIALS.get(name, '')).strip())
+                    record(True, msg, pid)
+                else:
+                    extra = ' いぬぬわん！' if name == 'ワンパチ' and ans in ('イヌヌワン', 'いぬぬわん') else ''
+                    record(False, f'不正解！ 正解は {name}{extra}', pid)
+        else:
+            row = db['pokemon'][str(pid)]
+            name = row['name']
+            if mode == PICTURE_MODE:
+                st.image(f'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{pid}.png', width=270)
+                st.write(f'**No.{pid:04d} {name}** に該当するゲーム内図鑑の説明文を選んでください。')
+                labels = [spec['quotes'][p]['text'] for p in spec['choices']]
+            else:
+                st.write('次のゲーム内図鑑の説明文に該当するポケモンを選んでください。')
+                st.markdown(f"**{spec['quotes'][pid]['text']}**")
+                labels = [db['pokemon'][str(p)]['name'] for p in spec['choices']]
+            with st.form(f'four_{i}'):
+                selection = st.radio('選択肢', list(range(4)), format_func=lambda n: labels[n], key=f'answer_{i}')
+                submitted = st.form_submit_button('送信', disabled=st.session_state.result is not None)
+                stopped = st.form_submit_button('途中終了')
+            if submitted and st.session_state.result is None:
+                correct = spec['choices'][selection] == pid
+                record(correct, '正解！' if correct else f'不正解！ 正解は {name}', pid)
+        if stopped:
+            end_now()
+        if st.session_state.result is not None:
+            ok, message = st.session_state.result
+            (st.success if ok else st.error)(message)
+            if mode == NAME_MODE:
+                if types:
+                    st.info(f"タイプ：{' / '.join(types)}")
+                show_extra_for_name(pid)
+            else:
+                st.markdown('**ゲーム内図鑑（最優先）・出典**')
+                st.write(f"**正解：{name}**")
+                r = spec['quotes'][pid]
+                st.write(r['text'])
+                show_source(r)
+                extras = supplementary_records(db['pokemon'][str(pid)])
+                if extras:
+                    with st.expander('その他の公式情報（追加知識）'):
+                        for info in extras:
+                            st.write(info['text'])
+                            show_source(info)
+                            if info['kind'] == 'ポケカ公式':
+                                st.caption(f"カードの初登場日：{info['first_release_on']}。個別カードの情報であり、現行環境で強いことを示すものではありません。")
+                            if info['kind'] == '大会公式':
+                                st.caption(f"大会開催日：{info['event_date']}（当時の実績であり、現在の強さを保証しません）")
+                if mode == PICTURE_MODE:
+                    with st.expander('他の選択肢の出典'):
+                        for other in spec['choices']:
+                            if other == pid:
+                                continue
+                            st.write(f"**{db['pokemon'][str(other)]['name']}**")
+                            show_source(spec['quotes'][other])
+            next_on_enter()
+            if st.button('次の問題へ'):
+                st.session_state.index += 1
+                st.session_state.result = None
+                st.rerun()
+    else:
+        st.header('終了')
+        st.write(f'今回のスコア：{st.session_state.score} / {len(specs)}')
+        missed = st.session_state.get('missed', [])
+        if missed:
+            st.write(f'現在の復習対象：{len(missed)}問')
+            if st.button('ミスだけ復習'):
+                begin(missed.copy(), st.session_state.mode,
+                      st.session_state.region_key, review=True,
+                      preview=st.session_state.preview)
+                st.rerun()
+        else:
+            st.success('すべてのミスをクリアしました！')
+        if st.button('最初に戻る'):
+            st.session_state.clear()
+            st.rerun()

@@ -1,0 +1,13 @@
+{
+  "current_entries": 293,
+  "pokemon": 276,
+  "new_official_excerpt": 2,
+  "removed_since_latest": 250,
+  "removed_breakdown": {
+    "previous_generated_summaries": 100,
+    "recent_anime_and_hp_generated_summaries": 100,
+    "profile_labels": 30,
+    "other_prior_additions_reverted": 20
+  },
+  "inherited_entries_not_reverified_in_this_run": 291
+}
