@@ -41,4 +41,12 @@ jobs:
             git push
           fi
       - name: 収集数の表示
-        run: python -c 'import json; s=json.load(open("data/collection_status.json")); print(f"取得完了: {s[\"fetched_from_official_count\"]}/{s[\"all_target_count\"]}; 未取得: {s[\"missing_ids\"]}")'
+        shell: bash
+        run: |
+          python - <<'PYCODE'
+          import json
+          from pathlib import Path
+          s = json.loads(Path('data/collection_status.json').read_text(encoding='utf-8'))
+          print('取得完了: {}/{}'.format(s['fetched_from_official_count'], s['all_target_count']))
+          print('未取得: {}'.format(s['missing_ids']))
+          PYCODE
