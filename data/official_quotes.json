@@ -1695,6 +1695,18 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "身体能力"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「Pokémon Magic Hour Illusion!」商品紹介",
+          "url": "https://www.pokemon.co.jp/goods/2026/09/260904_to01.html?rss=260904",
+          "text": "メインアートには、ゾロアークたちのイリュージョンによって変化したお菓子の森で、ピカチュウやマホイップたちがお菓子パーティーを楽しんでいるようすが描かれているよ。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "公式グッズの創作的な演出（種の普遍的な生態ではない）",
+          "topic": "イリュージョンのグッズ演出",
+          "proof_line": "turn495978view3:L35-L36"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3248,6 +3260,18 @@
           "verification_method": "official_website_text_read_via_web_tool",
           "source_scope": "アニメのリコの個体について",
           "topic": "バトルの特徴"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介「マスカーニャ」",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/220907_01/",
+          "text": "自身のトレーナーに強い執着を見せることが多く、嫉妬深いので、トレーナーが他のポケモンを可愛がっているのを見ると、機嫌が悪くなってしまいます。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "ゲーム公式の性格・行動",
+          "topic": "嫉妬深さ",
+          "proof_line": "turn391862view2:L248-L250"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4103,6 +4127,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn506718search0"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第52話「カイデン、強風注意報！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_11.html",
+          "text": "夜、こっそりとテントを抜け出し、飛ぶ練習をするカイデン。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "アニメ・ロイの個体の出来事",
+          "topic": "強風に向き合うカイデン",
+          "proof_line": "turn625442view2:L38-L42"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5034,6 +5070,18 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "POKÉTOON「ドオー大量発生ちゅう？」公式作品紹介",
+          "url": "https://www.pokemon.co.jp/ex/poketoon/2024/241004_01/",
+          "text": "すると、ドオーがたくさん集まってきて……。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "アニメ作品内の出来事（野生種全体の習性ではない）",
+          "topic": "ドオーが集まる場面",
+          "proof_line": "turn315311view0:L12-L18"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5112,6 +5160,18 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第58話「看板ポケモンはドドゲザン！？」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_10.html",
+          "text": "近くの宝食堂が人気のあまり、お客さんがいないナンデモ食堂は、看板ポケモン・ドドゲザンの呼び込みもうまくいっていないみたいで…。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "アニメ・食堂の看板ポケモンとしての個体",
+          "topic": "看板ポケモンの仕事",
+          "proof_line": "turn131225view0:L69-L72"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5430,6 +5490,18 @@
           "verified_on": "2026-10-21",
           "verification_method": "official_web_page_text_read_20261021",
           "text_format": "verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第102話「遺跡で出逢った騎士」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_6.html",
+          "text": "しかし、ロイとウルト、ドットはコレクレーに操られ、コイン探しに夢中になってしまう！",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "アニメの具体的なエピソード",
+          "topic": "人間を操るエピソード",
+          "proof_line": "turn131225view3:L38-L42"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6012,6 +6084,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn680982search0"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「ブリジュラス」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_07/",
+          "text": "ブリジュラスはピンチになると普段反らしている胴体を伸ばし、動きが鈍くなる代わりに重心を安定させます。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "ゲーム公式に記載された身体構造・習性",
+          "topic": "ピンチで橋の姿",
+          "proof_line": "turn315311view1:L29-L32"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6040,6 +6124,18 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "生態・共生"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「カミツオロチ」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_01/",
+          "text": "頭を出している真ん中のオロチュが司令塔として行動しますが、7匹は気まぐれで常に連携がとれているわけではありません。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "ゲーム公式の特徴",
+          "topic": "7匹の協調性",
+          "proof_line": "turn315311view4:L37-L39"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6067,6 +6163,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn130813search13"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「ウガツホムラ」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_02/",
+          "text": "ある映像には、このポケモンが火柱を噴き暴れる姿が記録されているほか、炎と結びつきが強いような噂が囁かれています。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "公式紹介中の映像と噂（確定生態と断言しない）",
+          "topic": "映像の記録と噂",
+          "proof_line": "turn883381search0"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6120,6 +6228,18 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「テツノイワオ」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_03/",
+          "text": "頭部に生えたツノの発光部は大きく変形し、左右を繋いだ円形の刀剣のような形状になります。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "公式紹介の形態情報（推測・噂は区別）",
+          "topic": "変形する角",
+          "proof_line": "turn315311view2:L33-L35"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -6183,6 +6303,18 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "身体能力"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「テラパゴス」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_02/",
+          "text": "古代のパルデア地方に暮らしていたテラパゴスは、およそ200万年前に発生した地殻変動に巻き込まれ絶滅したと考えられていましたが、体内のエネルギーを硬い結晶に変えて、休眠状態になりながら身を守っていたようです。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "ゲーム公式の生態・歴史（考えられていた説を含む）",
+          "topic": "200万年前の地殻変動",
+          "proof_line": "turn390891search4"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -6220,6 +6352,18 @@
           "verification_method": "official_website_text_read_via_web_tool",
           "source_scope": "アニメのエピソードにおける人物関係",
           "topic": "ともっこ"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ゼロの秘宝』公式ポケモン紹介「モモワロウ」",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240115_01/",
+          "text": "また、泣きまねをして同情を買うなど弱々しい赤子のように振舞うずる賢い一面もあります。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_page_text_directly_read_in_web_search",
+          "source_scope": "ゲーム公式の行動特性",
+          "topic": "泣きまね",
+          "proof_line": "turn315311view3:L29-L32"
         }
       ],
       "data_status": "official_page_search_reviewed"

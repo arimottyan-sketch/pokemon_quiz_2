@@ -1,0 +1,87 @@
+/* Staff learning quiz | Pokecenter-inspired custom palette (unofficial) */
+/* Palette: accent #E53E58, CTA #C22F4E, ink #1B2D47, canvas #FFFFFF, cards #F4F7FB */
+:root {
+  --staff-accent: #E53E58;
+  --staff-action: #C22F4E;
+  --staff-action-hover: #A91F40;
+  --staff-ink: #1B2D47;
+  --staff-canvas: #FFFFFF;
+  --staff-soft: #F4F7FB;
+  --staff-outline: #DCE5EE;
+}
+/* Preserve an accessible light theme even if browser preference is dark. */
+html, body, .stApp, [data-testid="stAppViewContainer"] {
+  background-color: var(--staff-canvas) !important;
+  color: var(--staff-ink) !important;
+}
+[data-testid="stHeader"] {
+  background: rgba(255,255,255,0.93) !important;
+}
+[data-testid="stSidebar"] {
+  background: var(--staff-soft) !important;
+}
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"],
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] h1,
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] h2,
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] h3,
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] h4 {
+  color: var(--staff-ink) !important;
+}
+.block-container {
+  max-width: 920px;
+  padding-top: 1.7rem;
+  padding-bottom: 3rem;
+}
+/* Non-image UI decoration does not touch official quotation data. */
+.block-container h1 {
+  letter-spacing: 0.012em;
+  padding-bottom: 0.65rem;
+  border-bottom: 3px solid var(--staff-accent);
+}
+.block-container h2, .block-container h3 {letter-spacing: 0.01em;}
+[data-testid="stMetric"] {
+  background: var(--staff-soft);
+  border: 1px solid var(--staff-outline);
+  border-radius: 12px;
+  padding: 0.55rem 0.8rem;
+}
+[data-testid="stMetricValue"] {font-size: 1.75rem;}
+/* Restores the former Streamlit primary/button accent where reliably selectable. */
+div.stButton > button[kind="primary"],
+div.stFormSubmitButton > button[kind="primary"],
+div.stDownloadButton > button[kind="primary"] {
+  background: var(--staff-action) !important;
+  border-color: var(--staff-action) !important;
+  color: white !important;
+  border-radius: 0.65rem;
+}
+div.stButton > button[kind="primary"]:hover,
+div.stFormSubmitButton > button[kind="primary"]:hover,
+div.stDownloadButton > button[kind="primary"]:hover {
+  background: var(--staff-action-hover) !important;
+  border-color: var(--staff-action-hover) !important;
+  color: white !important;
+}
+div.stButton > button[kind="secondary"],
+div.stFormSubmitButton > button[kind="secondary"] {
+  border: 1px solid var(--staff-outline);
+  border-radius: 0.65rem;
+}
+div.stButton > button:focus-visible,
+div.stFormSubmitButton > button:focus-visible {
+  outline: 3px solid var(--staff-accent) !important;
+  outline-offset: 2px;
+}
+[data-testid="stForm"] {
+  background: #FCFDFE;
+  border: 1px solid var(--staff-outline);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+[data-testid="stAlert"] {border-radius: 12px;}
+[data-testid="stProgress"] {accent-color: var(--staff-action);}
+@media (max-width: 640px) {
+  .block-container {padding-top: 0.8rem; padding-left: 0.9rem; padding-right: 0.9rem;}
+  [data-testid="stMetric"] {padding: 0.4rem 0.5rem;}
+}
