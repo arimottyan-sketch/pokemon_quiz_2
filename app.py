@@ -1,9 +1,9 @@
-"""Unofficial staff self-study quiz. Stored official source sentences are never edited."""
+"""Quiz and Pokémon information browser. Source texts are kept unchanged."""
 import random
 import requests
 import streamlit as st
 
-# Stable, bundled quiz engine; no quiz_engine.py / staff_learning.py dependency.
+# Bundled quiz functions; no external quiz modules required.
 import json
 import random
 import re
@@ -174,7 +174,7 @@ def make_questions(data, region, mode, ids=None, seed=None):
             extras = [q for q in supplementary_records(data['pokemon'][str(pid)])
                       if q['kind'] in ('ゲーム公式HP', 'アニメ公式', 'ゲーム内図鑑の補足', '公式図鑑プロフィール', '公式グッズ紹介')]
             if not extras:
-                raise ValueError(f'公式トリビア原文がありません: {pid}')
+                raise ValueError(f'公式情報の文章がありません: {pid}')
             answer = rng.choice(extras)
         else:
             answer = rng.choice(region_pool[pid])
@@ -251,11 +251,11 @@ from datetime import datetime, timezone, timedelta
 EXTRA_KINDS = {'ゲーム公式HP', 'アニメ公式', 'ゲーム内図鑑の補足', '公式図鑑プロフィール', '公式グッズ紹介'}
 ALL_REGION = '両方'
 MODE_LABELS = {
-    'mix': 'バランスよく（おすすめ）',
+    'mix': 'ミックス',
     'identification': '姿を見て名前を選ぶ',
     'description': '図鑑説明から名前を選ぶ（画像付き）',
     'picture': '姿から図鑑説明を選ぶ',
-    'extra_description': '公式トリビアから名前を選ぶ（画像付き）',
+    'extra_description': '公式情報から名前を選ぶ（画像付き）',
 }
 DISPLAY_MODES = {v:k for k,v in MODE_LABELS.items()}
 
@@ -341,16 +341,16 @@ def make_history(pid, mode, correct):
             'when':datetime.now(timezone(timedelta(hours=9))).strftime('%Y-%m-%d %H:%M:%S %z')}
 
 
-st.set_page_config(page_title='ポケモンをもっと知る｜スタッフ学習クイズ', page_icon='⚡', layout='centered')
-# GitHub's browser upload may reject .streamlit/: keep the shared color palette in
+st.set_page_config(page_title='イッシュ・パルデア｜クイズとポケモン情報', page_icon='📘', layout='centered')
+# GitHub's browser upload may reject .streamlit/: keep the color palette in
 # a regular file and apply it to the page without any dot-prefixed upload path.
 from pathlib import Path
-_THEME_PATH = Path(__file__).with_name('staff_theme.css')
+_THEME_PATH = Path(__file__).with_name('theme.css')
 if _THEME_PATH.is_file():
     st.markdown('<style>\n' + _THEME_PATH.read_text(encoding='utf-8') + '\n</style>',
                 unsafe_allow_html=True)
 
-NAME_MODE = '名前入力（上級）'
+NAME_MODE = '名前入力'
 PICTURE_MODE = MODE_LABELS['picture']
 TEXT_MODE = MODE_LABELS['description']
 
@@ -476,7 +476,6 @@ def details(pid, main_quote=None):
                     st.divider()
                 st.write(rec['text'])
                 source(rec)
-    st.caption('確認するポイント：姿と名前、公式文に書かれた特徴を結び付けて覚えましょう。')
 
 
 def bookmark_button(pid):
@@ -576,7 +575,7 @@ def show_question(q):
 
 
 def show_finish():
-    st.header('今回の学習結果')
+    st.header('結果')
     specs=st.session_state.specs
     attempted = min(st.session_state.idx + (1 if st.session_state.answer is not None else 0), len(specs))
     if st.session_state.finished and st.session_state.idx>=len(specs):
@@ -592,26 +591,24 @@ def show_finish():
         if st.button('苦手・★登録したポケモンを復習',type='primary'):
             start(ALL_REGION, 'mix', '全問',review_ids=pending)
     if st.session_state.history:
-        st.download_button('学習履歴をCSVで保存', data=progress_csv(st.session_state.history,db).encode('utf-8'),
-                           file_name='pokemon_staff_quiz_history.csv',mime='text/csv')
-        st.caption('学習履歴はこのブラウザのセッション中のみ保持されます。端末を閉じる前にCSVで保存できます。')
+        st.download_button('回答履歴をCSVで保存', data=progress_csv(st.session_state.history,db).encode('utf-8'),
+                           file_name='pokemon_quiz_history.csv',mime='text/csv')
+        st.caption('回答履歴はページを閉じると消える場合があります。必要に応じてCSVを保存してください。')
     if st.button('新しいクイズを始める'):
         clear_question_only()
         st.rerun()
 
 
-st.title('⚡ ポケモンをもっと知る')
-st.caption('イッシュ・パルデア｜ポケモンセンタースタッフ向け自主学習クイズ（非公式）')
-page = st.radio('画面', ['クイズで覚える','ポケモンを調べる','学習の使い方'], horizontal=True,
+st.title('イッシュ・パルデア')
+page = st.radio('画面', ['クイズ', 'ポケモン情報', '使い方'], horizontal=True,
                 label_visibility='collapsed')
 
-if page == 'クイズで覚える':
+if page == 'クイズ':
     if st.session_state.specs is None:
-        st.markdown('**名前と姿を見分ける → 公式の文章で特徴を知る → 間違いを復習する**')
         with st.form('quiz_options'):
             region = st.selectbox('出題する地方', [ALL_REGION,'イッシュ','パルデア'], index=0)
             options = list(MODE_LABELS.values()) + [NAME_MODE]
-            mode_label = st.selectbox('学習メニュー', options, index=0)
+            mode_label = st.selectbox('問題形式', options, index=0)
             mode = 'typed' if mode_label == NAME_MODE else DISPLAY_MODES[mode_label]
             count = st.selectbox('問題数', [5,10,20,30,'全問'], index=1,
                                  format_func=lambda n:f'{n}問' if isinstance(n,int) else '全問')
@@ -623,20 +620,17 @@ if page == 'クイズで覚える':
                 allowed = {str(p) for p in marked}
                 available = [p for p in available if str(p) in allowed]
             st.caption(f'この設定での出題対象：{len(available)}種類・すがた')
-            begin = st.form_submit_button('学習を始める', type='primary', disabled=not available,
+            begin = st.form_submit_button('クイズを始める', type='primary', disabled=not available,
                                           use_container_width=True)
         if begin:
             start(region,mode,count, review_ids=marked if restrict else None)
-        st.info('おすすめ：最初は「バランスよく」10問。短時間で姿・名前・特徴を繰り返せます。')
     elif st.session_state.finished or st.session_state.idx >= len(st.session_state.specs):
         show_finish()
     else:
         show_question(st.session_state.specs[st.session_state.idx])
-        st.caption('問題や画像に不具合がある場合も、公式原文を書き換えず出典ページで確認してください。')
 
-elif page == 'ポケモンを調べる':
-    st.subheader('公式の情報からポケモンを調べる')
-    st.caption('接客前の確認や、答えられなかったポケモンのおさらいに。')
+elif page == 'ポケモン情報':
+    st.subheader('ポケモン情報')
     region = st.selectbox('地方で絞り込む',[ALL_REGION,'イッシュ','パルデア'],key='lookup_region')
     search = st.text_input('ポケモン名・図鑑番号・文章中の言葉で検索',placeholder='例：ケンタロス、128、ツル',key='lookup_search')
     ids = pool_ids(db, region, 'description')
@@ -653,7 +647,7 @@ elif page == 'ポケモンを調べる':
         selected = db['pokemon'][str(selection)]
         st.markdown(f"### {selected['name']}")
         art_display(selected)
-        st.caption(f"全国図鑑 No.{national_number(selected):04d}｜{region_for(selection)}の学習対象")
+        st.caption(f"全国図鑑 No.{national_number(selected):04d}｜{region_for(selection)}")
         extras = supplementary_records(selected)
         if extras:
             st.markdown('#### もっと詳しく｜公式サイト・作品情報')
@@ -666,7 +660,7 @@ elif page == 'ポケモンを調べる':
             source(rec)
         c1,c2 = st.columns(2)
         with c1:
-            if st.button('この子を1問練習',use_container_width=True):
+            if st.button('このポケモンで1問',use_container_width=True):
                 start(region_for(selection),'description',1,review_ids=[selection])
         with c2:
             saved=selection in st.session_state.bookmarked
@@ -678,19 +672,10 @@ elif page == 'ポケモンを調べる':
         st.warning('該当するポケモンがありません。表記や地方を変えて検索してください。')
 
 else:
-    st.subheader('スタッフ研修としての使い方')
+    st.subheader('使い方')
     st.markdown('''
-**① 姿と名前を覚える**  — 「姿を見て名前を選ぶ」で商品や写真のポケモンを見分ける練習をします。
-
-**② 特徴を覚える**  — 「図鑑説明から名前」「姿から図鑑説明」で、名前だけでなくそのポケモンの特徴も結び付けます。
-
-**③ 話題を広げる**  — 「公式トリビア」で公式HPやアニメ紹介などの文章に触れます。アニメに登場した特定の個体の話は、種族全体の設定と混同しないよう出典を見ます。
-
-**④ 苦手を復習する**  — 間違えた種類・すがたがセッション中の復習対象になり、正解しても残したいものは☆に登録できます。
-
-**⑤ 調べてから伝える**  — 「ポケモンを調べる」で公式の文章と掲載元を見て、接客時に伝えたい特徴を確認します。
+- **クイズ**：地方・問題形式・問題数を選んでスタート。回答後に正解と出典を表示します。
+- **ポケモン情報**：名前・図鑑番号・説明文で検索し、掲載文と参照先を確認できます。
+- **復習**：間違えたポケモンや★登録したポケモンを、クイズの出題対象に指定できます。
+- **回答履歴**：結果画面からCSVを保存できます。
 ''')
-    st.warning('このアプリは公式運営・会社の研修認定ツールではありません。店舗在庫、商品価格、配布物、最新イベントの情報を保証しません。')
-    st.caption('原文データは改変せず保存していますが、既存のすべての文章の公式ページとの全面再照合をこの改修で行ったわけではありません。')
-    st.markdown('[ポケモンセンター公式サイト ↗](https://shop.pokemon.co.jp/)')
-    st.markdown('[ポケモン公式図鑑 ↗](https://zukan.pokemon.co.jp/)')

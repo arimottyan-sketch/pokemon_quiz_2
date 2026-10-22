@@ -15,11 +15,11 @@ st.title=lambda *a,**k: None
 st.subheader=lambda *a,**k: None
 st.warning=lambda *a,**k: None
 st.cache_data=lambda *a,**k: (lambda fn: fn)
-st.radio=lambda *a,**k: '学習の使い方'
+st.radio=lambda *a,**k: '使い方'
 sys.modules['streamlit']=st
 # Break any old modules deliberately: app.py must not import them.
 sys.modules['quiz_engine']=types.ModuleType('quiz_engine')
-sys.modules['staff_learning']=types.ModuleType('staff_learning')
+sys.modules['legacy_learning']=types.ModuleType('legacy_learning')
 module=runpy.run_path(str(Path(__file__).parent/'app.py'))
 db=module['db']
 assert len(db['pokemon']) == 280
@@ -30,4 +30,4 @@ for region in ('イッシュ','パルデア'):
         assert results and all(len(q['choices'])==4 and q['id'] in q['choices'] for q in results)
     prompts=module['plan_session'](db,region,'mix',10,seed=3)
     assert len(prompts)==10
-print('OK: no engine-module imports; theme present; 280 forms; 458 quotes; 8 generation checks')
+print('OK: independent app imports; 280 forms; 458 quotes; quiz generation checks')
