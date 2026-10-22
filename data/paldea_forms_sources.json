@@ -1,0 +1,30 @@
+[
+  {
+    "quiz_id": "128-paldea-combat",
+    "official_url": "https://zukan.pokemon.co.jp/detail/0128-1",
+    "source": "ポケモンずかん",
+    "national_id": 128,
+    "verified_on": "2026-10-21"
+  },
+  {
+    "quiz_id": "128-paldea-blaze",
+    "official_url": "https://zukan.pokemon.co.jp/detail/0128-2",
+    "source": "ポケモンずかん",
+    "national_id": 128,
+    "verified_on": "2026-10-21"
+  },
+  {
+    "quiz_id": "128-paldea-aqua",
+    "official_url": "https://zukan.pokemon.co.jp/detail/0128-3",
+    "source": "ポケモンずかん",
+    "national_id": 128,
+    "verified_on": "2026-10-21"
+  },
+  {
+    "quiz_id": "194-paldea",
+    "official_url": "https://zukan.pokemon.co.jp/detail/0194-1",
+    "source": "ポケモンずかん",
+    "national_id": 194,
+    "verified_on": "2026-10-21"
+  }
+]

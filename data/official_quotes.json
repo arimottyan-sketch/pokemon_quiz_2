@@ -184,6 +184,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『Pokémon LEGENDS アルセウス』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/legends_arceus/ja/pokemon/210818_03/",
+          "text": "ホタチは固いきのみを割るときにも使う。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "ゲーム公式の種の特徴",
+          "topic": "ホタチの用途"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1358,6 +1369,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_full_text_from_search",
           "review_reference": "turn861897search0"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター アルファサファイア』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0555",
+          "text": "たいないで　１４００どの　ほのおを　もやすことで　ダンプカーを　パンチで　はかいするほどの　パワーを　つくる。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体能力"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1409,6 +1431,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn882654search2"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター ソード』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0558",
+          "text": "かんそうした　ばしょを　このみ　あめのひは　いわから　でない。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "生息環境"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1426,6 +1459,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_full_text_from_search",
           "review_reference": "turn861897search1"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケモン不思議のダンジョン マグナゲートと∞迷宮』公式施設紹介",
+          "url": "https://www.pokemon.co.jp/ex/dungeon_magnagate/outline/story_03.html",
+          "text": "ズルッグが担当する、ポケモンたちが、それまでに覚えたわざを忘れたり思い出したりすることのできる施設。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "外伝作品での役割（種共通の性質ではない）",
+          "topic": "ズルッグわざっぐ"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1562,6 +1606,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn962716search2"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0567",
+          "text": "とぶことも　できるが　ちじょうで　えものを　かることの　ほうが　ずっと　とくい　だったようだ。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "生態"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1629,6 +1684,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search1"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0571",
+          "text": "いっぺんに　大勢の　人を　化かす　力を　持つ。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体能力"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1663,6 +1729,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn678445search2"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0573",
+          "text": "全身から　染み出す　油は　とても　なめらか。　肌荒れに　悩む　人にも　効果的なのだ。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体構造"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1714,6 +1791,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search4"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0576",
+          "text": "星を　眺め　未来を　予知する。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体能力"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1783,6 +1871,17 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search0",
           "sha256_text": "8baa1c23b23a4c7f7041d645973f2cbfd14ea8ae438d7ba8bf456aeaf32356cd"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "POKÉTOON公式「コアルヒーだいすき」紹介文",
+          "url": "https://www.pokemon.co.jp/ex/poketoon/2024/",
+          "text": "ふかふかの羽毛につぶらな瞳、チャームポイントは頭のハート！",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "作品紹介での表現",
+          "topic": "外見の魅力"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1946,6 +2045,17 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search5",
           "sha256_text": "3197b81eef01affa6d2479667367238db1a7231f88a50e6afdd6150376ad0e51"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0589",
+          "text": "ネギガナイトとの　けっとうを　えがいた　かいがが　ゆうめい。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "文化・関係"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2061,6 +2171,17 @@
           "verification_method": "official_page_text_via_web",
           "purpose": "補足情報",
           "topic": "電気の調達方法"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「でんきちょーだい！」公式グッズ紹介",
+          "url": "https://www.pokemon.co.jp/goods/2026/10/261002_to01.html?pokecen=0",
+          "text": "ひょっとすると、キミの家のコンセントからも、デデンネやバチュルが電気を吸い取っているかも!?",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "公式グッズ紹介中の仮定表現。生態の確定事実ではない",
+          "topic": "電気を求める演出"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2315,6 +2436,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0610",
+          "text": "岩や　樹木に　独特の　歯形を　見かけたら　近くに　キバゴが　棲んでいるはずだ。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "生息環境"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -2592,6 +2724,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0627",
+          "text": "木の実も　食べるが　基本的に　肉食のポケモン。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "食性"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -2640,6 +2783,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0630",
+          "text": "骨で　着飾る　習性。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "習性"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -2656,6 +2810,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open_or_official_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター ソード』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0631",
+          "text": "しっぽの　あなから　くうきを　とりこみ　ほのおを　もやす。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体構造"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -3072,6 +3237,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ公式キャラクター紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/chara/",
+          "text": "花爆弾を使ったトリッキーなバトルで相手を翻弄する。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "アニメのリコの個体について",
+          "topic": "バトルの特徴"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3187,6 +3363,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ公式キャラクター紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/chara/",
+          "text": "頭の火玉から生まれた炎の鳥と共に強力なほのおわざを放つ。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "アニメのロイの個体について",
+          "topic": "ほのおの鳥"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3467,6 +3654,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn319163search3"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「PAMO NO MURE」公式グッズ紹介",
+          "url": "https://www.pokemon.co.jp/goods/2024/06/240628_to01.html?flg=1%2C6&pokecen=1",
+          "text": "メインアートには、パモたちが群れで仲良く生活する様子が水彩スケッチ調に描かれているよ。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "公式グッズのメインアートの設定・描写",
+          "topic": "群れのイラスト"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3790,6 +3988,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn583825search5"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "POKÉTOON「幼なじみのカルボウ」公式作品紹介",
+          "url": "https://www.pokemon.co.jp/ex/poketoon/2024/241122_01/",
+          "text": "おとなしいカルボウは\nやんちゃなカルボウに振り回されながらも、\n2匹で楽しい日々を過ごしていた。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "作品内の個体についての描写",
+          "topic": "性格の違い"
         }
       ]
     },
@@ -3807,6 +4016,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn583825search6"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "また、体内の炎エネルギーを、鎧のエスパー能力で操り、技を繰り出します。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体能力"
         }
       ]
     },
@@ -4111,6 +4331,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "POKÉTOON「Romanticスパイス カプサイジ伝説」公式作品紹介",
+          "url": "https://www.pokemon.co.jp/ex/poketoon/2024/241101_01/",
+          "text": "噛みぐせのあるポケモン・\nカプサイジと女の子の、\n出会いと成長の物語。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "作品内の個体についての描写",
+          "topic": "噛みぐせ"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4259,6 +4490,17 @@
           "verification_method": "公式HP掲載の文字列を直接確認・抜粋",
           "verified_on": "2026-10-21",
           "origin": "official_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第70話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_9.html",
+          "text": "その道中、いい鉄を見つけて喜ぶカヌチャンは、ハンマーを叩き出す。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "アニメのドットの個体について",
+          "topic": "鉄を見つける"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4275,6 +4517,17 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第109話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_5.html",
+          "text": "最強ハンマーを作るため、ナカヌチャンは今日も元気に鉄探し！",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "アニメのドットの個体について",
+          "topic": "鉄探し"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -5519,6 +5772,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_06/",
+          "text": "香りをふりまく蜜飴の層は相手を惑わせます。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体構造"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5564,6 +5828,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230822_01/",
+          "text": "ひびが入っていたり、割れたりしたものを修理する習性があり、棲みついている民家の食器などを勝手に金継ぎしていることもあります。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "習性"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5699,6 +5974,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+          "text": "昔は、村の食料を勝手に食べたり、興味をひかれた道具を盗んだりとやんちゃをしていたようです。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "習性・伝承"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5743,6 +6029,17 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn506718search1"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_01/",
+          "text": "蜜飴で作ったりんごのなかで、7匹のオロチュが集まって暮らしています。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "生態・共生"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5875,6 +6172,17 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_02/",
+          "text": "テラパゴスは、体内で作り出したエネルギーを体外で結晶化させる、テラスタルの能力を持っています。",
+          "verified_on": "2026-10-22",
+          "review_status": "direct_official_page_excerpt_reviewed",
+          "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
+          "quote_type": "direct_verbatim_excerpt",
+          "learning_topic": "身体能力"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5901,9 +6209,133 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニポケ第152話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/",
+          "text": "そこでモモワロウは、ともっこと呼ばれるポケモン・イイネイヌ、マシマシラ、キチキギスと遭遇。",
+          "verified_on": "2026-10-22",
+          "quote_type": "official_verbatim_excerpt",
+          "verification_method": "official_website_text_read_via_web_tool",
+          "source_scope": "アニメのエピソードにおける人物関係",
+          "topic": "ともっこ"
         }
       ],
       "data_status": "official_page_search_reviewed"
+    },
+    "128-paldea-combat": {
+      "id": "128-paldea-combat",
+      "name": "ケンタロス（パルデアのすがた・コンバットしゅ）",
+      "national_id": 128,
+      "base_name": "ケンタロス",
+      "pokeapi_slug": "tauros-paldea-combat-breed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-1",
+          "text": "筋骨隆々の　体で　格闘戦が　得意。　短い　ツノで　急所を　狙う。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-1",
+          "text": "ぶ厚く　力強い　筋肉と　気性の　荒さが　特徴。　コンバット種と　呼ばれる。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        }
+      ],
+      "data_status": "official_source_confirmed",
+      "mask_aliases": [
+        "コンバット種"
+      ]
+    },
+    "128-paldea-blaze": {
+      "id": "128-paldea-blaze",
+      "name": "ケンタロス（パルデアのすがた・ブレイズしゅ）",
+      "national_id": 128,
+      "base_name": "ケンタロス",
+      "pokeapi_slug": "tauros-paldea-blaze-breed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-2",
+          "text": "炎のエネルギーで　熱した　ツノは　摂氏１０００度になり　突き刺された　敵は　傷と　火傷に　苦しむ。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-2",
+          "text": "高温の　鼻息を　吹きだすので　ブレイズ種と　名づけられた。　３本の　尻尾を　束ねている。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        }
+      ],
+      "data_status": "official_source_confirmed",
+      "mask_aliases": [
+        "ブレイズ種"
+      ]
+    },
+    "128-paldea-aqua": {
+      "id": "128-paldea-aqua",
+      "name": "ケンタロス（パルデアのすがた・ウォーターしゅ）",
+      "national_id": 128,
+      "base_name": "ケンタロス",
+      "pokeapi_slug": "tauros-paldea-aqua-breed",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-3",
+          "text": "ツノの　先端の　穴から　水を　勢いよく　吹きだし　高圧の　水流で　敵を　貫く。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0128-3",
+          "text": "ツノから　水を　吹きだし　泳ぐ。　脂肪分が　多く　浮きやすいのが　ウォーター種の　特徴。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_index_search_result_text"
+        }
+      ],
+      "data_status": "official_source_confirmed",
+      "mask_aliases": [
+        "ウォーター種"
+      ]
+    },
+    "194-paldea": {
+      "id": "194-paldea",
+      "name": "ウパー（パルデアのすがた）",
+      "national_id": 194,
+      "base_name": "ウパー",
+      "pokeapi_slug": "wooper-paldea",
+      "quotes": [
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0194-1",
+          "text": "縄張り争いに　敗れて　陸で　暮らすうちに　毒の　粘膜で　体を　保護するように　変わった。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_page_open_text"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0194-1",
+          "text": "単独行動は　危険なので　３、４匹が　一列に　並んで　助け合いながら　沼地を　歩く。",
+          "verified_on": "2026-10-21",
+          "verification_method": "official_site_page_open_text"
+        }
+      ],
+      "data_status": "official_source_confirmed"
     }
   }
 }

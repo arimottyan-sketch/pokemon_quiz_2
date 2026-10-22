@@ -1,21 +1,24 @@
 """GitHubに固定保存した公式原文だけで、ゲーム内図鑑最優先の四択を生成する。
 
 出題にゲーム公式図鑑以外は使わない。公式HP・アニメ・ポケカは解答後の補足に限定。
-カード/大会は元カードの初登場日/大会開催日が最近3年以内のもののみ表示する。
+カード・大会情報は収録ルールに従って扱う。
 ここで実施するのは形式と日付の検査であり、URL先との原文一致の証明ではない。
 """
 import json
 import random
+import re
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
+PALDEA_FORMS = ('128-paldea-combat', '128-paldea-blaze', '128-paldea-aqua', '194-paldea')
+
 REGIONS = {
     'イッシュ': list(range(494, 650)),
-    'パルデア': list(range(906, 1026)),
+    'パルデア': list(range(906, 1026)) + list(PALDEA_FORMS),
 }
 APPROVED_HOSTS = {'zukan.pokemon.co.jp', 'www.pokemon.co.jp', 'www.pokemon-card.com', 'www.tv-tokyo.co.jp'}
-SOURCE_KINDS = {'ゲーム内図鑑', 'ゲーム公式HP', 'ポケカ公式', 'アニメ公式', '大会公式', '公式図鑑プロフィール', 'ゲーム内図鑑の補足'}
+SOURCE_KINDS = {'ゲーム内図鑑', 'ゲーム公式HP', 'ポケカ公式', 'アニメ公式', '大会公式', '公式図鑑プロフィール', 'ゲーム内図鑑の補足', '公式グッズ紹介'}
 SENSITIVE_KINDS = {'ポケカ公式', '大会公式'}
 
 
@@ -90,11 +93,18 @@ def validate_db(data):
     if data.get('schema_version') != 1 or not isinstance(data.get('pokemon'), dict):
         raise ValueError('問題データ形式が不正です')
     for key, item in data['pokemon'].items():
-        try:
-            pid = int(key)
-        except ValueError:
-            raise ValueError(f'番号キーが不正: {key}') from None
-        if str(pid) != key or not any(pid in ids for ids in REGIONS.values()):
+        if key in PALDEA_FORMS:
+            pid = key
+            if item.get('national_id') not in (128, 194) or not item.get('pokeapi_slug'):
+                raise ValueError(f'リージョンフォームの情報不足: {key}')
+        else:
+            try:
+                pid = int(key)
+            except ValueError:
+                raise ValueError(f'番号キーが不正: {key}') from None
+            if str(pid) != key:
+                raise ValueError(f'番号キーが不正: {key}')
+        if not any(pid in ids for ids in REGIONS.values()):
             raise ValueError(f'対象外の番号: {key}')
         if item.get('id') != pid or not item.get('name'):
             raise ValueError(f'図鑑番号と名前の不整合: {pid}')
@@ -131,8 +141,8 @@ def supplementary_records(row, today=None):
 
 
 def missing_ids(data, region):
-    return sorted(pid for pid in REGIONS[region] if not pokedex_records(data['pokemon'].get(
-        str(pid), {'quotes': []})))
+    return sorted((pid for pid in REGIONS[region] if not pokedex_records(data['pokemon'].get(
+        str(pid), {'quotes': []}))), key=lambda pid: (isinstance(pid, str), str(pid)))
 
 
 def make_questions(data, region, mode, ids=None, seed=None):
@@ -140,7 +150,7 @@ def make_questions(data, region, mode, ids=None, seed=None):
 
     正答とすべての誤答は必ずゲーム内図鑑。補足資料を選択肢に使用しない。
     """
-    if mode not in ('picture', 'description'):
+    if mode not in ('picture', 'description', 'identification', 'extra_description'):
         raise ValueError('不正な問題形式')
     target = list(ids) if ids is not None else list(REGIONS[region])
     region_pool = {pid: pokedex_records(data['pokemon'][str(pid)])
@@ -155,8 +165,26 @@ def make_questions(data, region, mode, ids=None, seed=None):
     rng.shuffle(target)
     questions = []
     for pid in target:
-        answer = rng.choice(region_pool[pid])
-        # 完全同文の図鑑文章は選択肢に含めない（誤答の二重正解を防止）。
+        if mode == 'extra_description':
+            # Only verified, non-card supplementary records. Cards and tournaments
+            # remain in the post-answer source panel, never used as quiz prompts.
+            extras = [q for q in supplementary_records(data['pokemon'][str(pid)])
+                      if q['kind'] in ('ゲーム公式HP', 'アニメ公式', 'ゲーム内図鑑の補足', '公式図鑑プロフィール', '公式グッズ紹介')]
+            if not extras:
+                raise ValueError(f'公式トリビア原文がありません: {pid}')
+            answer = rng.choice(extras)
+        else:
+            answer = rng.choice(region_pool[pid])
+        if mode in ('identification', 'extra_description'):
+            # No distractor text is shown, so avoid only an identical species ID.
+            candidates = [x for x in region_pool if x != pid]
+            rng.shuffle(candidates)
+            choices = [pid, *candidates[:3]]
+            rng.shuffle(choices)
+            questions.append({'id': pid, 'answer': pid, 'choices': choices,
+                              'quotes': {pid: answer}, 'mode': mode})
+            continue
+        # Picture -> four distinct Pokedex descriptions.
         candidate_ids = [x for x in region_pool if x != pid and
                          any(q['text'] != answer['text'] for q in region_pool[x])]
         if len(candidate_ids) < 3:
@@ -182,3 +210,30 @@ def make_questions(data, region, mode, ids=None, seed=None):
         questions.append({'id': pid, 'answer': pid, 'choices': choices,
                           'quotes': choice_quotes, 'mode': mode})
     return questions
+
+
+def national_number(row):
+    """A form has its original National Pokédex number, never a fabricated one."""
+    return row.get('national_id', row['id'])
+
+
+def display_quote(text, subject_id, data):
+    """Mask only the Pokémon being tested. DO NOT change saved official quotes.
+
+    Match known Pokémon names longest first to preserve names of other Pokémon,
+    including those containing a shorter name of the subject.
+    """
+    subject_id = str(subject_id)
+    names_to_ids = {}
+    for key, entry in data['pokemon'].items():
+        names = {entry['name']}
+        if entry.get('base_name'):
+            names.add(entry['base_name'])
+        for alias in entry.get('mask_aliases', []):
+            names.add(alias)
+        for name in names:
+            names_to_ids.setdefault(name, set()).add(key)
+    if not names_to_ids:
+        return text
+    pattern = re.compile('|'.join(map(re.escape, sorted(names_to_ids, key=lambda name: (-len(name), name)))))
+    return pattern.sub(lambda m: '？？？' if subject_id in names_to_ids[m.group()] else m.group(), text)

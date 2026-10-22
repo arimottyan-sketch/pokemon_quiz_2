@@ -5,7 +5,9 @@ class ReleaseTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):cls.db=read_db()
  def test_all_276_present(self):
-  self.assertEqual(sum(len(x) for x in REGIONS.values()),276)
+  self.assertEqual(sum(len(x) for x in REGIONS.values()),280)
+  self.assertEqual(len(REGIONS["イッシュ"]), 156)
+  self.assertEqual(len(REGIONS["パルデア"]), 124)
   for region in REGIONS:self.assertEqual(missing_ids(self.db,region),[])
  def test_questions_all_regions_and_modes(self):
   for region in REGIONS:
