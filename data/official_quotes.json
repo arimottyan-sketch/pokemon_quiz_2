@@ -58,6 +58,16 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式サイト",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/companion.html",
+          "text": "遊び好きで好奇心旺盛な性格で、いつか冒険の旅に出たいと思っている。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "ゲーム登場個体の性格"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -127,6 +137,16 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式サイト",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/companion.html",
+          "text": "優しい性格だが少し気弱。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "ゲーム登場個体の性格"
         }
       ]
     },
@@ -3179,6 +3199,16 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京・アニメ「ポケットモンスター」第40話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_12.html",
+          "text": "ブレイブアサギ号を飛び出したニャオハが向かった場所は生まれ育ったブリーダーの家…！？",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "アニメ登場個体の出来事"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4110,6 +4140,16 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター スカーレット・バイオレット』公式サイト",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "これは鳴き声ではなく、お腹から出る音で、空腹を主張していることが分かっています。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "種の特徴"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4139,6 +4179,16 @@
           "source_scope": "アニメ・ロイの個体の出来事",
           "topic": "強風に向き合うカイデン",
           "proof_line": "turn625442view2:L38-L42"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京・アニメ「ポケットモンスター」第14話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_15.html",
+          "text": "なぜか群れから離れて1匹で過ごしているそのカイデンには、何やら事情がある様で…！？",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "アニメ登場個体の出来事"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4378,6 +4428,16 @@
           "verification_method": "official_website_text_read_via_web_tool",
           "source_scope": "作品内の個体についての描写",
           "topic": "噛みぐせ"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "POKÉTOON 2024 公式「Romanticスパイスカプサイジ伝説」紹介",
+          "url": "https://www.pokemon.co.jp/ex/poketoon/2024/",
+          "text": "やんちゃなカプサイジに振り回されっぱなしの女の子。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "アニメ作品中の登場個体の描写"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4661,6 +4721,16 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京・アニメ「ポケットモンスター」第70話公式紹介",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_9.html",
+          "text": "そこに野生のオトシドリが現れて、カヌチャンの鉄を持って行ってしまって…！？",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "アニメ登場個体の出来事"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4886,6 +4956,16 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open_or_official_search_result"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター スカーレット・バイオレット』公式サイト",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "ボチ自身も無自覚なまま、人の生気を少しずつ吸い取っているので、遊び過ぎは禁物です。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "種の特徴"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -6136,6 +6216,16 @@
           "source_scope": "ゲーム公式の特徴",
           "topic": "7匹の協調性",
           "proof_line": "turn315311view4:L37-L39"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_01/",
+          "text": "ふだんは司令塔のオロチュが攻撃しますが、ときどき他の首も協力してレーザーを放ち、絶大な威力を発揮します。",
+          "verified_on": "2026-10-22",
+          "verification_method": "official_webpage_direct_text_check",
+          "text_format": "verbatim_excerpt",
+          "source_scope": "公式ゲーム紹介・技の解説"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"

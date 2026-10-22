@@ -148,70 +148,169 @@ def missing_ids(data, region):
         str(pid), {'quotes': []}))), key=lambda pid: (isinstance(pid, str), str(pid)))
 
 
-def make_questions(data, region, mode, ids=None, seed=None):
-    """picture(画像→図鑑原文) / description(図鑑原文→名前)
+# Choice-generation hints are only used to SELECT distractors, never shown as facts.
+# They are deliberately separate from official source quotations.
+import math
+from collections import Counter as _TokenCounter
 
-    正答とすべての誤答は必ずゲーム内図鑑。補足資料を選択肢に使用しない。
+_CUTE = {906,907,908,909,912,921,922,923,924,925,926,927,
+         928,929,931,935,938,939,940,944,963,964,971,974,
+         495,498,501,504,506,509,519,531,546,548,550,
+         570,572,574,577,580,590,595,602,607,613,627}
+_THEME_GROUPS = (
+    (r'かわい|可愛|甘え|なつ|懐っこ|拗ね|寂し|きまぐれ|ふわふわ|やんちゃ|気を引|まいぺーす|マイペース', _CUTE),
+    (r'炎|ほのお|火炎|火玉|燃え|火を|火の|熱', {494,498,499,500,513,514,554,555,607,608,609,631,636,637,643,909,910,911,935,936,937,1004,'128-paldea-blaze'}),
+    (r'電気|でんき|放電|発電|雷|充電|電流', {522,523,587,595,596,602,603,604,618,642,644,921,922,923,938,939,940,941,989,992,995}),
+    (r'水中|水面|泳|川|海中|みず|水を|潮|波|水流', {501,502,503,515,516,535,536,537,550,564,565,580,581,592,593,594,647,912,913,914,960,961,963,964,976,977,978,991,'128-paldea-aqua'}),
+    (r'草|葉|植物|花|つぼみ|光合成|種子|ツル|木々', {495,496,497,511,512,540,541,542,546,547,548,549,556,585,586,590,591,597,598,640,906,907,908,928,929,930,947,948,949,1011,1019}),
+    (r'飛ぶ|羽ばた|翼|ひこう|空中|飛行|風|羽毛', {519,520,521,527,528,561,566,567,580,581,587,627,628,629,630,641,642,940,941,959,962,973}),
+    (r'こおり|氷|凍|寒さ|冷たい|雪', {582,583,584,613,614,615,646,974,975,991,996,997,998,1002}),
+    (r'毒|どく|有毒|猛毒|毒液|痺れ', {543,544,545,568,569,590,591,966,967,969,970,984,990,'194-paldea'}),
+    (r'ゴースト|幽霊|魂|おばけ|生気|怨念|呪', {562,563,592,593,607,608,609,622,623,679,680,681,911,937,971,972,979,986,987}),
+    (r'金属|鉄|鋼|はがね|鉱石|ハンマー|磁力', {529,530,597,598,599,600,601,624,625,632,638,957,958,959,966,968,983,994,1000}),
+)
+
+
+def _ngrams(text):
+    text = re.sub(r'[\s　、。！？・「」（）【】0-9a-zA-Z]+', '', text)
+    return set(text[i:i+2] for i in range(len(text)-1))
+
+
+def _semantic_similarity(a, b):
+    x, y = _ngrams(a), _ngrams(b)
+    if not x or not y:
+        return 0.0
+    return len(x & y) / math.sqrt(len(x)*len(y))
+
+
+def _themes_for(text):
+    return [(idx, group) for idx, (pattern, group) in enumerate(_THEME_GROUPS)
+            if re.search(pattern, text)]
+
+
+def distractor_score(db, answer_id, other_id, answer_quote=None, other_quote=None):
+    """Rank plausible choices using only official passages and internal group hints."""
+    answer_row = db['pokemon'][str(answer_id)]
+    other_row = db['pokemon'][str(other_id)]
+    anchor = answer_quote['text'] if answer_quote else ' '.join(q['text'] for q in answer_row['quotes'][:3])
+    comparison = other_quote['text'] if other_quote else ' '.join(q['text'] for q in other_row['quotes'][:3])
+    score = 2.5 * _semantic_similarity(anchor, comparison)
+    for _, group in _themes_for(anchor):
+        if other_id in group:
+            score += 1.7
+        if answer_id in group and other_id in group:
+            score += 0.5
+    # Closely related species usually make more plausible wrong answers.
+    if isinstance(answer_id, int) and isinstance(other_id, int):
+        dist = abs(answer_id - other_id)
+        score += (0.8 if dist == 1 else 0.45 if dist == 2 else 0.15 if dist <= 5 else 0)
+    return score
+
+
+def _prefer_matching_theme(answer_id, candidates, anchor):
+    """When three peers exist, require the SAME internally tagged theme.
+
+    This never inserts new factual content into the question; it only changes
+    which existing Pokémon can appear as alternative answers.
     """
-    if mode not in ('picture', 'description', 'identification', 'extra_description'):
+    for _, group in _themes_for(anchor):
+        if answer_id in group:
+            preferred = [x for x in candidates if x in group and x != answer_id]
+            if len(preferred) >= 3:
+                return preferred
+    return candidates
+
+
+def ranked_candidates(db, answer_id, candidates, *, answer_quote=None, quote_for=None, rng=None):
+    """Select three UNIQUE, high-similarity distractors with seeded variability."""
+    rng = rng or random.Random()
+    anchor = (answer_quote['text'] if answer_quote else
+              ' '.join(q['text'] for q in db['pokemon'][str(answer_id)]['quotes'][:3]))
+    candidates = _prefer_matching_theme(answer_id, candidates, anchor)
+    scores = []
+    for other_id in candidates:
+        if other_id == answer_id:
+            continue
+        quote = quote_for.get(other_id) if quote_for else None
+        score = distractor_score(db, answer_id, other_id, answer_quote, quote)
+        scores.append((score + rng.uniform(-0.12, 0.12), other_id))
+    scores.sort(reverse=True, key=lambda item: item[0])
+    # Randomly draw from top 7 so quizzes don't permanently repeat distractors.
+    head = [pid for _, pid in scores[:min(7, len(scores))]]
+    rng.shuffle(head)
+    return head[:3]
+
+
+def make_questions(data, region, mode, ids=None, seed=None):
+    """Build four-choice questions from unmodified official source records.
+
+    picture:       name/picture -> Pokedex texts
+    description:   Pokedex text -> pictured names
+    extra_picture: name/picture -> other official-source texts
+    extra_description: other official-source text -> pictured names
+    identification: picture -> names
+    """
+    if mode not in ('picture', 'description', 'identification',
+                    'extra_description', 'extra_picture'):
         raise ValueError('不正な問題形式')
-    target = list(ids) if ids is not None else list(REGIONS[region])
+    rng = random.Random(seed)
     region_pool = {pid: pokedex_records(data['pokemon'][str(pid)])
                    for pid in REGIONS[region] if str(pid) in data['pokemon']
                    and pokedex_records(data['pokemon'][str(pid)])}
-    absent = [pid for pid in target if pid not in region_pool]
+    extras = {pid: eligible_extra(data['pokemon'][str(pid)]) for pid in region_pool}
+    info_mode = mode in ('extra_description', 'extra_picture')
+    eligible_pool = {pid: records for pid, records in
+                     (extras if info_mode else region_pool).items() if records}
+    target = list(ids) if ids is not None else list(eligible_pool)
+    absent = [pid for pid in target if pid not in eligible_pool]
     if absent:
-        raise ValueError(f'ゲーム内図鑑がないポケモンがいます: {absent[:12]} (計{len(absent)}匹)')
-    if len(region_pool) < 4:
-        raise ValueError('四択作成に必要なゲーム内図鑑が4匹分ありません')
-    rng = random.Random(seed)
+        raise ValueError(f'選択した形式に公式文章がないポケモン: {absent[:12]}')
+    if len(eligible_pool) < 4:
+        raise ValueError('選択肢の作成には4種類以上の公式文章が必要です')
     rng.shuffle(target)
     questions = []
     for pid in target:
-        if mode == 'extra_description':
-            # Only verified, non-card supplementary records. Cards and tournaments
-            # remain in the post-answer source panel, never used as quiz prompts.
-            extras = [q for q in supplementary_records(data['pokemon'][str(pid)])
-                      if q['kind'] in ('ゲーム公式HP', 'アニメ公式', 'ゲーム内図鑑の補足', '公式図鑑プロフィール', '公式グッズ紹介')]
-            if not extras:
-                raise ValueError(f'公式情報の文章がありません: {pid}')
-            answer = rng.choice(extras)
-        else:
-            answer = rng.choice(region_pool[pid])
-        if mode in ('identification', 'extra_description'):
-            # No distractor text is shown, so avoid only an identical species ID.
-            candidates = [x for x in region_pool if x != pid]
-            rng.shuffle(candidates)
-            choices = [pid, *candidates[:3]]
+        source_pool = eligible_pool if info_mode else region_pool
+        answer = rng.choice(source_pool[pid])
+        if mode in ('identification', 'description', 'extra_description'):
+            candidate_ids = [x for x in eligible_pool if x != pid]
+            distractors = ranked_candidates(data, pid, candidate_ids,
+                                            answer_quote=answer, rng=rng)
+            choices = [pid, *distractors]
             rng.shuffle(choices)
-            questions.append({'id': pid, 'answer': pid, 'choices': choices,
-                              'quotes': {pid: answer}, 'mode': mode})
+            questions.append({'id':pid,'answer':pid,'choices':choices,
+                              'quotes':{pid:answer},'mode':mode})
             continue
-        # Picture -> four distinct Pokedex descriptions.
-        candidate_ids = [x for x in region_pool if x != pid and
-                         any(q['text'] != answer['text'] for q in region_pool[x])]
-        if len(candidate_ids) < 3:
-            raise ValueError('重複しない図鑑説明の選択肢を3件作れません')
-        rng.shuffle(candidate_ids)
-        other_ids = []
-        choice_quotes = {pid: answer}
+        # Image/name -> text. Each wrong quote is officially attributed to
+        # another species; select semantically confusing texts when possible.
+        candidates = [x for x in eligible_pool if x != pid and
+                      any(q['text'] != answer['text'] for q in source_pool[x])]
+        candidates = _prefer_matching_theme(pid, candidates, answer['text'])
+        quote_for = {}
+        for other in candidates:
+            unique = [q for q in source_pool[other] if q['text'] != answer['text']]
+            quote_for[other] = max(unique, key=lambda q:
+                   distractor_score(data, pid, other, answer, q))
+        ranked = sorted(candidates, key=lambda x:
+            distractor_score(data, pid, x, answer, quote_for[x]) + rng.uniform(-0.12,0.12),
+            reverse=True)
+        selected = []
         used = {answer['text']}
-        for other in candidate_ids:
-            quote_candidates = [q for q in region_pool[other] if q['text'] not in used]
-            if not quote_candidates:
+        for other in ranked:
+            quote = quote_for[other]
+            if quote['text'] in used:
                 continue
-            chosen = rng.choice(quote_candidates)
-            used.add(chosen['text'])
-            other_ids.append(other)
-            choice_quotes[other] = chosen
-            if len(other_ids) == 3:
+            selected.append(other)
+            used.add(quote['text'])
+            if len(selected) >= 3:
                 break
-        if len(other_ids) != 3:
-            raise ValueError('重複しない図鑑説明の選択肢を3件作れません')
-        choices = [pid, *other_ids]
+        if len(selected) != 3:
+            raise ValueError('異なる公式文章の選択肢が不足しています')
+        choices = [pid, *selected]
         rng.shuffle(choices)
-        questions.append({'id': pid, 'answer': pid, 'choices': choices,
-                          'quotes': choice_quotes, 'mode': mode})
+        questions.append({'id':pid, 'answer':pid, 'choices':choices,
+                          'quotes':{pid:answer, **{x:quote_for[x] for x in selected}},
+                          'mode':mode})
     return questions
 
 
@@ -255,7 +354,8 @@ MODE_LABELS = {
     'identification': '姿を見て名前を選ぶ',
     'description': '図鑑説明から名前を選ぶ（画像付き）',
     'picture': '姿から図鑑説明を選ぶ',
-    'extra_description': '公式情報から名前を選ぶ（画像付き）',
+    'extra_description': '公式情報 → 名前（画像付き）',
+    'extra_picture': '名前・姿 → 公式情報',
 }
 DISPLAY_MODES = {v:k for k,v in MODE_LABELS.items()}
 
@@ -270,7 +370,7 @@ def region_for(pid):
 def pool_ids(db, region, mode):
     regions = REGIONS if region == ALL_REGION else {region: REGIONS[region]}
     pool = [p for ids in regions.values() for p in ids if str(p) in db['pokemon']]
-    if mode == 'extra_description':
+    if mode in ('extra_description', 'extra_picture'):
         pool = [p for p in pool if eligible_extra(db['pokemon'][str(p)])]
     return pool
 
@@ -288,7 +388,7 @@ def plan_session(db, region, style, count, *, priority_ids=None, seed=None):
     if style not in MODE_LABELS:
         raise ValueError('不正な出題モード')
     rng = random.Random(seed)
-    candidates = pool_ids(db, region, 'extra_description' if style == 'extra_description' else 'description')
+    candidates = pool_ids(db, region, 'extra_description' if style in ('extra_description','extra_picture') else 'description')
     if priority_ids is not None:
         wanted = {str(p) for p in priority_ids}
         candidates = [p for p in candidates if str(p) in wanted]
@@ -300,7 +400,7 @@ def plan_session(db, region, style, count, *, priority_ids=None, seed=None):
     if not candidates:
         return []
     selections = []
-    modes = ['identification', 'description', 'picture', 'extra_description']
+    modes = ['identification', 'description', 'picture', 'extra_description', 'extra_picture']
     mode_usage = Counter()
     for pid in candidates:
         if style == 'mix':
@@ -500,8 +600,9 @@ def show_question(q):
     if kind in ('identification','typed'):
         st.markdown('#### このポケモンの名前は？')
         art_display(row)
-    elif kind == 'picture':
-        st.markdown('#### このポケモンに当てはまる図鑑説明を選んでください')
+    elif kind in ('picture', 'extra_picture'):
+        st.markdown('#### このポケモンに当てはまる公式情報を選んでください' if kind == 'extra_picture' else
+                    '#### このポケモンに当てはまる図鑑説明を選んでください')
         art_display(row)
     else:
         st.markdown('#### この公式の文章は、どのポケモンのもの？')
@@ -536,7 +637,7 @@ def show_question(q):
             commit(submitted_choice)
     else:
         with st.form(f'four_{n}'):
-            if kind == 'picture':
+            if kind in ('picture','extra_picture'):
                 labels = [display_quote(q['quotes'][p]['text'], p, db) for p in q['choices']]
             else:
                 labels = [db['pokemon'][str(p)]['name'] for p in q['choices']]
@@ -556,13 +657,21 @@ def show_question(q):
         else:
             details(pid)
         bookmark_button(pid)
-        if kind == 'picture':
+        if kind in ('picture','extra_picture'):
             with st.expander('他の選択肢の出典'):
                 for x in q['choices']:
                     if x != pid:
                         st.markdown(f"**{db['pokemon'][str(x)]['name']}**")
                         source(q['quotes'][x])
-        if st.button('次の問題へ →',type='primary',use_container_width=True):
+        col_next, col_finish = st.columns([2,1])
+        with col_next:
+            next_clicked = st.button('次の問題へ →',type='primary',use_container_width=True)
+        with col_finish:
+            finish_clicked = st.button('ここまでで終了',type='secondary',use_container_width=True)
+        if finish_clicked:
+            st.session_state.finished = True
+            st.rerun()
+        if next_clicked:
             st.session_state.idx += 1
             st.session_state.answer = None
             if st.session_state.idx >= total:
@@ -677,5 +786,6 @@ else:
 - **クイズ**：地方・問題形式・問題数を選んでスタート。回答後に正解と出典を表示します。
 - **ポケモン情報**：名前・図鑑番号・説明文で検索し、掲載文と参照先を確認できます。
 - **復習**：間違えたポケモンや★登録したポケモンを、クイズの出題対象に指定できます。
+- **公式情報**：『公式情報 → 名前』と『名前・姿 → 公式情報』の両方を出題できます。
 - **回答履歴**：結果画面からCSVを保存できます。
 ''')
