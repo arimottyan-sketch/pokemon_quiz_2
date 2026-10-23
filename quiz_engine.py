@@ -343,6 +343,11 @@ def display_quote(text, subject_id, data):
     pattern = re.compile('|'.join(map(re.escape, sorted(names_to_ids, key=lambda name: (-len(name), name)))))
     return pattern.sub(lambda m: '？？？' if subject_id in names_to_ids[m.group()] else m.group(), text)
 
+def question_passage(rec, pid, data):
+    """Quiz-visible complete passage; never alters rec['text'] (official original)."""
+    return display_quote(rec.get('question_text') or rec['text'], pid, data)
+
+
 import csv
 import io
 import random
@@ -508,7 +513,7 @@ def plan_extra_session(db, region, style, count, *, priority_ids=None, seed=None
                   for p in regional_ids}
             pool={p:rs for p,rs in pool.items() if rs}
             def select_other(p):
-                recs=[r for r in pool[p] if display_quote(r['text'],p,db)!=display_quote(answer['text'],pid,db)]
+                recs=[r for r in pool[p] if question_passage(r,p,db)!=question_passage(answer,pid,db)]
                 if not recs:return None
                 return max(recs,key=lambda r:distractor_score(db,pid,p,answer,r))
             quote_for={p:select_other(p) for p in pool if p!=pid}
@@ -517,9 +522,9 @@ def plan_extra_session(db, region, style, count, *, priority_ids=None, seed=None
                                       quote_for=quote_for,rng=rng)
             for p in list(quote_for):
                 if p not in ordered:ordered.append(p)
-            chosen=[]; used={display_quote(answer['text'],pid,db)}
+            chosen=[]; used={question_passage(answer,pid,db)}
             for other in ordered:
-                shown=display_quote(quote_for[other]['text'],other,db)
+                shown=question_passage(quote_for[other],other,db)
                 if shown in used:continue
                 used.add(shown);chosen.append(other)
                 if len(chosen)==3:break
@@ -531,7 +536,7 @@ def plan_extra_session(db, region, style, count, *, priority_ids=None, seed=None
         else:
             pool=[p for p in regional_ids if p!=pid and eligible_extra(db['pokemon'][str(p)])]
             # If named in the passage, another species must not be a choice.
-            names_in_text={p for p in pool if db['pokemon'][str(p)]['name'] in answer['text']}
+            names_in_text={p for p in pool if db['pokemon'][str(p)]['name'] in (answer.get('question_text') or answer['text'])}
             pool=[p for p in pool if p not in names_in_text]
             chosen=ranked_candidates(db,pid,pool,answer_quote=answer,rng=rng)
             if len(chosen)<3:raise ValueError(f'図鑑外選択肢不足: {pid}')

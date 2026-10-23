@@ -1,0 +1,9 @@
+{
+  "total_original_records": 631,
+  "non_dex_total": 226,
+  "eligible_non_dex": 127,
+  "eligible_species": 87,
+  "excluded_non_dex": 99,
+  "original_text_unchanged": true,
+  "browser_ui_tested": false
+}

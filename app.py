@@ -5,7 +5,7 @@ import streamlit as st
 from pathlib import Path
 from quiz_engine import *
 
-st.set_page_config(page_title='イッシュ・パルデア｜クイズとポケモン情報', page_icon='📘', layout='centered')
+st.set_page_config(page_title='ポケモンクイズ', page_icon='📘', layout='centered')
 # GitHub's browser upload may reject .streamlit/: keep the color palette in
 # a regular file and apply it to the page without any dot-prefixed upload path.
 from pathlib import Path
@@ -27,7 +27,7 @@ except (OSError, ValueError) as error:
 for key, default in {
     'specs':None, 'idx':0, 'score':0, 'answer':None,
     'missed':[], 'bookmarked':[], 'history':[], 'is_review':False,
-    'region':'両方', 'quiz_style':'mix', 'finished':False,
+    'region':'両方', 'quiz_style':'mix', 'finished':False, 'selected_pid':None,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -65,13 +65,7 @@ def art_display(row, *, full=False):
 
 
 def source(rec):
-    if rec.get('quiz_attribution_scope')=='作品内・個体に関する記述':
-        st.caption('※公式作品内の描写・伝承。種全体の一般的な生態を断定するものではありません。')
-    if rec.get('quiz_approved') is False:
-        st.caption('※出題対象外の資料記録（参考閲覧のみ）。')
     st.caption(f"出典：{rec['source_title']}｜{rec['kind']}")
-    if rec.get('source_scope'):
-        st.caption(f"資料の読み方：{rec['source_scope']}")
     st.markdown(f"[公式の掲載ページ ↗]({rec['url']})")
 
 
@@ -79,6 +73,7 @@ def clear_question_only():
     st.session_state.specs = None
     st.session_state.idx = 0
     st.session_state.answer = None
+    st.session_state.selected_pid = None
     st.session_state.finished = False
 
 
@@ -103,6 +98,7 @@ def start(region, style, count, review_ids=None):
     st.session_state.idx = 0
     st.session_state.score = 0
     st.session_state.answer = None
+    st.session_state.selected_pid = None
     st.session_state.finished = False
     st.session_state.is_review = review_ids is not None
     st.session_state.region = region
@@ -116,6 +112,7 @@ def commit(selection):
     q = st.session_state.specs[st.session_state.idx]
     ok = (selection == q['id'])
     st.session_state.answer = ok
+    st.session_state.selected_pid = selection
     if ok:
         st.session_state.score += 1
         if st.session_state.is_review and q['id'] in st.session_state.missed:
@@ -129,14 +126,18 @@ def commit(selection):
 def details(pid, main_quote=None):
     row = db['pokemon'][str(pid)]
     if main_quote:
-        st.markdown('**この問題の公式掲載文**')
-        st.write(main_quote['text'])
+        displayed = main_quote.get('question_text') or main_quote['text']
+        st.markdown('**問題に対応する公式情報**')
+        st.write(displayed)
+        if displayed != main_quote['text']:
+            with st.expander('保存した公式原文の抜粋を表示'):
+                st.write(main_quote['text'])
         source(main_quote)
     else:
         for rec in pokedex_records(row):
             st.write(rec['text'])
             source(rec)
-    extras = supplementary_records(row)
+    extras = eligible_extra(row)
     if extras:
         with st.expander(f'もっと知る｜その他の公式情報（{len(extras)}件）'):
             for j, rec in enumerate(extras):
@@ -174,13 +175,7 @@ def show_question(q):
         art_display(row)
     else:
         st.markdown('#### この公式の文章は、どのポケモンについての記述？')
-        if kind == 'extra_description':
-            source_rec=q['quotes'][pid]
-            scope=source_rec.get('source_scope') or source_rec.get('quiz_attribution_scope','公式資料の説明')
-            scope=display_quote(scope,pid,db)
-            st.caption(f'適用範囲：{scope}。作品内の出来事や伝承は種全体の習性とは限りません。')
-        st.write(display_quote(q['quotes'][pid]['text'], pid, db))
-        st.caption('※正解名が文章に含まれる場合のみ「？？？」に置換。解答後は保存された原文を表示します。')
+        st.write(question_passage(q['quotes'][pid], pid, db))
 
     if kind == 'typed':
         with st.form(f'write_{n}'):
@@ -211,7 +206,7 @@ def show_question(q):
     else:
         with st.form(f'four_{n}'):
             if kind in ('picture','extra_picture'):
-                labels = [display_quote(q['quotes'][p]['text'], p, db) for p in q['choices']]
+                labels = [question_passage(q['quotes'][p], p, db) for p in q['choices']]
             else:
                 labels = [db['pokemon'][str(p)]['name'] for p in q['choices']]
             choice = st.radio('選択肢', list(range(4)),
@@ -223,7 +218,22 @@ def show_question(q):
             commit(q['choices'][choice])
     if answered:
         ok=st.session_state.answer
-        (st.success if ok else st.error)(('正解！' if ok else f"正解は {row['name']}"))
+        if ok:
+            st.success('正解！')
+        elif kind == 'typed':
+            st.error('不正解')
+        else:
+            correct_index = q['choices'].index(pid)
+            if kind in ('picture', 'extra_picture'):
+                correct_content = question_passage(q['quotes'][pid], pid, db)
+            else:
+                correct_content = row['name']
+            st.error('不正解')
+            st.markdown(f"**正しい選択肢：{'ABCD'[correct_index]}. {correct_content}**")
+            chosen_pid = st.session_state.selected_pid
+            if chosen_pid in q['choices']:
+                wrong_index = q['choices'].index(chosen_pid)
+                st.caption(f"選んだ選択肢：{'ABCD'[wrong_index]}")
         st.markdown(f"### No.{national_number(row):04d} {row['name']}")
         if kind != 'typed':
             details(pid,q['quotes'][pid] if kind!='identification' else None)
@@ -247,6 +257,7 @@ def show_question(q):
         if next_clicked:
             st.session_state.idx += 1
             st.session_state.answer = None
+            st.session_state.selected_pid = None
             if st.session_state.idx >= total:
                 st.session_state.finished = True
             st.rerun()
@@ -281,13 +292,11 @@ def show_finish():
         st.rerun()
 
 
-st.title('ポケモン公式原文クイズ｜イッシュ・パルデア')
-st.caption('イッシュ156種・パルデア120種＋指定リージョンフォーム4枠。登録した公式文章は保存し、出題時のみ正解名を伏字化。')
+st.title('ポケモンクイズ')
 page = st.radio('画面', ['クイズ', 'ポケモン情報', '使い方'], horizontal=True,
                 label_visibility='collapsed')
 
 if page == 'クイズ':
-    st.caption('図鑑405件＋図鑑外の採用可能情報を掲載。図鑑外は1種1問に制限せず、原文抜粋1件ずつ出題します。全件の逐字再検証は未了。')
     if st.session_state.specs is None:
         with st.form('quiz_options'):
             region = st.selectbox('出題する地方', [ALL_REGION,'イッシュ','パルデア'], index=0)
@@ -332,7 +341,7 @@ elif page == 'ポケモン情報':
         st.markdown(f"### {selected['name']}")
         art_display(selected)
         st.caption(f"全国図鑑 No.{national_number(selected):04d}｜{region_for(selection)}")
-        extras = supplementary_records(selected)
+        extras = eligible_extra(selected)
         if extras:
             st.markdown('#### もっと詳しく｜公式サイト・作品情報')
             for rec in extras:

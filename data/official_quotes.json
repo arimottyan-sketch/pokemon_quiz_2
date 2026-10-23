@@ -55,7 +55,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -100,7 +101,8 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -183,10 +185,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "ゲーム『ポケパーク2』の登場個体",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "エリアマスターと名前を書いた見出しのみで、選択式の説明にならない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -218,11 +222,13 @@
           "quiz_enabled": true,
           "quiz_review": "edited_from_official_source",
           "quiz_review_reason": "前後の文脈・作品名を補ったクイズ用の文章。公式原文はtextに保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "「優しい性格だが気弱」だけでは他種にも当てはまり、個体の設定を特定できない"
         },
         {
           "kind": "ゲーム公式HP",
@@ -284,10 +290,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "ゲーム『ポケパーク2』の登場個体",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "エリアマスターと名前を書いた見出しのみで、選択式の説明にならない"
         },
         {
           "kind": "ゲーム公式HP",
@@ -305,7 +313,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -323,7 +332,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -367,7 +377,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -418,7 +429,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "アニメ『ベストウイッシュ』では、サトシのミジュマルに「水の中で目を開けられない」という弱点が見つかり、特訓することになった。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -466,7 +481,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ]
     },
@@ -510,7 +526,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -525,10 +542,12 @@
           "original_excerpt_reference": "turn156203view3:L39-L43",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「こごえるかぜ」は多くの種が使える技。相性がよいというだけでは固有情報にならない"
         }
       ]
     },
@@ -577,7 +596,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -621,10 +641,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "ヨーテリーの使用技だけでは作品個体の特徴として弱く、単独の選択肢にならない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -856,10 +878,12 @@
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn442002view0:L328-L330",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "夢の具現化という一般的な説明だけで同じ設定のポケモンと衝突する可能性がある"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -894,7 +918,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "アニメ公式",
@@ -1007,10 +1032,12 @@
           "source_scope": "オス・メスによる見た目の違い（種の特徴）",
           "original_excerpt_reference": "turn929054search2",
           "editorial_policy": "公式HP原文はtext、クイズ向けに文脈を補った文章はquiz_text。ゲーム内図鑑は無変更。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "プルリル・ブルンゲルも同じ条件に当てはまり、複数の選択肢が正解になり得る"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1052,10 +1079,12 @@
           "original_excerpt_reference": "turn156203view2:L70-L73",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "個体名とトレーニング名を並べただけで、識別する情報が不足"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1271,7 +1300,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1320,10 +1350,12 @@
           "original_excerpt_reference": "turn156203view2:L70-L73",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "個体名とトレーニング名を並べただけで、識別する情報が不足"
         },
         {
           "kind": "ゲーム公式HP",
@@ -1341,7 +1373,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -1356,10 +1389,12 @@
           "original_excerpt_reference": "turn945133search0",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「わかったり」で終わる不完全な原文断片。後続本文未確認"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1454,10 +1489,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "ゲーム『ポケパーク2』の登場個体",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "エリアマスターと名前を書いた見出しのみで、選択式の説明にならない"
         },
         {
           "kind": "ゲーム公式HP",
@@ -1475,7 +1512,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1596,10 +1634,12 @@
           "original_excerpt_reference": "turn156203view3:L45-L49",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "技名だけで対象ポケモンの固有の説明になっていない"
         }
       ]
     },
@@ -1643,10 +1683,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ]
     },
@@ -1725,7 +1767,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -1739,10 +1782,12 @@
           "source_scope": "ゲーム『マグナゲートと∞迷宮』の物語内の出来事",
           "original_excerpt_reference": "turn640513search0",
           "editorial_policy": "公式HP原文はtext、クイズ向けに文脈を補った文章はquiz_text。ゲーム内図鑑は無変更。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "後続の述語がなく、誰が依頼を受けたのかも示されない"
         }
       ]
     },
@@ -1988,10 +2033,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "アニメに登場した個体・エピソード",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         },
         {
           "kind": "アニメ公式",
@@ -2009,7 +2056,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2078,7 +2126,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2174,10 +2223,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "アニメ個体のグループ名だけで、どのような特徴か説明していない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2208,10 +2259,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "アニメに登場した個体・エピソード",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2277,7 +2330,8 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2384,7 +2438,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ]
     },
@@ -2470,7 +2525,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "アニメ『ベストウイッシュ』の「化石復活！古代怪鳥アーケオス！！」では、アララギ博士とマコモ博士が「はねのかせき」から「さいこどりポケモン」のアーケンを復活させようとしていた。",
+          "question_text_policy": "verified_contextual_rewrite",
+          "question_text_note": "アニメ公式の前後文から誰が何をしたかを補完",
+          "quality_repair": "repaired_from_official_context"
         }
       ]
     },
@@ -2568,10 +2627,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「誰が」「何を」を補わないと不完全な文。作品の一場面であるだけ"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2604,7 +2665,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "アニメ『ベストウイッシュ』には、映画のヒロインに化けるのが大好きで、映画の主役を演じるゾロアが登場する。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2650,7 +2715,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2681,10 +2747,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "アニメに登場した個体・エピソード",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "「きれいずき！？」の見出しだけでは説明文になっていない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2920,7 +2988,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3028,7 +3097,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3064,10 +3134,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3103,7 +3175,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3121,7 +3194,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3258,10 +3332,12 @@
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn338599view0:L165-L170",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "動作主体以外の状況説明がなく、文が途中で終わっている"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3348,7 +3424,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3476,7 +3553,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3522,10 +3600,12 @@
           "source_scope": "『ブラック・ホワイト』における特性の紹介",
           "original_excerpt_reference": "turn839869view0:L384-L386",
           "editorial_policy": "公式HP原文はtext、クイズ向けに文脈を補った文章はquiz_text。ゲーム内図鑑は無変更。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "複数種に共通する特性の説明で対象個体の識別力がない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3621,10 +3701,12 @@
           "original_excerpt_reference": "turn156203view3:L51-L54",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3642,7 +3724,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3660,7 +3743,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3681,7 +3765,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3699,7 +3784,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "メガシビルドンの発電した電気のほとんどは、左右の偽シビビールに送り込まれます。その電力は、ホエルオーのような超大型のポケモンも痺れて動けなくなるほど強力です。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3717,7 +3806,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "メガシンカ状態が終わると、偽シビビールを形成している粘液は溶けて消えてしまいます。0℃以下であればゼリー状のまま保存することができるため、美容や筋トレなどに再利用されることもありますが、効果のほどは定かではないようです。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3751,7 +3844,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "アニメ『ベストウイッシュ』「リグレーと未確認飛行物体！」では、指先のライトを不規則に点滅させる「ブレインポケモン」が登場する。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3984,7 +4081,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4033,10 +4131,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4072,7 +4172,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4121,10 +4222,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4422,7 +4525,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4456,7 +4560,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4503,10 +4608,12 @@
           "original_excerpt_reference": "turn156203view3:L56-L60",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "単なる汎用技「はねやすめ」の効果であり、対象の固有生態・特徴ではない"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4558,7 +4665,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4624,7 +4732,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4728,7 +4837,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4764,7 +4874,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4869,7 +4980,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4904,10 +5016,12 @@
           "quiz_enabled": false,
           "quiz_review": "pending_manual_four_option_check",
           "quiz_review_reason": "要調整：正解名の伏字が必要。劇場版という範囲が明示されないと設定を一般化する恐れ。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「聖剣士の後継者」は単独では種の識別に必要な文脈を欠くため保留"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4943,7 +5057,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -4961,7 +5076,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4999,7 +5115,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5029,7 +5146,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5056,7 +5174,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "アニメ公式",
@@ -5091,7 +5210,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "前脚をふみふみとこすりつけることで、周辺に甘い香りを放ち、周りを魅了します。この香りはアロマテラピー効果を持ち、相手の戦意を喪失させてしまいます。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式見出しの直下の本文",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5120,10 +5243,12 @@
           "quiz_enabled": true,
           "quiz_review": "verbatim_usable",
           "quiz_review_reason": "独立した意味が通る原文のため改変なし",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "性格の一般的な一文だけで、特定できる生態ではない"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5147,10 +5272,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "種の生態・特徴",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "「やんちゃで寂しがり屋」という見出しだけでは識別できず、既存情報と重複"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5179,10 +5306,12 @@
           "quiz_enabled": true,
           "quiz_review": "verbatim_usable",
           "quiz_review_reason": "独立した意味が通る原文のため改変なし",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "抽象的な性格だけで他種との差が弱い。花爆弾の固有構造の問題を優先"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5210,7 +5339,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5229,7 +5359,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5246,7 +5377,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "首元に生えていた葉っぱがマントのようになり、その裏にある毛が光を乱反射して、茎をカモフラージュし、花爆弾が浮いているように見せます。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5278,7 +5413,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5305,7 +5441,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5322,7 +5459,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "頭の上でゆらめいているのは、体内から溢れたほのおエネルギー。ホゲータの感情が高ぶって興奮すると、炎の放出量も増えます。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式見出し直下の本文",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5354,7 +5495,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5381,7 +5523,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "声帯と炎袋の弁は密接な関係があり、炎を吐き出す時に、一緒に声を出す習性がありますが、その声は美しいとは言えません。強い炎を吐き出そうとすると、更に大きな破壊力のある声が出て、相手によってはダメージを受けてしまいます。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5413,7 +5559,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "パワフルで優しい歌声は生命力に溢れ、聴いたものの心を癒し、温かく満ち足りた気持ちにして、相手の戦意を喪失させます。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "一般的な性格の1文から、固有性がある同段落の公式2文目へ",
+          "quality_repair": "repaired_from_official_context"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5441,7 +5591,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5487,10 +5638,12 @@
           "quiz_enabled": true,
           "quiz_review": "verbatim_usable",
           "quiz_review_reason": "独立した意味が通る原文のため改変なし",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "きれい好きという部分だけでは他種と重複しやすい（詳細な羽の構造の問題を別採用）"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5517,7 +5670,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "羽から分泌するジェルが水と汚れを弾くため、体は常にツヤツヤ。特に頭の毛は水分たっぷりのクリームで撫でつけており、乾くとボサボサになってしまいます。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式見出し直下の本文",
+          "quality_repair": "repaired_from_official_context"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5534,7 +5691,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "脚の力が強く、流れの速い場所でも自由に泳ぎ回ることができます。バトルでは高速で何度も相手を蹴りつけて攻撃します。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式見出し直下の本文",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5566,7 +5727,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -5593,7 +5755,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "頭の毛は衝撃を吸収する性質があり、攻撃を受ける際は低く身構えて頭から受け止めます。頭の毛が乱れると、心身ともに調子が悪くなるため、攻撃を受けた後は直ちにジェルで頭を撫でつけてセットし直します。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5636,7 +5802,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "鍛え上げた脚力は凄まじく、優雅に軽く蹴るだけで、トラックを転倒させてしまいます。バトルの時は、尾羽の上部にある器官から、噴水のように大きな水の飾り羽根を振り回し、ウォーターカッターのように、相手を切り裂きます。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式見出し直下の本文",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5679,7 +5849,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "敵に襲われて驚くと、パニックを起こして突進してしまいます。一見太っているようですが、エサ探しで歩き回っているため、実はほとんどが筋肉の力持ちです。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5875,7 +6049,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5919,7 +6094,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -5977,7 +6153,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "アニメ第38話「SOSはワッカネズミから？」では、通常2匹で行動するはずのワッカネズミが、船内で1匹だけ見つかった。",
+          "question_text_policy": "verified_contextual_rewrite",
+          "question_text_note": "公式第38話あらすじに掲載された出来事を1文で記述",
+          "quality_repair": "repaired_from_official_context"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -6047,7 +6227,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -6064,7 +6245,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "しっとりすべすべとした触り心地の皮膚は、弾力があり、剛柔の性質を併せ持っています。感情が高ぶったときは、身体を膨らませて、自分を大きく見せて相手を威嚇するようです。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -6124,7 +6309,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "頭の実から出るオイルは苦味と渋味が強く、食用には向きません。驚いたり、襲われたりするとこのオイルを噴射して敵の動きを鈍らせ、その隙に逃げてしまいます。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         },
         {
           "kind": "ゲーム公式HP",
@@ -6141,7 +6330,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "光合成で作った栄養をオイルにして頭の実に蓄えることで、1週間は飲まず食わずで過ごせます。日差しが強く乾燥した気候を好み、日中はよくひなたぼっこをしているようです。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6231,7 +6424,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ]
     },
@@ -6265,7 +6459,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ]
     },
@@ -6373,7 +6568,11 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "身につけている鎧は、多くの武勲を立てた戦士の鎧であり、グレンアルマが扱うエスパータイプの技のエネルギーの源です。また、体内の炎エネルギーを、鎧のエスパー能力で操り、技を繰り出します。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ]
     },
@@ -6407,7 +6606,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "ソウブレイズは、怨念の染みついた古い鎧を身にまとい、炎とゴーストのエネルギーでできた剣を持っています。戦いになると火力が上がり、大剣に変わります。この大剣で斬られると、生命エネルギーが流出してしまう傷を負います。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ]
     },
@@ -6469,7 +6672,11 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "ハラバリーの生息地では、日没後に「ぐもー、ぐもー」と不思議な音が聞こえます。これは鳴き声ではなく、お腹から出る音で、空腹を主張していることが分かっています。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         },
         {
           "kind": "ゲーム公式HP",
@@ -6486,7 +6693,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "弾力性に富む体を伸び縮みさせて、へそのように見える器官で発電します。発生した大電力のエネルギーは、頭の左右にある目玉のようなコブから放ちます。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -6648,7 +6859,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "食べたものによって色が変わる毒液を駆使して、口から毒液を噴射したり、毒液をつけた鋭いツメで切り裂いたりする攻撃が得意です。危険を感じると体内の毒は急激に濃くなり、吸い込むと3日間動けなくなる程の猛毒となります。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -6787,7 +7002,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "ガケガニのハサミは、挟む力が強く、獲物を掴んだらなかなか離しません。片方のハサミで相手を掴み、もう片方で相手の守りを崩し、急所を突きます。ハサミは、戦いなどで取れても、しばらくすると再生されます。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -7108,7 +7327,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7363,7 +7583,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7405,10 +7626,12 @@
           "original_excerpt_reference": "turn638285view2:L811-L813",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_ambiguous_or_fragment",
+          "quality_note": "公式小説で音に驚いて顔を出しただけの描写で、固有の習性・識別可能な特徴になっていない"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7473,7 +7696,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -7490,7 +7714,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7591,7 +7816,12 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要",
+          "question_text": "巨大な体を支えるため強靭な筋肉を持ち、大きな体を使った物理攻撃の威力は絶大です。ぶ厚い皮下脂肪に守られながら氷雪地帯を回遊します。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         },
         {
           "kind": "ゲーム公式HP",
@@ -7611,7 +7841,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "硬いツノを5本を持っています。その中でも、上あごのツノにはこおりエネルギーが集中し超低温になることで、周囲を凍らせることができます。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7773,7 +8007,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "分厚く頑丈なしっぽの頭は、本体の頭をしっかりと保護しています。しっぽの頭が口を閉じた状態になると、首を振り回して、激しい物理攻撃を繰り出します。その威力は岩盤を粉砕し、鉄骨をひしゃげさせるほどだと言われています。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7886,10 +8124,12 @@
           "original_excerpt_reference": "turn124224view3:L603-L610",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「現代に生き残る恐竜」との説だけでは原典のオカルト雑誌における未確認情報と伝わらない"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7923,7 +8163,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8074,7 +8315,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8118,7 +8360,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8248,7 +8491,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8266,7 +8510,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "メガシンカしたことで、氷のエネルギーが内臓や神経を含む全身に広がりました。これにより、反応速度や筋肉の瞬発力が強化され、技の威力も上がっています。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8286,7 +8534,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": true
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8322,7 +8571,8 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "アニメ公式",
@@ -8358,7 +8608,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8410,7 +8661,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "身体を形作るコインを操って活動し、バトルでもコインを武器とします。コインが密集しているため、とても頑丈で、敵の攻撃を受けた箇所のコインが飛び散ることで衝撃を吸収し、ダメージを軽減します。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8563,7 +8818,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8610,7 +8866,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8643,7 +8900,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -8667,10 +8925,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "種の生態・特徴",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「圧倒的なパワーを誇る」だけではどのポケモンか特定できない"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8703,7 +8963,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -8727,10 +8988,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "種の生態・特徴",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_unresolved_fragment",
+          "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8774,7 +9037,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "スカーレットブックに掲載されている、当時のエリアゼロ観測隊が描いたスケッチに似ているところがあります。額には特徴的な形状のツノがあり、後ろ足のみで体重を支えて、2本の足で歩くような姿をしています。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "本文の公式掲載2文。見出しだけを表示しない",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8818,7 +9085,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "バイオレットブックに掲載されている、当時のエリアゼロ観測隊が描いたスケッチに似ているところがあります。滑らかで光沢のある、金属のような質感の体を持ち、額と首の発光する部位は、長剣のように変形することがあるようです。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "本文の公式掲載2文。見出しだけを表示しない",
+          "quality_repair": "repaired_from_official_context"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8863,7 +9134,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8884,7 +9156,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8917,7 +9190,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8933,7 +9207,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム内図鑑の補足",
@@ -8961,7 +9236,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8982,7 +9258,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9064,7 +9341,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9190,7 +9468,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9279,7 +9558,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9325,7 +9605,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9346,7 +9627,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9381,7 +9663,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9400,7 +9683,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9417,7 +9701,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9463,7 +9748,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9484,7 +9770,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9529,7 +9816,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "question_text": "もっとも目を引く長い首の先にある体毛。ここから雷を放ち、あたりを焼きつくすと言われていますが、詳しいことはわかっていません。",
+          "question_text_policy": "verified_full_official_paragraph",
+          "question_text_note": "公式HPの2文を続けて引用。原文では断定していないことも保持",
+          "quality_repair": "repaired_from_official_context"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9547,7 +9838,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "相手が攻撃技を選択しているとき先に動くことができる、でんきタイプの特殊技「じんらい」を覚えます。電撃を浴びせて攻撃し、相手が攻撃技でないと失敗します。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9592,7 +9887,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9632,10 +9928,12 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "真偽・詳細不明の公式紹介",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "excluded_semantically_ambiguous",
+          "quality_note": "「S字型に発光するツノ」という見出しのみ。背景を補完する本文を未確認"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9679,7 +9977,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9698,7 +9997,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9753,7 +10053,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9819,7 +10120,11 @@
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "殻から分泌される毒を丸めて作った「くさりもち」を人やポケモンに振る舞い、食べた相手を鎖で操ります。「くさりもち」はとても美味しく、口にしたものの奥底に眠る願望や能力を引き出す効果もあるようです。また、泣きまねをして同情を買うなど弱々しい赤子のように振舞うずる賢い一面もあります。",
+          "question_text_policy": "verified_context_from_official_page",
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
         },
         {
           "kind": "ゲーム公式HP",
@@ -9857,7 +10162,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9987,7 +10293,11 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "repaired_from_official_context",
+          "question_text": "長い地上生活のおかげで、ウパーのエラは硬質化しています。体が重く、動きが鈍いですが、エラから強力な毒液を放って身を守ります。",
+          "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
         },
         {
           "kind": "ゲーム公式HP",
@@ -10008,7 +10318,8 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
         }
       ],
       "data_status": "official_source_confirmed"
