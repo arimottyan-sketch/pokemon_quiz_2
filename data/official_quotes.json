@@ -52,11 +52,39 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "ゲーム『ポケパーク2』の登場個体",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_generic_friend_role_no_specific_behavior"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック・ホワイト』公式サイト",
+          "url": "https://www.pokemon.co.jp/series/bw/",
+          "text": "図鑑No.000は、これまでのシリーズを通して一度も使われたことの無い、特別な番号。",
+          "quiz_text": "『ポケットモンスターブラック・ホワイト』で、それまでのシリーズでは一度も使われていなかった特別な図鑑番号「No.000」を与えられた。",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "verified_on": "2026-10-24",
+          "source_scope": "当該ゲーム作品の設定",
+          "audit_gate_reason": "選択肢の意味的一意性未審査につき出題保留"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "2011年劇場版「ビクティニと黒き英雄 ゼクロム／白き英雄 レシラム」公式ストーリー",
+          "url": "https://www.pokemon.co.jp/tv_movie/movie/2011/",
+          "text": "王国復活を願う大地の民の末裔、ドレッド・グランギルは、ビクティニのパワーを利用し、「大地の剣」を動かそうと企むが、その影響により、アイントオークはかつてない異変に巻き込まれてしまう。",
+          "question_text": "2011年の映画では、ドレッド・グランギルが自分の力を利用して「大地の剣」を動かそうとした。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2011年の劇場版の物語内に限る設定・出来事。",
+          "topic_key": "2011年映画の大地の剣",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -102,7 +130,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』に登場するツタージャは、遊び好きで好奇心旺盛で、いつか冒険に出たいと思っている。",
+          "editorial_note": "登場ゲーム名を付し、種全体への一般化を避ける。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -191,6 +221,17 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "エリアマスターと名前を書いた見出しのみで、選択式の説明にならない"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・エリアマスター紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/characters.html",
+          "text": "ポケモン同士の絆(きずな)が大事と考え、きのみパーティーを主催しようとしている。",
+          "question_text": "『ポケパーク2』では、ポケモン同士の絆を大切に考え、きのみパーティーを主催しようとしている。",
+          "quiz_enabled": false,
+          "quiz_review": "pending_option_uniqueness",
+          "scope": "『ポケパーク2』に登場する個体の設定",
+          "verified_on": "2026-10-24"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -314,7 +355,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『Pokémon LEGENDS Z-A』公式では、メガエンブオーは怒りっぽい暴れん坊だが、仲間への義理堅さはメガシンカ前と変わらず、仲間の窮地には命がけで駆け付けると紹介されている。",
+          "editorial_note": "メガエンブオーの説明箇所の前文を補い、断定範囲は公式説明まで。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -325,7 +368,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "メガシンカした姿の身体能力",
+          "source_scope": "メガエンブオーの身体構造",
           "original_excerpt_reference": "turn514424view1:L43-L45",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -333,7 +376,20 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "editorial_note": "メガエンブオーの炎の蛇矛という前文を補い、通常の画像には使わない。",
+          "question_text": "『Pokémon LEGENDS Z-A』公式紹介では、メガエンブオーは炎エネルギーで蛇矛を作り、興奮が頂点に達するとその先端の温度は1万度にもなる。"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・エリアマスター紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/characters.html",
+          "text": "ポカブを昔の自分に重ね合わせ、陰ながら見守ってくれている。",
+          "question_text": "『ポケパーク2』では、ロックエリアでバトル大会を開催し、ポカブを昔の自分に重ね合わせて陰ながら見守っている。",
+          "quiz_enabled": false,
+          "quiz_review": "pending_option_uniqueness",
+          "scope": "『ポケパーク2』に登場する個体の設定",
+          "verified_on": "2026-10-24"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -369,7 +425,7 @@
           "verified_on": "2026-10-22",
           "quote_type": "official_verbatim_excerpt",
           "verification_method": "official_website_text_read_via_web_tool",
-          "source_scope": "ゲーム公式の種の特徴",
+          "source_scope": "ゲーム公式で説明されるミジュマルの生態",
           "topic": "ホタチの用途",
           "quiz_enabled": true,
           "quiz_review": "verbatim_usable",
@@ -378,7 +434,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『Pokémon LEGENDS アルセウス』公式紹介では、ミジュマルは腹に持つ「ホタチ」を、硬いきのみを割るときにも使うと説明されている。",
+          "editorial_note": "ポケモンの行動主体と対象作品を補完。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -519,15 +577,17 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『ポケパーク2』での役割",
+          "source_scope": "ゲーム内の役割",
           "original_excerpt_reference": "turn156203view1:L35-L40",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』で、ポートエリアのエリアマスターを務めるダイケンキが登場する。",
+          "editorial_note": "役職名のみで固有の習性や面白いエピソードが不足。学習用には残す。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -548,6 +608,17 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "「こごえるかぜ」は多くの種が使える技。相性がよいというだけでは固有情報にならない"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・エリアマスター紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/characters.html",
+          "text": "ピカチュウたちにアドバイスをしてくれるぞ。",
+          "question_text": "『ポケパーク2』では、ポートエリアのエリアマスターとしてピカチュウたちにアドバイスをしてくれる。",
+          "quiz_enabled": false,
+          "quiz_review": "pending_option_uniqueness",
+          "scope": "『ポケパーク2』に登場する個体の設定",
+          "verified_on": "2026-10-24"
         }
       ]
     },
@@ -691,6 +762,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn319163search0"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター サン＆ムーン』「ニャビー、旅立ちの時！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_sunmoon/episodes/index_13.html",
+          "text": "ニャビーを指導する年老いたムーランドの姿もあった。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "アニメ『サン＆ムーン』では、年老いたムーランドがニャビーを指導していた。そのムーランドの体調が悪くなり、ニャビーはサトシに助けを求めた。",
+          "source_scope": "アニメ中の特定のムーランドとニャビーの関係",
+          "source_category": "story_character",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -762,6 +846,22 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn785727search3"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "Pokémon GO Fest 2022 Sapporo 公式チケット情報",
+          "url": "https://pokemongo.com/ja/news/gofest2022-sapporo-tickets",
+          "text": "イベント中は『Pokémon GO』に初登場となる色違いの「ペロッパフ」と「ヤナップ」が出現します。運が良ければイベント中に出会えるかもしれません！",
+          "question_text": "『Pokémon GO』では、2022年の「GO Fest」札幌イベントで色違いが初登場した。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2022年開催の『Pokémon GO』ゲームイベント限定の登場履歴。",
+          "topic_key": "GO色違い初登場：札幌",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -796,6 +896,22 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn785727search5"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "Pokémon GO Fest 2022 Berlin 公式開催報告",
+          "url": "https://pokemongo.com/ja/news/gofest-2022-berlin-recap",
+          "text": "今回のイベントは、参加したトレーナーの皆さんにとって色違いの「バオップ」や色違いの「タマゲタケ」と出会える初めての機会となりました！",
+          "question_text": "『Pokémon GO』では、2022年の「GO Fest」ベルリンイベントが、色違いに初めて出会える機会になった。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2022年開催の『Pokémon GO』ゲームイベントで初めて出会える機会。",
+          "topic_key": "GO色違い初登場：ベルリン",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -830,6 +946,22 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn914860search2"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "Pokémon GO Fest 2022 Seattle 公式チケット情報",
+          "url": "https://pokemongo.com/ja/news/gofest2022-seattle-tickets",
+          "text": "色違いの「ミツハニー」と「ヒヤップ」が『Pokémon GO』に初登場します。",
+          "question_text": "『Pokémon GO』では、2022年の「GO Fest」シアトルイベントで色違いが初登場した。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2022年開催の『Pokémon GO』ゲームイベント限定の登場履歴。",
+          "topic_key": "GO色違い初登場：シアトル",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -884,6 +1016,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "夢の具現化という一般的な説明だけで同じ設定のポケモンと衝突する可能性がある"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "不思議のダンジョン「マグナゲートと∞迷宮」公式・登場ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/dungeon_magnagate/outline/pokemon_01.html",
+          "text": "冒険は、主人公に助けを求めるムンナの声から始まるぞ！　ムンナを追いかける、サザンドラ。その理由はいったい!?",
+          "question_text": "『ポケモン不思議のダンジョン マグナゲートと∞迷宮』では、主人公に助けを求める声が冒険の始まりとなり、サザンドラに追われている。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ゲーム「マグナゲートと∞迷宮」の作品内冒頭の出来事。",
+          "topic_key": "マグナゲート冒険の発端",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1038,6 +1186,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "プルリル・ブルンゲルも同じ条件に当てはまり、複数の選択肢が正解になり得る"
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／ケンホロウ（『ウルトラサン・ウルトラムーン』の記述）",
+          "url": "https://www.pokemon.jp/special/forme/zukan03/zukan3-3.html",
+          "text": "オスは縄張りを守るときに頭の飾りを揺らして相手を威嚇する。",
+          "question_text": "オスは縄張りを守るとき、頭の飾りを揺らして相手を威嚇する。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "オスの威嚇行動",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1267,6 +1431,23 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ココロモリ／SV11W 034/086・ホワイトフレア",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47656/regu/all",
+          "text": "いろいろな 周波数の 音波を 鼻の 穴から 発射する。 岩を 破壊する 音波も 出す。",
+          "question_text": "鼻の穴からさまざまな周波数の音波を発射し、岩を破壊するほどの音波も出せる。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-24",
+          "verification_method": "公式カード個別ページのポケモン名・型番・説明文と公式商品紹介の発売日を照合",
+          "source_scope": "ポケモンカードに印刷された説明文（別バージョンのゲーム内図鑑由来の可能性あり）",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
+          "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1297,11 +1478,11 @@
           "source_scope": "『ブラック・ホワイト』の特性・バトル仕様としての紹介",
           "original_excerpt_reference": "turn839869view0:L229-L232",
           "editorial_policy": "公式HP原文はtext、クイズ向けに文脈を補った文章はquiz_text。ゲーム内図鑑は無変更。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_generic_ability_effect_not_species_unique"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1319,6 +1500,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn681728search1"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「ソウリュウジム！アイリスVSシャガ！！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes09/",
+          "text": "初めてシャガとバトルをした時、アイリスの身勝手に対してドリュウズは心を閉ざしてしまった…。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "アニメ『ベストウイッシュ』では、アイリスの身勝手な行動が原因で心を閉ざしてしまったドリュウズが、後にアイリスと再びシャガとのバトルに挑む。",
+          "source_scope": "アニメのアイリスの手持ち個体の出来事",
+          "source_category": "story_character",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1449,6 +1643,22 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "不思議のダンジョン「マグナゲートと∞迷宮」公式・登場ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/dungeon_magnagate/outline/pokemon_01.html",
+          "text": "宿場町の大工さん、ドテッコツとドッコラーたち。けれど、今はなにか様子がおかしいようだ？",
+          "question_text": "『ポケモン不思議のダンジョン マグナゲートと∞迷宮』では、ドッコラーたちとともに宿場町の大工として登場する。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ゲーム「マグナゲートと∞迷宮」の登場個体の職業。",
+          "topic_key": "マグナゲートの宿場町の大工",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1505,7 +1715,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『ポケパーク2』での役割",
+          "source_scope": "ゲーム内の役割",
           "original_excerpt_reference": "turn156203view1:L64-L70",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -1513,7 +1723,20 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、ローブシンが、はぐれ者ぞろいのスクラップエリアをまとめている。",
+          "editorial_note": "ゲーム固有の役割と分かるよう補完。"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・エリアマスター紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/characters.html",
+          "text": "スクラップエリアのポケモンたちと仲良くなるには、ローブシンに認められる必要があるポケモンもいるぞ。",
+          "question_text": "『ポケパーク2』では、はぐれ者ぞろいのスクラップエリアをまとめ、仲良くなるにはこのポケモンに認められる必要がある仲間もいる。",
+          "quiz_enabled": false,
+          "quiz_review": "pending_option_uniqueness",
+          "scope": "『ポケパーク2』に登場する個体の設定",
+          "verified_on": "2026-10-24"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1896,6 +2119,24 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn114488search1"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「恋するモンメンは風に乗って！」（2011年4月28日放送）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes03/",
+          "text": "カップル成立のためには自分の強さを見せつけなければいけないのが、モンメンたちのルール。",
+          "question_text": "アニメ『ベストウイッシュ』では、ある時期になると集団で行動し、カップルになると飛び立つという。カップル成立には自分の強さを見せつける必要がある。",
+          "quiz_text": "アニメ『ベストウイッシュ』では、ある時期になると集団で行動し、カップルになると飛び立つという。カップル成立には自分の強さを見せつける必要がある。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: official context and standalone learning value",
+          "verification_method": "テレビ東京公式のあらすじ本文を直接閲覧。原文の抜粋はtext、二つの記述を合わせた最小限の設問文章はquestion_text。",
+          "source_scope": "アニメ「ベストウイッシュ」で説明されたモンメンたちの習性。デントの発言が根拠であるため、全作品共通の設定とは断言しない。",
+          "quiz_attribution_scope": "アニメ内で説明されたモンメンの習性",
+          "require_special_form_image": false,
+          "verified_on": "2026-10-24",
+          "quality_note": "図鑑文と内容が異なり、出題文は単独で成立。カップル成立の際の具体的な行動に識別性があり、接客での紹介にも使用できる。"
         }
       ]
     },
@@ -1923,6 +2164,23 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・エルフーン／SV5K 008/071・ワイルドフォース",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45154",
+          "text": "綿を まき散らし イタズラする。 水を かけると 重くなって 動けなくなり 観念するぞ。",
+          "question_text": "綿をまき散らしていたずらするが、水をかけられると重くなって動けなくなり、観念する。",
+          "first_release_on": "2024-01-26",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv5/",
+          "verified_on": "2026-10-24",
+          "verification_method": "公式カード個別ページのポケモン名・型番・説明文と公式商品紹介の発売日を照合",
+          "source_scope": "ポケモンカードに印刷された説明文（別バージョンのゲーム内図鑑由来の可能性あり）",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
+          "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
         }
       ]
     },
@@ -1949,6 +2207,22 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「SHINKA NO ISHI」公式商品紹介",
+          "url": "https://www.pokemon.co.jp/goods/2022/06/220617_to01.html",
+          "text": "マスコット SHINKA NO ISHI チュリネ＆たいようのいし→ドレディア　1,650円（★）",
+          "question_text": "「たいようのいし」を使ってドレディアに進化する。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
+          "topic_key": "進化石：たいようのいし",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2003,6 +2277,22 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／バスラオ（『ウルトラサン・ウルトラムーン』の記述）",
+          "url": "https://www.pokemon.jp/special/forme/zukan04/zukan4-3.html",
+          "text": "「あかすじ」と「あおすじ」のバスラオがいるが、なぜ体の一部が違うのかは不明。赤と青の違いで仲が悪く、いつも争っている。",
+          "question_text": "「あかすじ」と「あおすじ」の姿があり、その違いの理由は不明。赤と青では仲が悪く、いつも争っている。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "姿の個体差と種内関係",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2047,7 +2337,7 @@
           "text": "普段はとっても大人しくて、トレーナーと一緒に砂風呂を楽しんでいるのだという。",
           "quiz_text": "アニメ『ベストウイッシュ』の温泉リゾートでは、ふだんはおとなしく、トレーナーと一緒に砂風呂を楽しむ群れが登場する。",
           "quiz_enabled": true,
-          "source_scope": "アニメに登場した砂風呂の群れ",
+          "source_scope": "ゲーム内の個体設定",
           "quiz_review": "web_original_passage_checked_2026-10-22",
           "verified_on": "2026-10-22",
           "verification_method": "official_web_source_opened_manually",
@@ -2057,7 +2347,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "アニメ『ベストウイッシュ』では、温泉リゾートの砂風呂にいるメグロコたちは、普段はおとなしく、トレーナーと一緒に砂風呂を楽しんでいると紹介された。",
+          "editorial_note": "誤記していた作品名「ポケパーク2」を訂正。テレビ東京「ミジュマル！メグロコ！危機一髪！！」2010-09-30公式あらすじ。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2119,7 +2411,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『ポケパーク2』の個体設定",
+          "source_scope": "ゲーム内の特定個体",
           "original_excerpt_reference": "turn156203view2:L49-L52",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -2127,7 +2419,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "added_game_context_preserves_uncertainty",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、ポケパークの門番をしているワルビアルが、タブンネのことを気にしているような描写がある。",
+          "editorial_note": "ゲーム名と「気にしているようだ」という原文の不確実性を残す。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2190,6 +2484,22 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "身体能力"
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／ヒヒダルマ（隠れ特性・フォルム変化）",
+          "url": "https://www.pokemon.jp/special/forme/zukan01/zukan1-9.html",
+          "text": "ダルマモードになると、タイプが「ほのお」から「ほのお・エスパー」に変わり、精神力で戦うんじゃ。",
+          "question_text": "隠れ特性「ダルマモード」で姿を変えると、タイプが「ほのお」から「ほのお・エスパー」になり、精神力で戦う。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "ヒヒダルマの隠れ特性・タイプ変化",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2326,12 +2636,12 @@
           "quiz_review": "edited_from_official_source",
           "quiz_review_reason": "前後の文脈・作品名を補ったクイズ用の文章。公式原文はtextに保持。",
           "context_check": "公式マグナゲート・ポケモンパラダイスの施設紹介（ズルッグわざっぐ）",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "source_excerpt_directly_checked_in_this_revision": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_uninformative_facility_description_not_about_species"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2386,6 +2696,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_full_text_from_search",
           "review_reference": "turn861897search3"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・世界紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/world.html",
+          "text": "不思議な空間を飛ぶアトラクション「ワンダーフライト」を管理している。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "ゲーム『ポケパーク2』では、シンボラーがワンダーゾーンのボスで、空を飛ぶアトラクション「ワンダーフライト」を管理している。",
+          "source_scope": "ゲーム『ポケパーク2』に登場する個体の役割",
+          "source_category": "game_character_fun_fact",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2439,7 +2762,28 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "デスカーンは、直接攻撃をしてきた相手の特性を「ミイラ」に変えてしまう特性を持つ。",
+          "editorial_note": "公式だいすきクラブ掲載のデスカーンの特性について、使い手を主語にした。",
+          "source_scope": "ゲーム上の固有特性"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式サイト・ウィッシュパーク",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/world.html",
+          "text": "ポケモンたちがおかしくなったのは、デスカーンのしわざだった！",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、スイートゾーンのボスとしてケーキ作りのアトラクションを管理し、ケーキを食べたポケモンたちがおかしくなる原因となった。",
+          "quiz_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、スイートゾーンのボスとしてケーキ作りのアトラクションを管理し、ケーキを食べたポケモンたちがおかしくなる原因となった。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "verified_on": "2026-10-24",
+          "quiz_review": "official_primary_page_directly_opened_2026-10-24",
+          "source_scope": "ゲーム『ポケパーク2』のスイートゾーンのボス個体と事件",
+          "source_excerpt_type": "verbatim_contiguous_short_excerpt",
+          "verification_method": "first_party_official_site_open_and_text_read",
+          "editorial_policy": "原文 text は変更しない。出題用 question_text は出典作品名と必要な主語・文脈のみ補う。",
+          "answer_uniqueness_review": "individual_stem_reviewed; every_possible_distractor_not_manually_checked",
+          "date_added": "2026-10-24"
         }
       ]
     },
@@ -2456,6 +2800,25 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn962716search0"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「ネジ山の激闘！アバゴーラの奇跡！！（後編）」（2012年4月26日）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes7/",
+          "text": "その「時の門」を安定させるには“こだいがめポケモン”プロトーガの生体エネルギーが必要なのだ…。",
+          "question_text": "アニメ『ベストウイッシュ』「ネジ山の激闘！アバゴーラの奇跡！！」では、ロケット団が過去へ行くために利用しようとしたネジ山の「時の門」を安定させるには、プロトーガの生体エネルギーが必要だとされていた。",
+          "quiz_text": "アニメ『ベストウイッシュ』「ネジ山の激闘！アバゴーラの奇跡！！」では、ロケット団が過去へ行くために利用しようとしたネジ山の「時の門」を安定させるには、プロトーガの生体エネルギーが必要だとされていた。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: direct official broadcast synopsis and meaningful standalone question",
+          "verification_method": "テレビ東京アニメ公式サイトの該当回あらすじ本文を閲覧し、連続した抜粋をtextに保存。表示文は作品名・主語・最低限の文脈のみを追加。",
+          "source_scope": "アニメの「時の門」とロケット団の計画に関する設定。別作品や全個体で時間移動できるとは断定しない。",
+          "quiz_attribution_scope": "アニメ内の特定の出来事・設定",
+          "verified_on": "2026-10-24",
+          "quality_note": "古代ポケモンの身体エネルギーと時空の門という意外性があり、会話につなげやすい。",
+          "evidence_ref_at_collection": "turn117415view1:L72-L77",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2712,11 +3075,27 @@
           "original_excerpt_reference": "turn156203view1:L76-L90",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_plot_fragment_low_customer_conversation_value"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "2010年劇場版「幻影の覇者 ゾロアーク」公式ストーリー",
+          "url": "https://www.pokemon.co.jp/tv_movie/movie/2010/",
+          "text": "このライコウ・エンテイ・スイクンこそ、コーダイがあやつる、ゾロアークの化けた姿だったのだ！",
+          "question_text": "映画『幻影の覇者』では、コーダイに操られ、ライコウ・エンテイ・スイクンの姿に化けた。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2010年の映画中の特定個体の出来事。一般的な生態と混同しない。",
+          "topic_key": "2010年映画の幻影",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2753,6 +3132,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "「きれいずき！？」の見出しだけでは説明文になっていない"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「SHINKA NO ISHI」公式商品紹介",
+          "url": "https://www.pokemon.co.jp/goods/2022/06/220617_to01.html",
+          "text": "マスコット SHINKA NO ISHI チラーミィ＆ひかりのいし→チラチーノ　1,650円（★）",
+          "question_text": "「ひかりのいし」を使ってチラチーノに進化する。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
+          "topic_key": "進化石：ひかりのいし",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2883,6 +3278,24 @@
           "audit_gate_reason": "前後が省略された場面のみ",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式サイト・ウィッシュパーク",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/world.html",
+          "text": "強い力を持っているが、自分で戦うことは好まない。",
+          "question_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、ファイトゾーンのボスとして登場し、強い力を持つものの自分で戦うことは好まない。",
+          "quiz_text": "ゲーム『ポケパーク2 ～Beyond the World～』では、ファイトゾーンのボスとして登場し、強い力を持つものの自分で戦うことは好まない。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "verified_on": "2026-10-24",
+          "quiz_review": "official_primary_page_directly_opened_2026-10-24",
+          "source_scope": "ゲーム『ポケパーク2』のファイトゾーンのボス個体",
+          "source_excerpt_type": "verbatim_contiguous_short_excerpt",
+          "verification_method": "first_party_official_site_open_and_text_read",
+          "editorial_policy": "原文 text は変更しない。出題用 question_text は出典作品名と必要な主語・文脈のみ補う。",
+          "answer_uniqueness_review": "individual_stem_reviewed; every_possible_distractor_not_manually_checked",
+          "date_added": "2026-10-24"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2985,11 +3398,11 @@
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn737773view0:L150-L155",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_noncontextual_plot_fragment"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3008,6 +3421,26 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search1",
           "sha256_text": "ca2121e627f525dfcbf1f47eeae9b10d10e2c75dbe2153bedfe0bf3794f7e40e"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「サトシとバタフリー！また会う日まで！！」（2013年6月13日）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes11/",
+          "text": "この島では、スワンナなどの「渡り」を行うポケモンたちが必ず立ち寄る寄港地であるという。",
+          "question_text": "アニメ『ベストウイッシュ』「サトシとバタフリー！また会う日まで！！」では、デコロラ諸島のワタリ島は、スワンナなどの渡りを行うポケモンたちが必ず立ち寄る島だと紹介された。",
+          "quiz_text": "アニメ『ベストウイッシュ』「サトシとバタフリー！また会う日まで！！」では、デコロラ諸島のワタリ島は、スワンナなどの渡りを行うポケモンたちが必ず立ち寄る島だと紹介された。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: direct official broadcast synopsis and meaningful standalone question",
+          "verification_method": "テレビ東京アニメ公式サイトの該当回あらすじ本文を閲覧し、連続した抜粋をtextに保存。表示文は作品名・主語・最低限の文脈のみを追加。",
+          "source_scope": "アニメ中のワタリ島についての説明。全世界のスワンナが同じ島に立ち寄るとは言わない。",
+          "quiz_attribution_scope": "アニメ内の特定の出来事・設定",
+          "verified_on": "2026-10-24",
+          "quality_note": "群れで渡りをするという特徴を、アニメの島の設定と一緒に紹介できる。",
+          "evidence_ref_at_collection": "turn937323view1:L26-L30",
+          "require_special_form_image": false,
+          "source_context_excerpt": "ワタリ島にやってきたサトシたちは、“さなぎポケモン”トランセルの群れが“ちょうちょポケモン”バタフリーに進化する瞬間に立ち会う。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3026,6 +3459,22 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn450891search0",
           "sha256_text": "fe596fa788350f771a7bb8b941c5d43c2772520b5ff5ebe9a997a3d78b6aeff1"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケとる』2016年クリスマス・ポケモンサファリ公式情報",
+          "url": "https://www.pokemon.co.jp/ex/poketoru/news/post.php/491/",
+          "text": "・バニプッチ～クリスマス～（こおり／むれをなす）　※初登場",
+          "question_text": "『ポケとる』では2016年のクリスマスイベントで特別な姿が初登場し、能力は「むれをなす」だった。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2016年の『ポケとる』クリスマスバージョンの能力。通常個体の本編能力ではない。",
+          "topic_key": "ポケとるクリスマス：むれをなす",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3044,6 +3493,23 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search2",
           "sha256_text": "c3ac9534ad60f1a79ee5b57e39528f4b230a6a12ddef167511c521fd57447f78"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・バニリッチ／SV4M 018/066・未来の一閃",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44330",
+          "text": "マイナス１００度の 冷気で 敵を 凍らせるが 命までは 奪わない 優しい 気質。",
+          "question_text": "マイナス100度の冷気で敵を凍らせる一方、命までは奪わない優しい気質を持つ。",
+          "first_release_on": "2023-10-27",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4/",
+          "verified_on": "2026-10-24",
+          "verification_method": "公式カード個別ページのポケモン名・型番・説明文と公式商品紹介の発売日を照合",
+          "source_scope": "ポケモンカードに印刷された説明文（別バージョンのゲーム内図鑑由来の可能性あり）",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
+          "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3140,6 +3606,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_unresolved_fragment",
           "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／シキジカ・メブキジカ（『ウルトラサン・ウルトラムーン』の記述）",
+          "url": "https://www.pokemon.jp/special/forme/zukan02/zukan2-17.html",
+          "text": "メブキジカは、体毛ではなく、季節によってツノに生える草木が変わる。また、見た目だけでなく、その季節の草と同じ香りに変わる。",
+          "question_text": "季節によってツノに生える草木が変わり、その季節の草と同じ香りにもなる。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "ツノの季節変化と香り",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3176,7 +3658,8 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "added_specific_owner_and_unexpected_swap_from_same_official_episode",
+          "question_text": "アニメ『ベストウイッシュ』では、アイリスのエモンガが、指示を受けずに「ボルトチェンジ」で交代し、サトシやデントのポケモンまで引きずり出した。木の上で皆の慌てる様子を嬉しそうに眺めていた。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3187,7 +3670,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『マグナゲートと∞迷宮』での個体設定",
+          "source_scope": "ゲーム内の個体設定",
           "original_excerpt_reference": "turn156203view0:L25-L27",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -3195,7 +3678,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "ゲーム『ポケモン不思議のダンジョン マグナゲートと∞迷宮』では、熱いハートのエモンガと引っ込み思案のノコッチが凸凹コンビとして登場する。",
+          "editorial_note": "ゲーム名が分からない孤立文を作品固有の紹介として補完。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3356,6 +3841,22 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search6",
           "sha256_text": "087ef7251a442a9b37cb6ba64d53a106bd4c03ff1bf2104b3c331268d1acbceb"
+        },
+        {
+          "kind": "ポケモン公式大会ニュース",
+          "source_title": "『ポケモンジャパンチャンピオンシップス2025』公式／サイドイベント告知",
+          "url": "https://www.pokemon.co.jp/ex/pjcs/2025/news/250606_03/",
+          "text": "会場内の『Pokémon HOME』コーナーにて、昨年8月に開催された「ポケモンワールドチャンピオンシップス2024」ゲーム部門シニアディビジョンのチャンピオンのポケモンをプレゼントするよ！プレゼントされるポケモンは、モロバレル。",
+          "question_text": "PJCS2025公式サイドイベントでは、2024年のポケモンWCSゲーム部門シニアディビジョン王者のポケモンとして、会場でのプレゼント対象に選ばれた。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "2025年PJCS公式告知における2024年大会王者由来の個体。野生のモロバレル全般の特徴とはしない。",
+          "topic_key": "WCS2024王者のポケモンをPJCS2025で紹介・配布",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3421,11 +3922,11 @@
           "source_scope": "『ブラック・ホワイト』の特性・バトル仕様としての紹介",
           "original_excerpt_reference": "turn839869view0:L236-L238",
           "editorial_policy": "公式HP原文はtext、クイズ向けに文脈を補った文章はquiz_text。ゲーム内図鑑は無変更。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_generic_ability_effect_not_species_unique"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3554,7 +4055,8 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "restored_missing_antecedent_moss_from_official_summary",
+          "question_text": "アニメ『ベストウイッシュ』のテッシード研究所では、テッシードが岩や石の成分を体内に取り込むことによって、ポケモンの能力を高めるコケが作られていた。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3721,11 +4223,11 @@
           "original_excerpt_reference": "turn156203view4:L40-L42",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_bare_fragment_name_only_no_explanatory_context"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3736,7 +4238,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "メガシンカした姿の機能",
+          "source_scope": "メガシンカ後の機能",
           "original_excerpt_reference": "turn156203view4:L40-L42",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -3744,7 +4246,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『Pokémon LEGENDS Z-A』で、メガシビルドンはメガシンカ前と比べて遊泳速度が約2倍に上がる。",
+          "editorial_note": "メガシンカ後の特徴。通常の姿で画像出題しない。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3752,7 +4256,7 @@
           "url": "https://www.pokemon.co.jp/ex/legends_z-a/ja/pokemon/251106_04/",
           "text": "メガシンカ状態が終わると、偽シビビールを形成している粘液は溶けて消えてしまいます。",
           "source_excerpt_type": "公式掲載文の一部を連続した原文のまま抜粋",
-          "source_scope": "特定のすがたにのみ適用",
+          "source_scope": "メガシンカ後の粘液",
           "form_scope": "メガシビルドン限定",
           "topic": "メガシビルドンの粘液",
           "proof_ref": "turn417373search1",
@@ -3762,11 +4266,13 @@
           "quiz_review": "candidate_only_pending_four_choice_uniqueness_and_form_images",
           "quiz_enabled": false,
           "form_image_required": true,
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『Pokémon LEGENDS Z-A』では、メガシビルドンがメガシンカを終えると、左右の偽シビビールを形成していた粘液が溶けて消える。",
+          "editorial_note": "後続の粘液の保存・再利用説明と同一内容を含み、短い方を重複問題として保留。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3788,7 +4294,9 @@
           "quality_repair": "repaired_from_official_context",
           "question_text": "メガシビルドンの発電した電気のほとんどは、左右の偽シビビールに送り込まれます。その電力は、ホエルオーのような超大型のポケモンも痺れて動けなくなるほど強力です。",
           "question_text_policy": "verified_context_from_official_page",
-          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変",
+          "editorial_note": "メガシンカ前の姿の画像と混同させない",
+          "source_scope": "メガシンカ後の発電"
         },
         {
           "kind": "ゲーム公式HP",
@@ -3810,7 +4318,9 @@
           "quality_repair": "repaired_from_official_context",
           "question_text": "メガシンカ状態が終わると、偽シビビールを形成している粘液は溶けて消えてしまいます。0℃以下であればゼリー状のまま保存することができるため、美容や筋トレなどに再利用されることもありますが、効果のほどは定かではないようです。",
           "question_text_policy": "verified_context_from_official_page",
-          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変",
+          "editorial_note": "メガシンカ前の姿の画像と混同させない",
+          "source_scope": "メガシンカ後の粘液"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3902,6 +4412,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「ヒトモシ屋敷のこわ～いお話！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes03/",
+          "text": "実はこれ\"ろうそくポケモン\"ヒトモシの仕業！",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "アニメ『ベストウイッシュ』の「ヒトモシ屋敷のこわ～いお話！」では、洋館の棚や花瓶が勝手に動いてサトシたちを襲ったが、それはヒトモシの仕業だった。",
+          "source_scope": "アニメの洋館でのヒトモシのいたずら",
+          "source_category": "story_character_fun_fact",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3918,6 +4441,22 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_text_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "公式グッズ紹介",
+          "source_title": "ポケモンセンター「SHINKA NO ISHI」公式商品紹介",
+          "url": "https://www.pokemon.co.jp/goods/2022/06/220617_to01.html",
+          "text": "マスコット SHINKA NO ISHI ランプラー＆やみのいし→シャンデラ　1,650円（★）",
+          "question_text": "「やみのいし」を使ってシャンデラに進化する。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
+          "topic_key": "進化石：やみのいし",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -3934,6 +4473,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_text_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケパーク2 ～Beyond the World～』公式・世界紹介",
+          "url": "https://www.pokemon.co.jp/ex/pokepark2/outline/world.html",
+          "text": "派手なものとダンスが好き。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "ゲーム『ポケパーク2』では、シャンデラがゴージャスゾーンのボスとして登場。派手なものとダンスが好きで、「ゴージャスダンシング」を管理している。",
+          "source_scope": "ゲーム『ポケパーク2』に登場する個体の好きなもの・役割",
+          "source_category": "game_character_fun_fact",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -4012,6 +4564,18 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn709780search1",
           "sha256_text": "fd2595997d9dad9dba13fb6c57f8425ac9a47ec49546de8ed957b6211bbe7c27"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック２・ホワイト２』公式サイト・イッシュ図鑑を完成させると良いことが！",
+          "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon07.html",
+          "text": "自然保護区では、イッシュ地方では出会えないポケモンや、とても珍しい色違いのオノノクスと出会えるぞ！",
+          "quiz_text": "『ポケットモンスターブラック２・ホワイト２』で、イッシュ図鑑の指定されたポケモンをすべて見つけると行ける「自然保護区」で、珍しい色違いの個体に出会える。",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "verified_on": "2026-10-24",
+          "source_scope": "当該ゲーム作品の設定",
+          "audit_gate_reason": "選択肢の意味的一意性未審査につき出題保留"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4048,6 +4612,22 @@
           "audit_gate_reason": "事件の断片のみ",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケとる』2016年クリスマス・ポケモンサファリ公式情報",
+          "url": "https://www.pokemon.co.jp/ex/poketoru/news/post.php/491/",
+          "text": "・クマシュン～クリスマス～（こおり／４つのちから＋）　※初登場",
+          "question_text": "『ポケとる』では2016年のクリスマスイベントで特別な姿が初登場し、能力は「４つのちから＋」だった。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "2016年の『ポケとる』クリスマスバージョンの能力。通常個体の本編能力ではない。",
+          "topic_key": "ポケとるクリスマス：４つのちから＋",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4072,17 +4652,19 @@
           "text": "ツンベアーたちは容赦なく\"こごえるかぜ\"を放って襲ってくるのだった。",
           "quiz_text": "アニメ『ベストウイッシュ』では、嵐の山で群れが現れ、ニャースたちに「こごえるかぜ」を放つ場面が描かれた。",
           "quiz_enabled": true,
-          "source_scope": "アニメに登場した山中の群れの行動",
+          "source_scope": "アニメ内の場面",
           "quiz_review": "web_original_passage_checked_2026-10-22",
           "verified_on": "2026-10-22",
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn338599view1:L127-L134",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "アニメ『ベストウイッシュ』では、サトシたちにツンベアーの群れが「こごえるかぜ」を放って襲いかかる場面がある。",
+          "editorial_note": "前後の話数・登場人物について今回公式原文との再照合をしていないため表示用文は参考のみ。出題は保留。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4099,6 +4681,25 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「チーム・イーブイ出動せよ！ポケモンレスキュー隊！！」（2012年11月15日）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes9/",
+          "text": "好戦的な“けっしょうポケモン”フリージオはダム管理室の扉を凍らせ、デビーを閉じ込めてしまう！",
+          "question_text": "アニメ『ベストウイッシュ』「チーム・イーブイ出動せよ！ポケモンレスキュー隊！！」では、好戦的なフリージオがダム管理室の扉を凍らせ、現場に駆けつけたデビーを閉じ込めた。",
+          "quiz_text": "アニメ『ベストウイッシュ』「チーム・イーブイ出動せよ！ポケモンレスキュー隊！！」では、好戦的なフリージオがダム管理室の扉を凍らせ、現場に駆けつけたデビーを閉じ込めた。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: direct official broadcast synopsis and meaningful standalone question",
+          "verification_method": "テレビ東京アニメ公式サイトの該当回あらすじ本文を閲覧し、連続した抜粋をtextに保存。表示文は作品名・主語・最低限の文脈のみを追加。",
+          "source_scope": "アニメに登場した好戦的な個体が起こした出来事。種全体が人を閉じ込める習性とは言わない。",
+          "quiz_attribution_scope": "アニメ内の特定の出来事・設定",
+          "verified_on": "2026-10-24",
+          "quality_note": "氷の能力を使った具体的な事件で、種の能力に関する話題を広げやすい。",
+          "evidence_ref_at_collection": "turn337969view0:L46-L51",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4163,7 +4764,7 @@
           "text": "“快傑ア☆ギルダー”とアギルダーが現れ、犯人逮捕に協力するのだった。",
           "quiz_text": "アニメ『ベストウイッシュ』では、ホドモエシティのローカルヒーロー「快傑ア☆ギルダー」とともに泥棒の逮捕を手伝う個体が登場した。",
           "quiz_enabled": true,
-          "source_scope": "アニメに登場したローカルヒーローの相棒",
+          "source_scope": "アニメ内のチャールズの相棒",
           "quiz_review": "web_original_passage_checked_2026-10-22",
           "verified_on": "2026-10-22",
           "verification_method": "official_web_source_opened_manually",
@@ -4173,7 +4774,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_incomplete_episode_context",
+          "question_text": "アニメ『ベストウイッシュ』では、ホドモエシティでバイク乗りのチャールズと行動する「からぬけポケモン」のアギルダーが、町のローカルヒーローとともに泥棒の逮捕に協力した。",
+          "editorial_note": "テレビ東京2011-12-01公式あらすじで本文の主語と場面を確認。作品中の特定個体。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4293,6 +4896,23 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ゴルーグ／SV5K 036/071・ワイルドフォース",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45182",
+          "text": "古代人の お城の 壁には ゴルーグが ビームを 撃つための 砲台の ような 台座が ある。",
+          "question_text": "古代人の城の壁には、このポケモンがビームを撃つための砲台のような台座が設けられている。",
+          "first_release_on": "2024-01-26",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv5/",
+          "verified_on": "2026-10-24",
+          "verification_method": "公式カード個別ページのポケモン名・型番・説明文と公式商品紹介の発売日を照合",
+          "source_scope": "ポケモンカードに印刷された説明文（別バージョンのゲーム内図鑑由来の可能性あり）",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
+          "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4341,6 +4961,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「アフロでGO！バッフロンはNO！！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes06/",
+          "text": "バッフロンは、生息地に入る者を敵とみなして攻撃する習性を持つという。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "アニメ『ベストウイッシュ』では、生息地に入る者を敵とみなして攻撃する習性があるとされ、ジョーイさんは「バッフロンよけ」としてアフロヘアーのカツラを渡した。",
+          "source_scope": "アニメにおける生態説明とアフロの対処法",
+          "source_category": "nature_plus_fun_fact",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4404,6 +5037,26 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「大空と大地のタッグバトル！」（2012年10月18日）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes9/",
+          "text": "「ドリルウィング」、「ほーるバード」、「つばめクロー」など、誰も見たことのない、コンビネーション抜群の合体技を繰り出す２体！",
+          "question_text": "アニメ『ベストウイッシュ』「大空と大地のタッグバトル！」では、ソラン＆リーク兄弟のウォーグルがモグリューと組み、「ドリルウィング」や「ほーるバード」などの合体技を繰り出した。",
+          "quiz_text": "アニメ『ベストウイッシュ』「大空と大地のタッグバトル！」では、ソラン＆リーク兄弟のウォーグルがモグリューと組み、「ドリルウィング」や「ほーるバード」などの合体技を繰り出した。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: direct official broadcast synopsis and meaningful standalone question",
+          "verification_method": "テレビ東京アニメ公式サイトの該当回あらすじ本文を閲覧し、連続した抜粋をtextに保存。表示文は作品名・主語・最低限の文脈のみを追加。",
+          "source_scope": "アニメのソラン＆リーク兄弟のパートナーによる合体技。ゲームで同名の通常技を使えるとは言わない。",
+          "quiz_attribution_scope": "アニメ内の特定の出来事・設定",
+          "verified_on": "2026-10-24",
+          "quality_note": "飛行するウォーグルと地中のモグリューの意外な連携で接客の雑談に向く。",
+          "evidence_ref_at_collection": "turn337969view0:L70-L75",
+          "require_special_form_image": false,
+          "source_context_excerpt": "突然、“ゆうもうポケモン”ウォーグルと“もぐらポケモン”モグリュー、そのトレーナーの、ソラン＆リーク兄弟が現れ、サトシとデントにタッグバトルを挑んできた！！"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4516,7 +5169,7 @@
           "text": "どうやら葉っぱの服を着たキバゴを食料と間違えてしまったらしい！",
           "quiz_text": "アニメ『ベストウイッシュ』では、葉っぱの服を着たキバゴを食べ物と勘違いし、巣穴へ連れ去る群れが登場する。",
           "quiz_enabled": true,
-          "source_scope": "アニメに登場した群れの行動",
+          "source_scope": "アニメ内の特定のアイアントたち",
           "quiz_review": "web_original_passage_checked_2026-10-22",
           "verified_on": "2026-10-22",
           "verification_method": "official_web_source_opened_manually",
@@ -4526,7 +5179,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_plot_fragment_about_axew_not_very_useful_ant_species",
+          "question_text": "アニメ『ベストウイッシュ』では、ハハコモリが作った葉っぱの服を着たキバゴを、食料と間違えて巣へ連れ去ったアイアントたちが登場した。",
+          "editorial_note": "テレビ東京2012-04-12公式あらすじで葉っぱの服・食料との誤認・連れ去りを確認。種全般の習性ではない。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4551,7 +5206,7 @@
           "text": "一匹だけ人見知りが激しく、育て屋に預けられて以来、ご飯を食べず元気のないモノズ",
           "quiz_text": "アニメ『ベストウイッシュ』では、育て屋で人見知りが激しく、預けられてから食事を取らなくなった個体が登場する。",
           "quiz_enabled": true,
-          "source_scope": "アニメに登場した特定個体の性格",
+          "source_scope": "育て屋に預けられたアニメ内の個体",
           "quiz_review": "web_original_passage_checked_2026-10-22",
           "verified_on": "2026-10-22",
           "verification_method": "official_web_source_opened_manually",
@@ -4561,7 +5216,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "アニメ『ベストウイッシュ』では、育て屋に預けられたモノズのうち1匹だけ人見知りが激しく、食事をとらず元気がなくなっていた。",
+          "editorial_note": "テレビ東京公式あらすじで個体の状況を確認。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4578,6 +5235,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「アイリス、竜の里へ帰る！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes09/",
+          "text": "同じ日にタマゴからかえった兄弟分で、お兄さんの方は今日はなぜか元気がないという…。",
+          "verified_on": "2026-10-23",
+          "quiz_approved": true,
+          "question_text": "アニメ『ベストウイッシュ』では、ショウブが同じ日にタマゴからかえった兄弟分のジヘッド2匹を育てていた。そのうち兄の方がサザンドラに進化した。",
+          "source_scope": "アニメで登場した特定の兄弟分のジヘッド",
+          "source_category": "story_character_fun_fact",
+          "source_review": "2026-10-23: official publishing page text confirmed",
+          "quality_repair": "new_contextual_source_checked"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4662,11 +5332,12 @@
           "original_excerpt_reference": "turn439331search2",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_location_only_game_walkthrough_no_species_knowledge",
+          "editorial_note": "既にゲーム攻略上の場所情報として出題外。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4683,6 +5354,22 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "不思議のダンジョン「マグナゲートと∞迷宮」公式・伝説のポケモン",
+          "url": "https://www.pokemon.co.jp/ex/dungeon_magnagate/outline/pokemon_03.html",
+          "text": "一度エンディングを見た状態で、パラダイスランクを「ロイヤル」まで上げると、「ポケモンパラダイス」にある「おしごと掲示板」に、伝説のポケモン、コバルオンとテラキオンからの挑戦状が届くことがある。",
+          "question_text": "『マグナゲートと∞迷宮』では、エンディング後にパラダイスランクを「ロイヤル」にすると、テラキオンとともに挑戦状を送ってくることがある。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
+          "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "source_scope": "ゲーム「マグナゲートと∞迷宮」の特定の解放条件。",
+          "topic_key": "マグナゲートのロイヤルランクの挑戦状",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4725,15 +5412,17 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『マグナゲートと∞迷宮』での個体設定",
+          "source_scope": "ゲーム内の個体設定",
           "original_excerpt_reference": "turn156203view0:L35-L37",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "ゲーム『ポケモン不思議のダンジョン マグナゲートと∞迷宮』では、ビリジオンが世界各地を冒険している。",
+          "editorial_note": "作品の個体の冒険設定だけでは接客の会話で扱える固有の意外性が弱いため、調べもの用には残してクイズ外。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -4838,7 +5527,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『ポケットモンスター ブラック・ホワイト』公式では、レシラムの熱は世界中の大気を動かすと言われている。",
+          "editorial_note": "文中の「その熱」が何を指すかを元の公式見出しと主語で補完。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4913,6 +5604,22 @@
           "audit_gate_reason": "比較対象とゲーム内仕様の文脈が欠落",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／トルネロス・ボルトロス・ランドロス",
+          "url": "https://www.pokemon.jp/special/forme/zukan01/zukan1-2.html",
+          "text": "２匹の伝説のポケモンが起こす風と雷をエネルギーに変え、大地を豊かにする伝説のポケモン・ランドロス。",
+          "question_text": "トルネロスとボルトロスが起こす風と雷をエネルギーに変え、大地を豊かにする。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "伝説三体の能力の関係",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4977,11 +5684,12 @@
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn442002view2:L17-L20",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "editorial_note": "見出しの切り出し。元の出典本文との照合を終えるまで保留。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5022,6 +5730,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "「聖剣士の後継者」は単独では種の識別に必要な文脈を欠くため保留"
+        },
+        {
+          "kind": "ポケモンだいすきクラブ公式記事",
+          "source_title": "『ふしぎ!?ポケモンすがた図鑑』／ケルディオ（『ウルトラサン・ウルトラムーン』『ブラック2・ホワイト2』参照）",
+          "url": "https://www.pokemon.jp/special/forme/zukan01/zukan1-8.html",
+          "text": "幼い頃のケルディオの親代わりになって、生きるために必要な知識や技を教えたのが、コバルオン、テラキオン、ビリジオンだと言われておる。",
+          "question_text": "幼いころ、コバルオン・テラキオン・ビリジオンに親代わりとして育てられ、生きるための知識や技を教わったといわれる。",
+          "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
+          "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
+          "verified_on": "2026-10-24",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
+          "source_scope": "作品中の設定・公式特集・大会実績として記載。資料の性格を超えて一般化しない。",
+          "topic_key": "三闘との育成・継承関係",
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5054,11 +5778,11 @@
           "verification_method": "official_web_source_opened_manually",
           "original_excerpt_reference": "turn338599view4:L75-L81",
           "editorial_policy": "図鑑以外：公式掲載原文の短い抜粋はtext、文脈を補ったクイズ用編集文はquiz_text。作品内の個体と種一般を区別。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_generic_single_episode_battle_has_low_customer_conversation_value"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5078,6 +5802,23 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "劇場版短編『メロエッタのキラキラリサイタル』",
+          "url": "https://www.pokemon.co.jp/tv_movie/movie/2012/meloetta/",
+          "text": "満月が「ルナトーン岩」の上に来る時、幻のポケモン、メロエッタのリサイタルが始まるよ。",
+          "question_text": "映画短編『メロエッタのキラキラリサイタル』では、満月が「ルナトーン岩」の上に来る時、このポケモンのリサイタルが始まる。",
+          "source_excerpt_type": "公式映画の紹介ページに連続して掲載された原文（改変なし）",
+          "verification_method": "公式サイトの対象作品本文を直接開き、掲載文・前後関係・帰属を照合",
+          "verified_on": "2026-10-26",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_movie_exact_excerpt_checked_2026-10-26",
+          "source_scope": "2012年映画短編内のイベント条件（一般の生態と断定しない）",
+          "topic_key": "film2012_meloetta_moon_concert",
+          "require_special_form_image": false,
+          "editorial_note": "text は変更しない原文。question_text は作品名の明示とポケモン名の伏せ字化のみ。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5116,7 +5857,44 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "movie_specific_form_not_generic_species",
+          "question_text": "映画『神速のゲノセクト ミュウツー覚醒』に登場するゲノセクトは、素早く移動するとき「高速飛行形態」に姿を変える。",
+          "editorial_note": "映画公式のゲノセクト紹介。ゲーム全体・すべての姿の仕様には一般化しない。",
+          "source_scope": "2013年映画公式のゲノセクト紹介"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "劇場版『神速のゲノセクト ミュウツー覚醒』",
+          "url": "https://www.pokemon.co.jp/tv_movie/movie/2013/",
+          "text": "昔とあまりにも違う世界にとまどい、「ウチニカエリタイ……」と、テレパシーでサトシたちに語りかけてくるゲノセクト。",
+          "question_text": "映画『神速のゲノセクト ミュウツー覚醒』では、よみがえった現代の世界に戸惑い、サトシたちにテレパシーで「ウチニカエリタイ……」と訴えた。",
+          "source_excerpt_type": "公式映画の紹介ページに連続して掲載された原文（改変なし）",
+          "verification_method": "公式サイトの対象作品本文を直接開き、掲載文・前後関係・帰属を照合",
+          "verified_on": "2026-10-26",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_movie_exact_excerpt_checked_2026-10-26",
+          "source_scope": "2013年映画に登場するゲノセクトの行動（種の普遍的な習性ではない）",
+          "topic_key": "film2013_genesect_homesick",
+          "require_special_form_image": false,
+          "editorial_note": "text は変更しない原文。question_text は作品名の明示とポケモン名の伏せ字化のみ。"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "劇場版『神速のゲノセクト ミュウツー覚醒』",
+          "url": "https://www.pokemon.co.jp/tv_movie/movie/2013/",
+          "text": "４体それぞれの背中の砲台にセットされているカセットが異なる。",
+          "question_text": "映画『神速のゲノセクト ミュウツー覚醒』では、赤い個体以外の４体は、背中の砲台にセットされているカセットがそれぞれ異なる。",
+          "source_excerpt_type": "公式映画の紹介ページに連続して掲載された原文（改変なし）",
+          "verification_method": "公式サイトの対象作品本文を直接開き、掲載文・前後関係・帰属を照合",
+          "verified_on": "2026-10-26",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_movie_exact_excerpt_checked_2026-10-26",
+          "source_scope": "2013年映画に登場する赤い個体以外の4体について（一般的な全個体の特徴ではない）",
+          "topic_key": "film2013_genesect_four_cassettes",
+          "require_special_form_image": false,
+          "editorial_note": "text は変更しない原文。question_text は作品名の明示とポケモン名の伏せ字化のみ。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5340,7 +6118,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "アニメ『ポケットモンスター』（2023年開始シリーズ）では、リコのパートナーであるマスカーニャが、花爆弾を使ったトリッキーな戦い方で相手を翻弄する。",
+          "editorial_note": "テレビ東京アニメ公式キャラクター紹介の「リコのパートナー」という主語を付加。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -5592,7 +6372,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "アニメ『ポケットモンスター』（2023年開始シリーズ）では、ロイのパートナーのラウドボーンが、頭の火玉から生まれた炎の鳥とともに強力なほのおわざを放つ。",
+          "editorial_note": "テレビ東京アニメ公式キャラクター紹介。ロイの個体に限定する。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -6087,7 +6869,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "作品内の生態・身体構造",
+          "source_scope": "公式小説のネモのパモット",
           "original_excerpt_reference": "turn984931view2:L564-L568",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -6095,7 +6877,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "公式短編小説『きみと雨上がりを』では、ネモのパモットが寝ぼけてネモの腕に頬をこすりつけ、ネモは電気の刺激を感じた。パモやパモットの黄色い頬には電気が蓄えられており、触れると感電することがある。",
+          "editorial_note": "原文の後続文と前の登場場面を公式短編小説本文で確認。パモにも当てはまる性質だけでは答えを一意にできないため、小説内のパモットの出来事を主にする。"
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -6390,6 +7174,25 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビアニメ『ポケットモンスター』第16話「クワッスとなら、できるよ」（2023年8月4日）",
+          "url": "https://www.tv-tokyo.co.jp/anime/pocketmonster2023/episodes/index_14.html",
+          "text": "いにしえの冒険者・ルシアスがともに旅した六英雄と呼ばれるポケモンの一体であるオリーヴァが入った「いにしえのモンスターボール」が輝きだす。",
+          "question_text": "アニメ『ポケットモンスター』第16話では、いにしえの冒険者ルシアスと旅をした「六英雄」の1匹、オリーヴァが入った「いにしえのモンスターボール」が、リコたちのペンダント捜索中に輝き出した。",
+          "quiz_text": "アニメ『ポケットモンスター』第16話では、いにしえの冒険者ルシアスと旅をした「六英雄」の1匹、オリーヴァが入った「いにしえのモンスターボール」が、リコたちのペンダント捜索中に輝き出した。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_direct_source_checked_2026-10-24",
+          "review_status": "approved: direct official broadcast synopsis and meaningful standalone question",
+          "verification_method": "テレビ東京アニメ公式サイトの該当回あらすじ本文を閲覧し、連続した抜粋をtextに保存。表示文は作品名・主語・最低限の文脈のみを追加。",
+          "source_scope": "アニメに登場する特定のオリーヴァと六英雄に関する描写。すべてのオリーヴァが六英雄ではない。",
+          "quiz_attribution_scope": "アニメ内の特定の出来事・設定",
+          "verified_on": "2026-10-24",
+          "quality_note": "「六英雄」と古代のモンスターボールという作品特有の特徴で、接客時にも作品紹介が可能。",
+          "evidence_ref_at_collection": "turn668408view1:L91-L94",
+          "require_special_form_image": false
         }
       ]
     },
@@ -6417,7 +7220,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "公式短編小説に登場する個体の設定",
+          "source_scope": "小説内のそらとぶタクシー従業個体",
           "original_excerpt_reference": "turn514424view2",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -6425,7 +7228,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "公式短編小説『きみと雨上がりを』では、そらとぶタクシー会社で働くイキリンコたちは、野生の個体と異なりスタッフスカーフを巻いている。",
+          "editorial_note": "小説中のタクシーで働く個体の特徴。"
         }
       ]
     },
@@ -6449,7 +7254,7 @@
           "source_title": "『きみと雨上がりを』（武田綾乃著、ポケモン公式短編小説）",
           "url": "https://novel-kimiame.pokemon.co.jp/",
           "text": "貴重な塩を分けてくれるから、昔の人はコジオのことをとくに大事にしてたんだよ。",
-          "source_scope": "公式小説のネモの発言。昔の人とコジオの関係についての作中説明。一般的な生物学的断定とは区別する。",
+          "source_scope": "公式短編小説内のネモの発言",
           "source_location": "小説第二章付近、原文HTML L515（2026-10-23閲覧）",
           "quote_type": "direct_verbatim_excerpt",
           "verified_on": "2026-10-23",
@@ -6460,7 +7265,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "公式短編小説『きみと雨上がりを』では、コジオが貴重な塩を分けてくれるため、昔の人たちに大事にされていたとネモが語っている。",
+          "editorial_note": "小説における作中人物の発言。実際の全個体に一般化しない。"
         }
       ]
     },
@@ -6573,6 +7380,36 @@
           "question_text": "身につけている鎧は、多くの武勲を立てた戦士の鎧であり、グレンアルマが扱うエスパータイプの技のエネルギーの源です。また、体内の炎エネルギーを、鎧のエスパー能力で操り、技を繰り出します。",
           "question_text_policy": "verified_context_from_official_page",
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "多くの武勲を立てた戦士の鎧",
+          "quiz_text": "身につけている鎧は、多くの武勲を立てた戦士の鎧であり、グレンアルマが扱うエスパータイプの技のエネルギーの源です。",
+          "question_text": "身につけている鎧は、多くの武勲を立てた戦士の鎧であり、グレンアルマが扱うエスパータイプの技のエネルギーの源です。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "鎧の由来",
+          "verified_on": "2026-10-23"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "正々堂々と戦うことが信条",
+          "quiz_text": "正々堂々と戦うことが信条で、強敵相手でも真正面から戦いを挑みます。",
+          "question_text": "正々堂々と戦うことが信条で、強敵相手でも真正面から戦いを挑みます。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "戦い方",
+          "verified_on": "2026-10-23"
         }
       ]
     },
@@ -7007,6 +7844,36 @@
           "question_text": "ガケガニのハサミは、挟む力が強く、獲物を掴んだらなかなか離しません。片方のハサミで相手を掴み、もう片方で相手の守りを崩し、急所を突きます。ハサミは、戦いなどで取れても、しばらくすると再生されます。",
           "question_text_policy": "verified_context_from_official_page",
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "逆さまになって断崖にへばりついています。",
+          "quiz_text": "逆さまになって断崖にへばりつき、真上から獲物に襲い掛かろうとするものの、頭に血が上って目を回すため長くは待てません。",
+          "question_text": "逆さまになって断崖にへばりつき、真上から獲物に襲い掛かろうとするものの、頭に血が上って目を回すため長くは待てません。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "待ち伏せの習性",
+          "verified_on": "2026-10-23"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "ハサミは、戦いなどで取れても、しばらくすると再生されます。",
+          "quiz_text": "ハサミは戦いなどで取れてもしばらくすると再生され、パルデア地方の一部では貴重な食材とされています。",
+          "question_text": "ハサミは戦いなどで取れてもしばらくすると再生され、パルデア地方の一部では貴重な食材とされています。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "再生と食文化",
+          "verified_on": "2026-10-23"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -7284,6 +8151,23 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・デカヌチャン／SV4a 096/190・シャイニートレジャーex",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44619",
+          "text": "知能が 高く とても 豪快。 ハンマーで 岩を 殴り飛ばして 空飛ぶ アーマーガアを 狙う。",
+          "question_text": "知能が高く豪快で、ハンマーで岩を殴り飛ばし、空を飛ぶアーマーガアを狙う。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-24",
+          "verification_method": "公式カード個別ページのポケモン名・型番・説明文と公式商品紹介の発売日を照合",
+          "source_scope": "ポケモンカードに印刷された説明文（別バージョンのゲーム内図鑑由来の可能性あり）",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
+          "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7324,11 +8208,27 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "種の生態・特徴",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_fragment_low_information_without_additional_context"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "他のポケモンのにおいに気付くと、砂の中に引っ込んで身を隠します。",
+          "question_text": "周囲を警戒する臆病な性格で、他のポケモンのにおいに気付くと砂の中へ引っ込んで隠れる。",
+          "quiz_text": "周囲を警戒する臆病な性格で、他のポケモンのにおいに気付くと砂の中へ引っ込んで隠れる。",
+          "source_scope": "種の特徴",
+          "topic": "生態",
+          "verification_method": "2026-10-23 ポケモン公式HPの検索閲覧で該当文章を確認",
+          "editorial_policy": "textは公式原文を保持。question_textは元本文の内容を変えず主語・文脈を補った。",
+          "quiz_enabled": true,
+          "quiz_review": "official_page_confirmed_pending_full_choice_semantic_review",
+          "quiz_approved": false,
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7580,11 +8480,11 @@
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "種の生態・特徴",
           "editorial_policy": "公式原文の引用はtextに保存。quiz_textは出典に基づき文脈を補った非図鑑の編集文。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "excluded_low_information_generic_sentence"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7715,7 +8615,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』公式紹介では、ボチは地中に潜み、地表に頭を出して光を灯す。人が近づくと不気味な声とともに飛び出すが、悪気はないようだ。",
+          "editorial_note": "SV公式ページの段落（地中に潜む→人を待つ→飛び出す）に基づき短い見出し断片を完結文へ。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7904,6 +8806,24 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター スカーレット・バイオレット』更新データ（Ver.1.2.0）",
+          "url": "https://www.pokemon.co.jp/info/2023/02/230228_gm01.html",
+          "text": "口の中にシャリタツがいるヘイラッシャが「いっちょうあがり」を使用した際、技が相手の「まもる」などにより無効になった場合も能力が上がってしまう不具合を修正しました。",
+          "question_text": "ゲーム『ポケットモンスター スカーレット・バイオレット』では、ヘイラッシャの口の中に入ることがあり、そのヘイラッシャが技「いっちょうあがり」を使う場面もある。",
+          "quiz_text": "ゲーム『ポケットモンスター スカーレット・バイオレット』では、ヘイラッシャの口の中に入ることがあり、そのヘイラッシャが技「いっちょうあがり」を使う場面もある。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "verified_on": "2026-10-24",
+          "quiz_review": "official_primary_page_directly_opened_2026-10-24",
+          "source_scope": "『スカーレット・バイオレット』のダブルバトルでの組み合わせ（公式更新データの記載）",
+          "source_excerpt_type": "verbatim_contiguous_short_excerpt",
+          "verification_method": "first_party_official_site_open_and_text_read",
+          "editorial_policy": "原文 text は変更しない。出題用 question_text は出典作品名と必要な主語・文脈のみ補う。",
+          "answer_uniqueness_review": "individual_stem_reviewed; every_possible_distractor_not_manually_checked",
+          "date_added": "2026-10-24"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8012,6 +8932,22 @@
           "question_text": "分厚く頑丈なしっぽの頭は、本体の頭をしっかりと保護しています。しっぽの頭が口を閉じた状態になると、首を振り回して、激しい物理攻撃を繰り出します。その威力は岩盤を粉砕し、鉄骨をひしゃげさせるほどだと言われています。",
           "question_text_policy": "verified_context_from_official_page",
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "脳の処理速度に体が追いつかない時もあるようです。",
+          "question_text": "進化でつながった２つの脳の処理が速すぎて、体が追いつかない時もあるという。",
+          "quiz_text": "進化でつながった２つの脳の処理が速すぎて、体が追いつかない時もあるという。",
+          "source_scope": "種の特徴",
+          "topic": "身体構造",
+          "verification_method": "2026-10-23 ポケモン公式HPの検索閲覧で該当文章を確認",
+          "editorial_policy": "textは公式原文を保持。question_textは元本文の内容を変えず主語・文脈を補った。",
+          "quiz_enabled": true,
+          "quiz_review": "official_page_confirmed_pending_full_choice_semantic_review",
+          "quiz_approved": false,
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8305,7 +9241,7 @@
           "quiz_text": "『スカーレット・バイオレット』の作中オカルト雑誌に、球体に変化して高速回転で襲ってきたという目撃談と、宇宙人の兵器という噂が掲載されたポケモン。真偽は不明。",
           "quiz_enabled": true,
           "quiz_review": "manual_primary_source_checked_2026-10-22",
-          "source_scope": "作中オカルト雑誌の未確認の説",
+          "source_scope": "作中オカルト雑誌の未確認説",
           "section": "テツノワダチ",
           "verified_on": "2026-10-22",
           "review_method": "official_source_web_open_current_turn",
@@ -8316,7 +9252,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』の作中オカルト雑誌には、パルデアの乾燥地帯で目撃されたテツノワダチが、突如球体に変化して高速回転し襲いかかったという報告が紹介されている。ただし真相は不明。",
+          "editorial_note": "SV公式にある作中オカルト雑誌の記述。襲撃相手は不明なので勝手に補わず、「真相不明」を保持。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8361,7 +9299,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』の作中オカルト雑誌では、テツノツツミは球体の装置から大量の氷を噴射し、雪原を移動すると紹介されている。真偽は不明。",
+          "editorial_note": "作中オカルト雑誌の説であることを明確化。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8484,7 +9424,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "メガシンカした姿の身体構造",
+          "source_scope": "メガシンカ後の身体構造",
           "original_excerpt_reference": "turn156203view5:L38-L43",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -8492,7 +9432,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『Pokémon LEGENDS Z-A M次元ラッシュ』では、メガセグレイブは「みぞおちグリップ」に氷エネルギーを集めて技を放つ。",
+          "editorial_note": "通常のセグレイブの生態と混同しない。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8503,7 +9445,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "メガシンカした姿の変化",
+          "source_scope": "メガセグレイブの身体能力",
           "original_excerpt_reference": "turn156203view5:L46-L49",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -8512,9 +9454,10 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
           "quality_repair": "repaired_from_official_context",
-          "question_text": "メガシンカしたことで、氷のエネルギーが内臓や神経を含む全身に広がりました。これにより、反応速度や筋肉の瞬発力が強化され、技の威力も上がっています。",
+          "question_text": "『Pokémon LEGENDS Z-A M次元ラッシュ』の公式紹介では、メガセグレイブはメガシンカによって氷エネルギーが内臓や神経まで広がり、反応速度と筋肉の瞬発力が強化される。",
           "question_text_policy": "verified_context_from_official_page",
-          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+          "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変",
+          "editorial_note": "公式段落の主語・前後の文脈を補完。"
         },
         {
           "kind": "ゲーム公式HP",
@@ -8531,11 +9474,12 @@
           "source_excerpt_type": "official_direct_short_verbatim_excerpt",
           "quiz_text_type": "contextualized_summary_not_verbatim",
           "editorial_policy": "ゲーム内図鑑の本文は変更しない。図鑑外の出題文に文脈を補い、出典リンクと原文抜粋を保持。",
-          "quiz_approved": true,
+          "quiz_approved": false,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": true,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "editorial_note": "切り出された断片で、付加情報と文脈の公式照合が未完了。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8572,7 +9516,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』公式では、コレクレーは人やポケモンを操り、コインを集めさせると紹介されている。",
+          "editorial_note": "見出し断片の主語を補完した。"
         },
         {
           "kind": "アニメ公式",
@@ -8608,8 +9554,10 @@
           "quiz_approved": true,
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
-          "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "require_special_form_image": true,
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』公式では、コレクレーの「はこフォルム」は宝箱の中に隠れていて、動きが鈍いと紹介されている。",
+          "editorial_note": "「はこフォルム」限定。画像と不整合なときは強制画像なし。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8666,6 +9614,22 @@
           "question_text": "身体を形作るコインを操って活動し、バトルでもコインを武器とします。コインが密集しているため、とても頑丈で、敵の攻撃を受けた箇所のコインが飛び散ることで衝撃を吸収し、ダメージを軽減します。",
           "question_text_policy": "verified_context_from_official_page",
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv/ja/pokemon/230112_06/",
+          "text": "とても活発で陽気な性質で、人やポケモンに対して友好的です。",
+          "question_text": "1000枚のコインからなる体を持ち、活発で陽気な性質で、人やポケモンにも友好的。",
+          "quiz_text": "1000枚のコインからなる体を持ち、活発で陽気な性質で、人やポケモンにも友好的。",
+          "source_scope": "種の特徴",
+          "topic": "習性",
+          "verification_method": "2026-10-23 ポケモン公式HPの検索閲覧で該当文章を確認",
+          "editorial_policy": "textは公式原文を保持。question_textは元本文の内容を変えず主語・文脈を補った。",
+          "quiz_enabled": true,
+          "quiz_review": "official_page_confirmed_pending_full_choice_semantic_review",
+          "quiz_approved": false,
+          "require_special_form_image": false
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8819,7 +9783,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』の作中オカルト雑誌では、トドロクツキの姿は、他の地方でボーマンダに起こるある現象の結果と酷似していると紹介される。真偽は不明。",
+          "editorial_note": "作中オカルト雑誌の説であることを明確化。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8867,7 +9833,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット』の作中オカルト雑誌では、テツノブジンはサーナイトとエルレイドの両方を思わせる姿のロボットと紹介される。真偽は不明。",
+          "editorial_note": "ハバタクカミへの誤帰属を防ぎ、作中の未確認説と明記。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9343,6 +10311,36 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/231207_01/",
+          "text": "茶せんで自らの体をかき回す",
+          "quiz_text": "頭の茶せんで自らの体をかき回すしぐさをしているときは戦闘態勢で、近寄ると生気を吸い取るお茶をかけることがあります。",
+          "question_text": "頭の茶せんで自らの体をかき回すしぐさをしているときは戦闘態勢で、近寄ると生気を吸い取るお茶をかけることがあります。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "戦闘態勢",
+          "verified_on": "2026-10-23"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『スカーレット・バイオレット ゼロの秘宝』公式ポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/231207_01/",
+          "text": "夕暮れ時になると町中や郊外を徘徊し",
+          "quiz_text": "夕暮れ時になると町中や郊外を徘徊し、獲物となるポケモンや人間を探しています。",
+          "question_text": "夕暮れ時になると町中や郊外を徘徊し、獲物となるポケモンや人間を探しています。",
+          "source_scope": "種の生態・特徴",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "primary_source_seen; pending exact-copy and semantic uniqueness checks",
+          "verification_method": "公式HTMLの本文をwebで閲覧。抜粋は短い原文断片、設問は文脈を補った編集文",
+          "topic": "夕暮れの行動",
+          "verified_on": "2026-10-23"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9545,7 +10543,7 @@
           "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
           "text": "オーガポンが覚える新しい技「ツタこんぼう」は、ツタをまきつけたとげ付きのこん棒で相手を攻撃する、高い威力をもつ攻撃技です。かぶるお面によって技のタイプが変わります。",
           "source_excerpt_type": "公式掲載文の一部を連続した原文のまま抜粋",
-          "source_scope": "技「ツタこんぼう」の説明に限る",
+          "source_scope": "ゲーム内でオーガポンが使う技",
           "form_scope": "通常",
           "topic": "仮面でタイプが変化する技",
           "proof_ref": "turn905058view1:L84-L87",
@@ -9559,7 +10557,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット・バイオレット ゼロの秘宝』でオーガポンが使う技「ツタこんぼう」は、かぶっているお面によって技のタイプが変わる。",
+          "editorial_note": "技そのものの一般説明から、誰のどの固有の使い方かに限定。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9757,7 +10757,7 @@
           "url": "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/240125_02/",
           "text": "相手の攻撃を超高熱の体毛で防ぐと共に、触れた相手にやけどを与える技です。",
           "source_excerpt_type": "公式掲載文の一部を連続した原文のまま抜粋",
-          "source_scope": "技「かえんのまもり」の説明に限る",
+          "source_scope": "特定作品に登場する技",
           "form_scope": "通常",
           "topic": "専用技かえんのまもり",
           "proof_ref": "turn627491view2:L37-L41",
@@ -9771,7 +10771,9 @@
           "audit_gate_reason": "原文抜粋として単独出題候補（過去の公式根拠記録に依拠）",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
-          "quality_repair": "previous_candidate_retained_unverified_in_this_turn"
+          "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
+          "question_text": "『スカーレット ゼロの秘宝』では、ウガツホムラが使う技「かえんのまもり」は、超高熱の体毛で攻撃を防ぎ、触れた相手をやけどにする。",
+          "editorial_note": "公式紹介の技名と使い手を明記。「技です」の孤立断片を修復。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -9831,7 +10833,7 @@
           "verified_on": "2026-10-22",
           "quiz_enabled": true,
           "quiz_review": "editorially_contextualized_source_grounded",
-          "source_scope": "『ゼロの秘宝』での技",
+          "source_scope": "特定作品に登場する技",
           "original_excerpt_reference": "turn192940search2",
           "quote_type": "direct_official_excerpt",
           "verification_method": "original_official_page_read_via_web_and_manual_transcription",
@@ -9840,9 +10842,10 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "repaired_from_official_context",
-          "question_text": "相手が攻撃技を選択しているとき先に動くことができる、でんきタイプの特殊技「じんらい」を覚えます。電撃を浴びせて攻撃し、相手が攻撃技でないと失敗します。",
+          "question_text": "『ゼロの秘宝』では、タケルライコが使うでんきタイプの技「じんらい」は、相手が攻撃技を選んだ場合に先に攻撃できる一方、攻撃技以外を選ぶと失敗する。",
           "question_text_policy": "verified_official_full_paragraph_or_minimal_context",
-          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）"
+          "question_text_note": "公式サイト本文・見出しと続く段落に照らして文脈を補完（source text不変）",
+          "editorial_note": "公式の技説明を使い手の特徴として統合。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -10325,5 +11328,5 @@
       "data_status": "official_source_confirmed"
     }
   },
-  "build_note": "631件の一次データを保持。図鑑外は条件付で出題可否を管理。公式原文に由来するtextは書き換えない。過去の検証記録と出典URLに基づく候補であり、全件を今ターン逐字再検証したものではない。"
+  "build_note": "前回までの647件を一字も変更せず保持。テレビ東京公式あらすじで確認したモンメンの図鑑外説明1件を追加（計648件）。"
 }

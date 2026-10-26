@@ -1,0 +1,14 @@
+{
+  "original_records_preserved": 631,
+  "seven_prior_staged_records": 7,
+  "total_records": 641,
+  "dex_records": 405,
+  "non_dex_records": 236,
+  "non_dex_quiz_candidates": 117,
+  "non_dex_species_or_forms": 81,
+  "non_dex_not_available": 116,
+  "verification_scope": "auto-tested structure and selected official source paragraphs; semantic uniqueness of every 4-way option not human-verified",
+  "web_ui_tested": false,
+  "added_this_update": 3,
+  "addition_policy": "3 official source excerpts directly confirmed; all original 638 records preserved; choices not exhaustively semantically validated"
+}

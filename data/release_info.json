@@ -1,9 +1,21 @@
 {
-  "total_original_records": 631,
-  "non_dex_total": 226,
-  "eligible_non_dex": 127,
-  "eligible_species": 87,
-  "excluded_non_dex": 99,
-  "original_text_unchanged": true,
-  "browser_ui_tested": false
+  "build_date": "2026-10-26",
+  "based_on": "POKEMON_QUIZ_OFFICIAL_DIVERSE_PLUS13_20261024.zip",
+  "original_records_preserved": 687,
+  "added_this_update": 3,
+  "total_records": 690,
+  "all_regions_species_forms": 280,
+  "eligible_extra_species_before": 114,
+  "eligible_extra_species_after": 114,
+  "eligible_extra_species_still_empty": 166,
+  "selected_pokemon": [
+    "ゲノセクト",
+    "メロエッタ"
+  ],
+  "source_families": [
+    "2013年劇場版公式映画サイト",
+    "2012年劇場版短編公式映画サイト"
+  ],
+  "review_scope": "新規3件の公式映画ページ原文と作品内の帰属を確認。既存687件不変更。全既存問題の意味的一意性は未審査。",
+  "tests": "既存テストスイート通過、新規3件の有効判定／名前非表示、2種×2形式×10シードの出題確認。ブラウザー実動作は未確認。"
 }

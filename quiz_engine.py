@@ -16,8 +16,8 @@ REGIONS = {
     'イッシュ': list(range(494, 650)),
     'パルデア': list(range(906, 1026)) + list(PALDEA_FORMS),
 }
-APPROVED_HOSTS = {'zukan.pokemon.co.jp', 'www.pokemon.co.jp', 'www.pokemon-card.com', 'www.tv-tokyo.co.jp', 'www.pokemon.jp', 'novel-kimiame.pokemon.co.jp'}
-SOURCE_KINDS = {'ゲーム内図鑑', 'ゲーム公式HP', 'ポケカ公式', 'アニメ公式', '大会公式', '公式図鑑プロフィール', 'ゲーム内図鑑の補足', '公式グッズ紹介', 'ポケモンだいすきクラブ公式記事', '公式小説', '公式短編小説（作中人物の発言）'}
+APPROVED_HOSTS = {'zukan.pokemon.co.jp', 'www.pokemon.co.jp', 'www.pokemon-card.com', 'www.tv-tokyo.co.jp', 'www.pokemon.jp', 'novel-kimiame.pokemon.co.jp', 'pokemongo.com'}
+SOURCE_KINDS = {'ゲーム内図鑑', 'ゲーム公式HP', 'ポケカ公式', 'アニメ公式', '大会公式', '公式図鑑プロフィール', 'ゲーム内図鑑の補足', '公式グッズ紹介', 'ポケモンだいすきクラブ公式記事', '公式小説', '公式短編小説（作中人物の発言）', 'ポケモン公式大会ニュース'}
 SENSITIVE_KINDS = {'ポケカ公式', '大会公式'}
 
 
@@ -37,10 +37,14 @@ def source_is_allowed(rec):
                         and p.path.lower().startswith('/' + account + '/status/'))
         if host not in APPROVED_HOSTS:
             return False
+        if rec.get('kind') == 'ポケモン公式大会ニュース':
+            return host == 'www.pokemon.co.jp' and p.path.startswith('/ex/pjcs/')
+        if host == 'pokemongo.com':
+            return rec.get('kind') == 'ゲーム公式HP' and p.path.startswith('/ja/news/')
         if host == 'www.pokemon.jp':
             return rec.get('kind') == 'ポケモンだいすきクラブ公式記事'
         if host == 'novel-kimiame.pokemon.co.jp':
-            return rec.get('kind') in {'公式小説','公式短編小説（作中人物の発言）'}
+            return rec.get('kind') in {'公式小説','公式短編小説（作中人物の発言）', 'ポケモン公式大会ニュース'}
         if rec.get('kind') in ('ポケカ公式', '大会公式'):
             return host == 'www.pokemon-card.com'
         if rec.get('kind') in ('ゲーム内図鑑', '公式図鑑プロフィール', 'ゲーム内図鑑の補足'):
@@ -119,9 +123,14 @@ def validate_db(data):
         for rec in quotes:
             if rec.get('kind') not in SOURCE_KINDS or not source_is_allowed(rec):
                 raise ValueError(f'非対応の出典: {pid} {rec.get("url")}')
-            if not all(rec.get(k) for k in ('text', 'source_title', 'verified_on')):
-                raise ValueError(f'本文・出典・照合日の欠落: {pid}')
-            parse_date(rec['verified_on'], 'verified_on')
+            if not all(rec.get(k) for k in ('text', 'source_title')):
+                raise ValueError(f'本文・出典の欠落: {pid}')
+            # Unapproved legacy source records may lack a review date; never
+            # invent a date for them or admit them as playable questions.
+            if rec.get('verified_on'):
+                parse_date(rec['verified_on'], 'verified_on')
+            elif rec.get('quiz_approved') is True:
+                raise ValueError(f'出題承認済み記録の照合日がありません: {pid}')
             # '…' is sometimes part of the OFFICIAL original prose (anime previews).
             # Never remove it from a verified direct excerpt. Only explicit editorial
             # omission markers are invalid.
@@ -155,6 +164,7 @@ def missing_ids(data, region):
 # They are deliberately separate from official source quotations.
 import math
 from collections import Counter as _TokenCounter
+from functools import lru_cache
 
 _CUTE = {906,907,908,909,912,921,922,923,924,925,926,927,
          928,929,931,935,938,939,940,944,963,964,971,974,
@@ -174,6 +184,7 @@ _THEME_GROUPS = (
 )
 
 
+@lru_cache(maxsize=8192)
 def _ngrams(text):
     text = re.sub(r'[\s　、。！？・「」（）【】0-9a-zA-Z]+', '', text)
     return set(text[i:i+2] for i in range(len(text)-1))
@@ -186,6 +197,7 @@ def _semantic_similarity(a, b):
     return len(x & y) / math.sqrt(len(x)*len(y))
 
 
+@lru_cache(maxsize=8192)
 def _themes_for(text):
     return [(idx, group) for idx, (pattern, group) in enumerate(_THEME_GROUPS)
             if re.search(pattern, text)]
@@ -322,6 +334,25 @@ def national_number(row):
     return row.get('national_id', row['id'])
 
 
+_MASK_PATTERN_CACHE = {}
+
+def _mask_pattern(data):
+    """Compile Pokémon-name masking once per in-memory database."""
+    token=id(data)
+    item=_MASK_PATTERN_CACHE.get(token)
+    if item is not None and item[0] is data:
+        return item[1],item[2]
+    names_to_ids={}
+    for key, entry in data["pokemon"].items():
+        names={entry["name"]}
+        if entry.get("base_name"):names.add(entry["base_name"])
+        names.update(entry.get("mask_aliases", []))
+        for name in names:names_to_ids.setdefault(name,set()).add(key)
+    pattern=re.compile("|".join(map(re.escape, sorted(names_to_ids,key=lambda name:(-len(name),name)))))
+    _MASK_PATTERN_CACHE.clear()
+    _MASK_PATTERN_CACHE[token]=(data,pattern,names_to_ids)
+    return pattern,names_to_ids
+
 def display_quote(text, subject_id, data):
     """Mask only the Pokémon being tested. DO NOT change saved official quotes.
 
@@ -329,18 +360,7 @@ def display_quote(text, subject_id, data):
     including those containing a shorter name of the subject.
     """
     subject_id = str(subject_id)
-    names_to_ids = {}
-    for key, entry in data['pokemon'].items():
-        names = {entry['name']}
-        if entry.get('base_name'):
-            names.add(entry['base_name'])
-        for alias in entry.get('mask_aliases', []):
-            names.add(alias)
-        for name in names:
-            names_to_ids.setdefault(name, set()).add(key)
-    if not names_to_ids:
-        return text
-    pattern = re.compile('|'.join(map(re.escape, sorted(names_to_ids, key=lambda name: (-len(name), name)))))
+    pattern,names_to_ids=_mask_pattern(data)
     return pattern.sub(lambda m: '？？？' if subject_id in names_to_ids[m.group()] else m.group(), text)
 
 def question_passage(rec, pid, data):
@@ -355,7 +375,7 @@ from collections import Counter
 from datetime import datetime, timezone, timedelta
 
 
-EXTRA_KINDS = {'ゲーム公式HP', 'アニメ公式', '公式図鑑プロフィール', '公式グッズ紹介', 'ポケモンだいすきクラブ公式記事', '公式小説', '公式短編小説（作中人物の発言）'}
+EXTRA_KINDS = {'ゲーム公式HP', 'アニメ公式', '公式図鑑プロフィール', '公式グッズ紹介', 'ポケモンだいすきクラブ公式記事', '公式小説', '公式短編小説（作中人物の発言）', 'ポケカ公式', 'ポケモン公式大会ニュース'}
 ALL_REGION = '両方'
 MODE_LABELS = {
     'mix': 'ミックス（図鑑＋図鑑外）',
@@ -384,8 +404,22 @@ def pool_ids(db, region, mode):
     return pool
 
 
+def is_standalone_question(rec):
+    """Reject clearly incomplete quotations without changing their original text.
+
+    Editorial/semantic suitability still requires a human review; this is a
+    preflight check against the user's reported truncated-choice regressions.
+    """
+    text = (rec.get('question_text') or rec.get('text') or '').strip()
+    return (len(text) >= 18 and text.endswith(('。', '！', '？'))
+            and not re.match(r'^(?:その|ここから|どうやら|突如)', text)
+            and not text.endswith(('おり', '技です。')))
+
+
 def eligible_extra(row):
-    return [rec for rec in supplementary_records(row) if rec['kind'] in EXTRA_KINDS and rec.get('quiz_approved') is True]
+    return [rec for rec in supplementary_records(row)
+            if rec['kind'] in EXTRA_KINDS and rec.get('quiz_approved') is True
+            and is_standalone_question(rec)]
 
 
 def plan_session(db, region, style, count, *, priority_ids=None, seed=None):

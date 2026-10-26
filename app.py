@@ -18,8 +18,12 @@ NAME_MODE = '名前入力'
 PICTURE_MODE = MODE_LABELS['picture']
 TEXT_MODE = MODE_LABELS['description']
 
+@st.cache_resource(show_spinner=False)
+def cached_db():
+    return read_db()
+
 try:
-    db = read_db()
+    db = cached_db()
 except (OSError, ValueError) as error:
     st.error(f'公式文章の固定データを読み込めません。data/official_quotes.json を確認してください。詳細：{error}')
     st.stop()
@@ -28,6 +32,7 @@ for key, default in {
     'specs':None, 'idx':0, 'score':0, 'answer':None,
     'missed':[], 'bookmarked':[], 'history':[], 'is_review':False,
     'region':'両方', 'quiz_style':'mix', 'finished':False, 'selected_pid':None,
+    'light_mode':False,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -57,7 +62,7 @@ def art_display(row, *, full=False):
     url = artwork(row)
     if url:
         if full:
-            st.image(url, use_container_width=True)
+            st.image(url, width=172)
         else:
             st.image(url, width=260)
     else:
@@ -185,7 +190,7 @@ def show_question(q):
             # No aliases silently accepted: spelling practice is exact.
             chosen = pid if answer_text.strip() == row['name'] else None
             commit(chosen)
-    elif kind in ('description', 'extra_description') and not q.get('force_text_choices'):
+    elif kind in ('description', 'extra_description') and not q.get('force_text_choices') and not st.session_state.light_mode:
         # Image-backed four answer buttons; no hidden preselected radio values.
         submitted_choice = None
         with st.form(f'four_{n}'):
@@ -305,6 +310,8 @@ if page == 'クイズ':
             mode = 'typed' if mode_label == NAME_MODE else DISPLAY_MODES[mode_label]
             count = st.selectbox('問題数', [5,10,20,30,'全問'], index=1,
                                  format_func=lambda n:f'{n}問' if isinstance(n,int) else '全問')
+            light = st.checkbox('軽量表示（名前の四択で選択肢画像を省略）', value=st.session_state.light_mode,
+                                help='画像→説明の問題で必要なポケモン画像は表示します。文章→名前の四択で4枚の画像の読み込みを省略します。')
             marked = list(dict.fromkeys(st.session_state.missed+st.session_state.bookmarked))
             restrict = st.checkbox(f'苦手・★登録だけ出題する（{len(marked)}種類・すがた）',
                                    disabled=not marked)
@@ -316,6 +323,7 @@ if page == 'クイズ':
             begin = st.form_submit_button('クイズを始める', type='primary', disabled=not available,
                                           use_container_width=True)
         if begin:
+            st.session_state.light_mode = light
             start(region,mode,count, review_ids=marked if restrict else None)
     elif st.session_state.finished or st.session_state.idx >= len(st.session_state.specs):
         show_finish()
@@ -370,8 +378,9 @@ else:
 - **クイズ**：地方・問題形式・問題数を選んでスタート。回答後に正解と出典を表示します。
 - **ポケモン情報**：名前・図鑑番号・説明文で検索し、掲載文と参照先を確認できます。
 - **復習**：間違えたポケモンや★登録したポケモンを、クイズの出題対象に指定できます。
-- **図鑑外の公式情報**：原資料631件を保持し、条件を満たした原文抜粋を1件ずつ問題化。「図鑑外ミックス」を選べば採用した全情報に取り組めます。不適切候補は監査CSVに理由を記録しました。
+- **図鑑外の公式情報**：原資料631件を保持し、条件を満たした情報を1件ずつ問題化。「図鑑外ミックス」を選べば採用した全情報に取り組めます。不適切候補は監査CSVに理由を記録しました。
 - **作品個体の記述**：作品内・個体の出来事は種全体に当てはまる生態と混同しません。メガシンカ後の説明を普通のすがたの画像で出すことも避けます。
+- **軽量表示**：全問が重い場合は、名前の選択肢に付属する画像4枚を読み込まないモードに切り替えられます。画像から答える問題の必須画像は省略しません。
 - **回答履歴**：結果画面からCSVを保存できます。
 - **未完了の検証**：過去の図鑑登録文章405件すべてを2026-10-23に再照合したわけではありません。公式URLを解答後に示します。
 - **画像**：PokeAPI提供のイラストURLを表示のみに利用。クイズ文章の情報源には使用しません。画像取得に失敗したら通常のすがたへ代用しません。
