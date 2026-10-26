@@ -85,3 +85,6 @@ div.stFormSubmitButton > button:focus-visible {
   .block-container {padding-top: 0.8rem; padding-left: 0.9rem; padding-right: 0.9rem;}
   [data-testid="stMetric"] {padding: 0.4rem 0.5rem;}
 }
+/* Only the progressive-quiz silhouette; does not affect other modes. */
+.poke-silhouette { display:flex; justify-content:center; align-items:center; min-height:245px; }
+.poke-silhouette img { width:230px; max-width:90%; height:230px; object-fit:contain; filter:brightness(0); }

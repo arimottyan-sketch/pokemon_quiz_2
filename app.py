@@ -4,6 +4,9 @@ import requests
 import streamlit as st
 from pathlib import Path
 from quiz_engine import *
+from progressive_quiz import (PROGRESSIVE_MODE, PROGRESSIVE_LABEL, MAX_HINTS,
+                              plan_progressive_session, progressive_ids,
+                              get_official_profile, hint_points)
 
 st.set_page_config(page_title='ポケモンクイズ', page_icon='📘', layout='centered')
 # GitHub's browser upload may reject .streamlit/: keep the color palette in
@@ -33,6 +36,7 @@ for key, default in {
     'missed':[], 'bookmarked':[], 'history':[], 'is_review':False,
     'region':'両方', 'quiz_style':'mix', 'finished':False, 'selected_pid':None,
     'light_mode':False,
+    'hint_step':0, 'hint_informative':[], 'progressive_points':0,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -49,6 +53,16 @@ def form_art(slug):
                 or s.get('front_default'))
     except (requests.RequestException, ValueError, KeyError, TypeError):
         return None
+
+
+@st.cache_data(ttl=21600, show_spinner=False)
+def cached_official_profile(row_id):
+    row = db['pokemon'][str(row_id)]
+    def fetch(url):
+        response = requests.get(url, headers={'User-Agent':'Mozilla/5.0 (compatible; PokemonLearningQuiz/1.0)'}, timeout=8)
+        response.raise_for_status()
+        return response.text
+    return get_official_profile(row, fetch)
 
 
 def artwork(row):
@@ -80,10 +94,14 @@ def clear_question_only():
     st.session_state.answer = None
     st.session_state.selected_pid = None
     st.session_state.finished = False
+    st.session_state.hint_step = 0
+    st.session_state.hint_informative = []
 
 
 def start(region, style, count, review_ids=None):
-    if style == 'typed':
+    if style == PROGRESSIVE_MODE:
+        specs = plan_progressive_session(db, region, count, priority_ids=review_ids)
+    elif style == 'typed':
         # Hand-typed spelling training retains the earlier style without a PokeAPI
         # species/name lookup: names come from the local official-source dataset.
         ids = pool_ids(db, region, 'description')
@@ -105,6 +123,9 @@ def start(region, style, count, review_ids=None):
     st.session_state.answer = None
     st.session_state.selected_pid = None
     st.session_state.finished = False
+    st.session_state.hint_step = 0
+    st.session_state.hint_informative = []
+    st.session_state.progressive_points = 0
     st.session_state.is_review = review_ids is not None
     st.session_state.region = region
     st.session_state.quiz_style = style
@@ -120,6 +141,9 @@ def commit(selection):
     st.session_state.selected_pid = selection
     if ok:
         st.session_state.score += 1
+        if q['mode'] == PROGRESSIVE_MODE:
+            st.session_state.progressive_points += hint_points(
+                st.session_state.hint_step, st.session_state.hint_informative)
         if st.session_state.is_review and q['id'] in st.session_state.missed:
             st.session_state.missed.remove(q['id'])
     elif q['id'] not in st.session_state.missed:
@@ -171,6 +195,9 @@ def show_question(q):
     st.progress(n / total, text=f'{n+1} / {total}問 ｜ 正解 {st.session_state.score}問')
     st.caption(f"{MODE_LABELS.get(kind, NAME_MODE)} ・ {region_for(pid)}")
     answered = st.session_state.answer is not None
+    if kind == PROGRESSIVE_MODE:
+        show_progressive_question(q)
+        return
     if kind in ('identification','typed'):
         st.markdown('#### このポケモンの名前は？')
         art_display(row)
@@ -272,6 +299,106 @@ def show_question(q):
             st.rerun()
 
 
+def show_progressive_question(q):
+    """Five-stage voluntary hints, with official citations after answering."""
+    pid = q['id']
+    row = db['pokemon'][str(pid)]
+    idx = st.session_state.idx
+    step = st.session_state.hint_step
+    informed = st.session_state.hint_informative
+    answered = st.session_state.answer is not None
+    profile = cached_official_profile(pid) if (step >= 2 or answered) else None
+
+    st.markdown('#### このポケモンは誰？')
+    st.caption('難しい公式情報 → 詳しい公式情報 → 特性 → タイプ → シルエット')
+    st.write(f'ヒント **{min(step+1, 5)} / 5** ｜ 今正解すると **{hint_points(step, informed)}点**')
+    st.markdown('**ヒント①：少し難しい公式情報**')
+    st.write(question_passage(q['hints'][0], pid, db))
+
+    if step >= 1:
+        st.markdown('**ヒント②：追加の公式情報・図鑑説明**')
+        st.write(question_passage(q['hints'][1], pid, db))
+    if step >= 2:
+        st.markdown('**ヒント③：特性**')
+        if profile and profile.get('abilities'):
+            st.write('・'.join(profile['abilities']))
+        else:
+            st.caption('公式ずかんから特性を取得できませんでした。このヒントは減点対象外です。')
+    if step >= 3:
+        st.markdown('**ヒント④：タイプ**')
+        if profile and profile.get('types'):
+            st.write('・'.join(profile['types']))
+        else:
+            st.caption('公式ずかんからタイプを取得できませんでした。このヒントは減点対象外です。')
+    if step >= 4:
+        st.markdown('**ヒント⑤：シルエット**')
+        url = artwork(row)
+        if url:
+            # Render the existing transparent artwork as a black silhouette.
+            # Never display the full-colour artwork before the answer.
+            from html import escape
+            st.markdown('<div class="poke-silhouette"><img src="' + escape(url, quote=True)
+                        + '" alt="ポケモンのシルエット"></div>', unsafe_allow_html=True)
+        else:
+            st.warning('この姿のシルエット画像を取得できません。')
+
+    if not answered:
+        choices = q['choices']
+        with st.form(f'progressive_{idx}'):
+            selection = st.radio('どのポケモン？', list(range(4)),
+                                 format_func=lambda i: f"{'ABCD'[i]}. {db['pokemon'][str(choices[i])]['name']}",
+                                 index=None, key=f'progressive_choice_{idx}')
+            submitted = st.form_submit_button('回答する', type='primary', use_container_width=True)
+        if submitted and selection is not None:
+            commit(choices[selection])
+        if step < 4:
+            if st.button('次のヒントを表示', use_container_width=True):
+                next_step = step + 1
+                informative = True
+                # The official profile may not be available: skip point penalty.
+                if next_step == 2 and not (cached_official_profile(pid) or {}).get('abilities'):
+                    informative = False
+                elif next_step == 3 and not (cached_official_profile(pid) or {}).get('types'):
+                    informative = False
+                if informative:
+                    st.session_state.hint_informative.append(next_step)
+                st.session_state.hint_step = next_step
+                st.rerun()
+        if st.button('ここまでで終了', key=f'progressive_end_{idx}'):
+            st.session_state.finished = True
+            st.rerun()
+        return
+
+    if st.session_state.answer:
+        st.success(f"正解！ {hint_points(step, informed)}点獲得")
+    else:
+        st.error(f"不正解。正解は {row['name']} です。")
+    st.markdown(f"### No.{national_number(row):04d} {row['name']}")
+    art_display(row)
+    st.markdown('**今回のヒントに用いた公式原文・出典**')
+    for i, rec in enumerate(q['hints'], start=1):
+        with st.expander(f'ヒント{i}｜{rec["source_title"]}'):
+            st.write(rec['text'])
+            source(rec)
+    if profile:
+        st.markdown(f'[特性・タイプの公式掲載ページ ↗]({profile["url"]})')
+    details(pid)
+    bookmark_button(pid)
+    c_next, c_end = st.columns([2, 1])
+    if c_next.button('次の問題へ →', type='primary', use_container_width=True):
+        st.session_state.idx += 1
+        st.session_state.answer = None
+        st.session_state.selected_pid = None
+        st.session_state.hint_step = 0
+        st.session_state.hint_informative = []
+        if st.session_state.idx >= len(st.session_state.specs):
+            st.session_state.finished = True
+        st.rerun()
+    if c_end.button('ここまでで終了', key=f'progressive_finish_{idx}',use_container_width=True):
+        st.session_state.finished = True
+        st.rerun()
+
+
 def show_finish():
     st.header('結果')
     specs=st.session_state.specs
@@ -282,6 +409,8 @@ def show_finish():
     c1.metric('解答数',attempted)
     c2.metric('正解',st.session_state.score)
     c3.metric('正答率',f'{st.session_state.score/attempted:.0%}' if attempted else '—')
+    if st.session_state.quiz_style == PROGRESSIVE_MODE:
+        st.metric('ヒントクイズ獲得ポイント', st.session_state.progressive_points)
     pending = list(dict.fromkeys(st.session_state.missed + st.session_state.bookmarked))
     st.write(f'現在の復習対象：**{len(pending)}種類・すがた**（誤答と★登録）')
     if pending:
@@ -305,9 +434,10 @@ if page == 'クイズ':
     if st.session_state.specs is None:
         with st.form('quiz_options'):
             region = st.selectbox('出題する地方', [ALL_REGION,'イッシュ','パルデア'], index=0)
-            options = list(MODE_LABELS.values()) + [NAME_MODE]
+            options = list(MODE_LABELS.values()) + [NAME_MODE, PROGRESSIVE_LABEL]
             mode_label = st.selectbox('問題形式', options, index=0)
-            mode = 'typed' if mode_label == NAME_MODE else DISPLAY_MODES[mode_label]
+            mode = ('typed' if mode_label == NAME_MODE else
+                    PROGRESSIVE_MODE if mode_label == PROGRESSIVE_LABEL else DISPLAY_MODES[mode_label])
             count = st.selectbox('問題数', [5,10,20,30,'全問'], index=1,
                                  format_func=lambda n:f'{n}問' if isinstance(n,int) else '全問')
             light = st.checkbox('軽量表示（名前の四択で選択肢画像を省略）', value=st.session_state.light_mode,
@@ -315,7 +445,8 @@ if page == 'クイズ':
             marked = list(dict.fromkeys(st.session_state.missed+st.session_state.bookmarked))
             restrict = st.checkbox(f'苦手・★登録だけ出題する（{len(marked)}種類・すがた）',
                                    disabled=not marked)
-            available = pool_ids(db,region,mode if mode!='typed' else 'description')
+            available = (progressive_ids(db, region) if mode == PROGRESSIVE_MODE else
+                         pool_ids(db,region,mode if mode!='typed' else 'description'))
             if restrict:
                 allowed = {str(p) for p in marked}
                 available = [p for p in available if str(p) in allowed]
