@@ -6,7 +6,7 @@ from pathlib import Path
 from quiz_engine import *
 from progressive_quiz import (PROGRESSIVE_MODE, PROGRESSIVE_LABEL, MAX_HINTS,
                               plan_progressive_session, progressive_ids,
-                              get_official_profile, hint_points)
+                              get_official_profile, get_official_profile_from_zukan, hint_points)
 
 st.set_page_config(page_title='ポケモンクイズ', page_icon='📘', layout='centered')
 # GitHub's browser upload may reject .streamlit/: keep the color palette in
@@ -31,6 +31,26 @@ except (OSError, ValueError) as error:
     st.error(f'公式文章の固定データを読み込めません。data/official_quotes.json を確認してください。詳細：{error}')
     st.stop()
 
+# Cached official Pokédex access. These names were referenced by the app but
+# absent from the prior archive, causing NameError during progressive play.
+@st.cache_data(ttl=21600, show_spinner=False)
+def cached_webpage(url):
+    from urllib.parse import urlparse
+    parsed = urlparse(url)
+    if parsed.scheme != 'https' or parsed.hostname != 'zukan.pokemon.co.jp':
+        raise ValueError('公式ずかん以外のURLは取得しません')
+    response = requests.get(url, timeout=12)
+    response.raise_for_status()
+    return response.text
+
+@st.cache_data(ttl=21600, show_spinner=False)
+def cached_official_profile(pid):
+    return get_official_profile(db['pokemon'][str(pid)], cached_webpage)
+
+@st.cache_data(ttl=21600, show_spinner=False)
+def cached_zukan_profile(pid):
+    return get_official_profile_from_zukan(db['pokemon'][str(pid)], cached_webpage)
+
 for key, default in {
     'specs':None, 'idx':0, 'score':0, 'answer':None,
     'missed':[], 'bookmarked':[], 'history':[], 'is_review':False,
@@ -41,35 +61,32 @@ for key, default in {
     if key not in st.session_state:
         st.session_state[key] = default
 
-@st.cache_data(ttl=86400, show_spinner=False)
-def form_art(slug):
-    """Only obtain artwork from PokeAPI. Never use the base form as a fallback."""
-    try:
-        r = requests.get(f'https://pokeapi.co/api/v2/pokemon/{slug}', timeout=10)
-        r.raise_for_status()
-        s = r.json().get('sprites') or {}
-        return (((s.get('other') or {}).get('official-artwork') or {}).get('front_default')
-                or ((s.get('other') or {}).get('home') or {}).get('front_default')
-                or s.get('front_default'))
-    except (requests.RequestException, ValueError, KeyError, TypeError):
-        return None
-
-
 @st.cache_data(ttl=21600, show_spinner=False)
-def cached_official_profile(row_id):
-    row = db['pokemon'][str(row_id)]
-    def fetch(url):
-        response = requests.get(url, headers={'User-Agent':'Mozilla/5.0 (compatible; PokemonLearningQuiz/1.0)'}, timeout=8)
-        response.raise_for_status()
-        return response.text
-    return get_official_profile(row, fetch)
+def official_artwork_url(pid, name):
+    """Return an illustration linked from the official Pokédex page, if found.
+
+    Never use nonofficial mirrors or synthesize unverified CDN paths.
+    """
+    from bs4 import BeautifulSoup
+    from urllib.parse import urljoin, urlparse
+    official_page=f'https://zukan.pokemon.co.jp/detail/{int(pid):04d}'
+    try:
+        soup=BeautifulSoup(cached_webpage(official_page),'html.parser')
+        images=soup.find_all('img')
+        exact=[t for t in images if t.get('alt','').strip()==name]
+        for tag in exact:
+            src=tag.get('src') or tag.get('data-src') or tag.get('data-original')
+            if not src:continue
+            url=urljoin(official_page,src)
+            if url.startswith('https://') and urlparse(url).hostname=='zukan.pokemon.co.jp':
+                return url
+    except Exception:
+        pass
+    return None
 
 
 def artwork(row):
-    if row.get('pokeapi_slug'):
-        return form_art(row['pokeapi_slug'])
-    return ('https://raw.githubusercontent.com/PokeAPI/sprites/master/'
-            f'sprites/pokemon/other/official-artwork/{national_number(row)}.png')
+    return official_artwork_url(national_number(row),row['name'])
 
 
 def art_display(row, *, full=False):
@@ -316,12 +333,42 @@ def show_progressive_question(q):
     st.write(question_passage(q['hints'][0], pid, db))
 
     if step >= 1:
-        st.markdown('**ヒント②：追加の公式情報・図鑑説明**')
+        staged = q['hints'][1].get('progressive_staged')
+        st.markdown('**ヒント②：' + ('図鑑説明の続き' if staged else '追加の公式情報・図鑑説明') + '**')
         st.write(question_passage(q['hints'][1], pid, db))
+        if staged:
+            # An additional independently sourced clue only when read from the
+            # official zukan. The excerpt/full-text fallback works offline.
+            zukan = cached_zukan_profile(pid) or {}
+            facts = [f'{title}：{zukan[key]}' for title,key in (
+                     ('分類','classification'),('高さ','height'),('重さ','weight')) if zukan.get(key)]
+            if facts:
+                st.caption('公式ずかんのプロフィール：' + '／'.join(facts))
     if step >= 2:
         st.markdown('**ヒント③：特性**')
         if profile and profile.get('abilities'):
-            st.write('・'.join(profile['abilities']))
+            if profile.get('ability_reference_url'):
+                normal=profile.get('normal_abilities',[])
+                hidden=profile.get('hidden_abilities',[])
+                if normal:st.write('通常特性：'+'・'.join(normal))
+                if hidden:st.write('隠れ特性：'+'・'.join(hidden))
+                for f in profile.get('ability_forms',[]):
+                    name = f.get('form','')
+                    n = '・'.join(f.get('normal',[])) or '該当なし'
+                    h = '・'.join(f.get('hidden',[])) or '該当なし'
+                    st.caption(f'{name}：通常 {n}／隠れ {h}')
+                st.caption('公式ずかん掲載の特性を表示しています。')
+                if not profile.get('ability_verified_complete'):
+                    st.caption('このポケモンの全特性は照合中です。')
+            else:
+                hidden=profile.get('hidden_abilities', [])
+                additional=profile.get('additional_official_abilities', [])
+                displayed=[a for a in profile['abilities'] if a not in hidden and a not in additional]
+                if displayed:st.write('公式ずかん掲載の特性：'+'・'.join(displayed))
+                if additional:st.write('別の公式資料に掲載の特性：'+'・'.join(additional))
+                if hidden:st.write('隠れ特性：'+'・'.join(hidden))
+                if not profile.get('hidden_abilities_verified'):
+                    st.caption('隠れ特性を含めた確認は継続中です。')
         else:
             st.caption('公式ずかんから特性を取得できませんでした。このヒントは減点対象外です。')
     if step >= 3:
@@ -376,12 +423,18 @@ def show_progressive_question(q):
     st.markdown(f"### No.{national_number(row):04d} {row['name']}")
     art_display(row)
     st.markdown('**今回のヒントに用いた公式原文・出典**')
-    for i, rec in enumerate(q['hints'], start=1):
+    records=q['hints'][:1] if q['hints'][1].get('progressive_staged') else q['hints']
+    for i, rec in enumerate(records, start=1):
         with st.expander(f'ヒント{i}｜{rec["source_title"]}'):
             st.write(rec['text'])
             source(rec)
     if profile:
-        st.markdown(f'[特性・タイプの公式掲載ページ ↗]({profile["url"]})')
+        st.markdown(f'[特性（公式ずかん掲載分）・タイプの公式出典 ↗]({profile["url"]})')
+        if profile.get('ability_reference_url'):
+            st.markdown(f'[特性の出典 ↗]({profile["ability_reference_url"]})')
+        for hidden_url in profile.get('hidden_source_urls', []) + profile.get('additional_official_source_urls', []):
+            source_label = ('特性のみ参照を許可した資料' if hidden_url in profile.get('permitted_nonofficial_ability_urls', []) else '隠れ特性の追加公式出典')
+            st.markdown(f'[{source_label} ↗]({hidden_url})')
     details(pid)
     bookmark_button(pid)
     c_next, c_end = st.columns([2, 1])
@@ -427,6 +480,7 @@ def show_finish():
 
 
 st.title('ポケモンクイズ')
+st.caption('AIを使って収集したポケモン公式資料の情報を使用しています。原文と出典の照合を継続しています。')
 page = st.radio('画面', ['クイズ', 'ポケモン情報', '使い方'], horizontal=True,
                 label_visibility='collapsed')
 
@@ -506,13 +560,9 @@ elif page == 'ポケモン情報':
 else:
     st.subheader('使い方')
     st.markdown('''
-- **クイズ**：地方・問題形式・問題数を選んでスタート。回答後に正解と出典を表示します。
-- **ポケモン情報**：名前・図鑑番号・説明文で検索し、掲載文と参照先を確認できます。
-- **復習**：間違えたポケモンや★登録したポケモンを、クイズの出題対象に指定できます。
-- **図鑑外の公式情報**：原資料631件を保持し、条件を満たした情報を1件ずつ問題化。「図鑑外ミックス」を選べば採用した全情報に取り組めます。不適切候補は監査CSVに理由を記録しました。
-- **作品個体の記述**：作品内・個体の出来事は種全体に当てはまる生態と混同しません。メガシンカ後の説明を普通のすがたの画像で出すことも避けます。
-- **軽量表示**：全問が重い場合は、名前の選択肢に付属する画像4枚を読み込まないモードに切り替えられます。画像から答える問題の必須画像は省略しません。
-- **回答履歴**：結果画面からCSVを保存できます。
-- **未完了の検証**：過去の図鑑登録文章405件すべてを2026-10-23に再照合したわけではありません。公式URLを解答後に示します。
-- **画像**：PokeAPI提供のイラストURLを表示のみに利用。クイズ文章の情報源には使用しません。画像取得に失敗したら通常のすがたへ代用しません。
+- **クイズ**：地方・問題形式・問題数を選んでスタート。回答すると正解と出典を確認できます。
+- **だんだんヒント**：「このポケモンは誰？」に挑戦。ヒントを少なく使って正解するほど高得点です。
+- **ポケモン情報**：名前・図鑑番号・文章中の言葉で検索できます。
+- **復習**：間違えたポケモンや★を付けたポケモンを出題できます。
+- **履歴**：結果画面からCSVを保存できます。
 ''')

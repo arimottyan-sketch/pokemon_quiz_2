@@ -287,6 +287,18 @@
           "audit_gate_reason": "見出しだけで特定できる情報がない",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『Pokémon LEGENDS Z-A』公式サイト「最初のパートナー」ポカブ紹介",
+          "url": "https://www.pokemon.co.jp/ex/legends_z-a/ja/pokemon/250227_01/",
+          "text": "見かけによらず身軽な動きで敵を翻弄し、攻撃を軽やかに避けて、左右の鼻の穴から火の玉を連射します。カゼをひくと、炎ではなく真っ黒な煙になってしまいます。",
+          "distinctness_review": "風邪をひくと炎のかわりに真っ黒な煙を出す、という既存図鑑説明にない特徴",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_exact_official_source_distinctness_review",
+          "review_status": "official_primary_page_checked_20261028",
+          "source_scope": "ゲーム公式サイトの紹介文"
         }
       ]
     },
@@ -303,6 +315,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47634",
+          "text": "体内の 炎が 燃え上がると 動きの キレと スピードが 増す。 ピンチになると 煙を 吹き出す。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ]
     },
@@ -390,6 +415,19 @@
           "quiz_review": "pending_option_uniqueness",
           "scope": "『ポケパーク2』に登場する個体の設定",
           "verified_on": "2026-10-24"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47635",
+          "text": "アゴの 炎で こぶしを 燃やして 炎の パンチを 繰り出す。 とても 仲間思いの ポケモン。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -635,6 +673,40 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック・ホワイト』公式サイト／ミネズミ紹介",
+          "url": "https://www.pokemon.co.jp/series/bw/",
+          "text": "おさきにどうぞは、相手に先に攻撃させるユニークな技。",
+          "question_text": "『ポケットモンスターブラック・ホワイト』の公式サイトでは、ミネズミの紹介で、相手に先に攻撃させるわざ「おさきにどうぞ」が紹介された。",
+          "source_scope": "ゲーム公式サイトでの技の紹介",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "quiz_review": "official_webpage_directly_verified_2026_10_28",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "汎用技の説明であり、生態を説明しない",
+          "source_locator": "公式サイト本文・ミネズミ画像付近",
+          "editorial_status": "excluded_low_species_learning_value_20261029"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ミネズミ／BW7-B 060/070（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/28283",
+          "text": "警戒心が 強く 必ず 一匹は 見張りを しているのだが 後ろからの 敵には 気づかない。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の見張り当番・合図に対し、背後に気づかない弱点を追加",
+          "source_card_code": "BW7-B 060/070"
         }
       ]
     },
@@ -735,6 +807,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn341488search3"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター ソード』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0507",
+          "text": "とても　かしこく　よく　なつく。　はじめて　ひとのパートナーに　なった　ポケモンと　いう　せつも　あるのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -812,6 +896,18 @@
           "audit_gate_reason": "作中の台詞断片だけで特定する根拠が乏しい",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』第46話",
+          "url": "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/201108/21304_201108251900.html",
+          "text": "昔チョロネコにひどい目にあわされたというデントは、チョロネコの言うことを信用していない様子。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "specific_fictional_episode",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』第46話では、昔チョロネコにひどい目にあわされたというデントは、チョロネコの言うことを信用していない様子。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -829,6 +925,39 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn785727search2"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京『ポケットモンスターBW シーズン2』2012年12月13日放送・番組情報",
+          "url": "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/201212/21304_201212131900.html",
+          "text": "レパルダス、ゼブライカ、ダゲキと強力なポケモンたちにサトシは…!?",
+          "question_text": "アニメ『ポケットモンスターBW シーズン2』のイッシュリーグ3回戦の公式番組紹介では、ケニヤンとの対戦をめぐり、レパルダス・ゼブライカ・ダゲキが強力なポケモンとして挙げられた。",
+          "source_scope": "2012年12月13日放送分の番組予告（種一般の特徴ではない）",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "quiz_review": "official_webpage_directly_verified_2026_10_28",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "強いポケモンとして名前が挙がるだけ",
+          "source_locator": "番組ページ・番組冒頭紹介文",
+          "editorial_status": "excluded_low_species_learning_value_20261029"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "スターターセットex「マリィのモルペコ＆オーロンゲex」・マリィのレパルダス SVOM 002/019（2025年2月21日）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47254",
+          "text": "フォクスライと 縄張りを めぐり 争う。 音ひとつ たてずに 獲物の 背後に 忍び寄る。",
+          "first_release_on": "2025-02-21",
+          "source_scope": "ポケモンの種に関する公式カード図鑑説明。バトルの技効果ではない",
+          "verification_method": "公式カード個別ページ掲載文と商品発売日の目視照合",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "progressive_priority": 22,
+          "editorial_note": "フォクスライとの縄張り争い、無音の狩りは既存の毛並み・神出鬼没とは別内容。",
+          "verified_on": "2026-10-29",
+          "release_proof_url": "https://www.pokemon-card.com/products/sv/svo.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -856,12 +985,76 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
-          "quiz_approved": true,
-          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "low_value_event_archived_2026-10-28",
           "source_scope": "2022年開催の『Pokémon GO』ゲームイベント限定の登場履歴。",
           "topic_key": "GO色違い初登場：札幌",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "official_archive_kept_not_eligible_for_question"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック・ホワイト』公式・ヤナップ紹介",
+          "url": "https://www.pokemon.co.jp/series/bw/",
+          "text": "「アクロバット」は道具を持っていなければ威力が倍になる新技。きのみを使ったあとなどに使うと強力だ！",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "source_scope": "2010年公式ゲーム紹介・技の例であり種の習性ではない",
+          "quality_review": "中：作品固有の技紹介。Pokémon GO色違い初登場より知識的価値が高い",
+          "progressive_priority": 2,
+          "question_text": "『ポケットモンスターブラック・ホワイト』公式サイトのヤナップ紹介では、道具を持っていないと威力が倍になるわざ「アクロバット」が紹介された。"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「デントVS氷の挑戦者！サンヨウジムの危機！！」",
+          "text": "ヤナップはデントと拾いにいった木の実を分けてあげようとユキノオーに近づいたところ、突然攻撃を受けてしまう。",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes12/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "progressive_priority": 6,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "アニメ内の出来事",
+          "quality_note": "特定作品でのヤナップ本人の行動（他者へ木の実を分けようとする）",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「デントVS氷の挑戦者！サンヨウジムの危機！！」では、ヤナップはデントと拾いにいった木の実を分けてあげようとユキノオーに近づいたところ、突然攻撃を受けてしまう。",
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "その個体が偶然攻撃された出来事のみで学習価値が低い"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京公式「デントとポッド兄弟バトル！バオップVSヤナップ」2011年12月8日",
+          "text": "ポッドは相棒の“こうおん”ポケモンのバオップで、一方デントは“くさざる”ポケモンのヤナップで勝負に臨み、見事デントが勝利する。",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes05/",
+          "verified_on": "2026-10-29",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "review_status": "verbatim_2011_episode_summary_verified",
+          "quiz_attribution_scope": "アニメの特定話における対戦の結果。生態一般として扱わない",
+          "quality_note": "偶発的な木の実の場面ではなく、デントの相棒としての重要な兄弟バトル",
+          "progressive_priority": 8,
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「デントとポッド兄弟バトル！バオップVSヤナップ」では、ポッドは相棒の“こうおん”ポケモンのバオップで、一方デントは“くさざる”ポケモンのヤナップで勝負に臨み、見事デントが勝利する。",
+          "editorial_status": "excluded_low_species_learning_value_20261029_v2",
+          "editorial_note": "勝利した場面の説明はポケモンの生態・特徴の理解に直結しないため優先対象から外した"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "拡張パック「ブラックボルト」・ヤナップ SV11B 004/086（2025年6月6日）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47540",
+          "text": "深い 森で 暮らす ポケモン。 頭に 生えた 葉っぱを 食べると 疲れが ウソのように 消える。",
+          "first_release_on": "2025-06-06",
+          "source_scope": "公式カードの図鑑文。生息環境と頭の葉の性質",
+          "verification_method": "公式カード個別ページ掲載文と商品発売日の目視照合",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "progressive_priority": 22,
+          "editorial_note": "森に生息する情報は別の事実。ただし頭の葉の疲労回復は第2ヒントと部分重複する。",
+          "verified_on": "2026-10-29",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -879,6 +1072,42 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn785727search4"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』第73話",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes06/",
+          "text": "ヤナッキーのローキックが何度もさく裂し、痛烈な連続技を受けたズルッグは、バトルフィールドに倒れ込んでしまった。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "specific_fictional_episode",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』第73話では、ヤナッキーのローキックが何度もさく裂し、痛烈な連続技を受けたズルッグは、バトルフィールドに倒れ込んでしまった。",
+          "quiz_enabled": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "一般的な技で殴っただけという説明"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック２・ホワイト２』公式サイト・ポッド／デント／コーン",
+          "url": "https://www.pokemon.co.jp/ex/b2w2/koryaku/koryaku08.html",
+          "text": "サンヨウシティのレストランでは、元ジムリーダーのポッド・デント・コーンと出会える。3人がなぜ、ジムを閉鎖してしまったのかは、「おもいでリンク」をすると語られる。",
+          "question_text": "『ポケットモンスター ブラック・ホワイト』ではサンヨウジムのリーダーだったデント。2年後の『ブラック２・ホワイト２』では元ジムリーダーとなり、サンヨウシティのレストランで、進化後のくさタイプのポケモンとともに登場する。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "primary_official_paragraph_and_adjacent_species_images_checked_20261030",
+          "verified_on": "2026-10-30",
+          "source_scope": "BW2の元ジムリーダー3兄弟と公式ページに並ぶ3種類の進化形（ヤナッキー・バオッキー・ヒヤッキー）",
+          "quiz_attribution_scope": "ゲーム作品固有の事実。BWのデントのくさ担当／BW2での元ジムリーダー・レストラン・進化後のくさタイプを公式資料で照合。ゲーム中の同一個体だとは断定しない。",
+          "primary_source_support_urls": [
+            "https://www.pokemon.co.jp/series/bw/characters/characters07.html",
+            "https://zukan.pokemon.co.jp/detail/0512",
+            "https://www.pokemon.co.jp/ex/b2w2/system/system07.html"
+          ],
+          "progressive_after_dex": true,
+          "progressive_priority": 100,
+          "editorial_note": "本文は公式ページの原文そのまま。question_textはBW/BW2/公式図鑑の複数の根拠を組み合わせた出題文。ヤナッキーという正解名は出題文に含めない。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -906,12 +1135,59 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
-          "quiz_approved": true,
-          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "low_value_event_archived_2026-10-28",
           "source_scope": "2022年開催の『Pokémon GO』ゲームイベントで初めて出会える機会。",
           "topic_key": "GO色違い初登場：ベルリン",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "official_archive_kept_not_eligible_for_question"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック・ホワイト』公式・バオップ紹介",
+          "url": "https://www.pokemon.co.jp/series/bw/",
+          "text": "新技の「はじけるほのお」は、追加効果で横にいるポケモンにもダメージを与える！",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "source_scope": "2010年公式ゲーム紹介・わざの紹介（通常の生態ではない）",
+          "quality_review": "中：作品固有の技紹介",
+          "progressive_priority": 2,
+          "question_text": "『ポケットモンスターブラック・ホワイト』公式サイトのバオップ紹介では、「はじけるほのお」が隣のポケモンにもダメージを与える追加効果を持つわざとして紹介された。"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "バオップ／SV11W 014/086・拡張パック「ホワイトフレア」",
+          "text": "頭の ふさは 怒ると 温度が 上がり ３００度 以上になる。 木の実を ふさで 焼いて 食べる。",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47636",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "progressive_priority": 6,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "ポケモン自身の特徴",
+          "quality_note": "怒ると頭の房が300度以上になる固有の生態",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「デントとポッド兄弟バトル！バオップVSヤナップ」",
+          "text": "ポッドは相棒の“こうおん”ポケモンのバオップで、一方デントは“くさざる”ポケモンのヤナップで勝負に臨み、見事デントが勝利する。",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「デントとポッド兄弟バトル！バオップVSヤナップ」では、ポッドは相棒の“こうおん”ポケモンのバオップで、一方デントは“くさざる”ポケモンのヤナップで勝負に臨み、見事デントが勝利する。",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes05/",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "progressive_priority": 4,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "アニメ内の出来事",
+          "quality_note": "ポッドの相棒として兄弟対戦したアニメ固有の事実"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -929,6 +1205,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn879693search0"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "拡張パック「ホワイトフレア」・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/48180",
+          "text": "甘いものが 大好物。 体内の 炎を 燃やす エネルギーに なるのだ。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -956,12 +1245,62 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
-          "quiz_approved": true,
-          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "low_value_event_archived_2026-10-28",
           "source_scope": "2022年開催の『Pokémon GO』ゲームイベント限定の登場履歴。",
           "topic_key": "GO色違い初登場：シアトル",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "official_archive_kept_not_eligible_for_question"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスターブラック・ホワイト』公式・ヒヤップ紹介",
+          "url": "https://www.pokemon.co.jp/series/bw/",
+          "text": "新技の「ねっとう」は、みずタイプの技だが追加効果で「やけど」状態になる珍しい技だ。",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "source_scope": "2010年公式ゲーム紹介・わざの紹介（通常の生態ではない）",
+          "quality_review": "中：作品固有の技紹介",
+          "progressive_priority": 2,
+          "question_text": "『ポケットモンスターブラック・ホワイト』公式サイトのヒヤップ紹介では、みずタイプなのに「やけど」状態にすることがあるわざ「ねっとう」が紹介された。"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ヒヤップ／SV11B 020/086・拡張パック「ブラックボルト」",
+          "text": "頭の ふさに ためた 水は 栄養 たっぷり。 植物に かけると 大きく 育つのだ。",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47556",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "progressive_priority": 5,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "ポケモン自身の特徴",
+          "quality_note": "栄養豊富な水を植物に与えると大きく育つ。既存図鑑と主題は重なるため独立ヒントとしては要改善",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "既存の草木に水をかける生態と意味が重複"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトコレクション」・ヒヤップ（BW1-Bw 014/053／ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27169",
+          "text": "乾燥した 環境に 弱い。 頭の ふさに ためた 水を しっぽから まいて 湿らせる。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261030",
+          "source_scope": "ポケモンカード下部に掲載されたポケモンの説明文（ワザ・特性の効果とは別）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存は養分のある水で草木を育てる話",
+          "source_card_code": "BW1-Bw 014/053"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -979,6 +1318,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn879693search1"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケモン超不思議のダンジョン』学校のポケモン紹介",
+          "url": "https://www.pokemon.co.jp/ex/cho_dungeon/game/pokemon/150715_02.html",
+          "text": "学校の校長先生。\n子どもたちの自主性を大切にして、のびのびと育てている。子どもたちの考え方にも理解があるようだ。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "game_specific_role",
+          "question_text": "ゲーム『ポケモン超不思議のダンジョン』では、学校の校長先生。\n子どもたちの自主性を大切にして、のびのびと育てている。子どもたちの考え方にも理解があるようだ。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1113,6 +1464,22 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・マメパト／BW6-Bf 050/059（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/28144",
+          "text": "とても 忘れっぽい ポケモンで トレーナーに 命令 されたのに 新しい 命令を 待っている。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の群れ・餌付けと異なり、忘れっぽい性格を追加",
+          "source_card_code": "BW6-Bf 050/059"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1249,6 +1616,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "個体名とトレーニング名を並べただけで、識別する情報が不足"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・シママ／CS1p 005/009（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27005",
+          "text": "放電すると たてがみが 光る。 たてがみの 光り方で 仲間と コミュニケーションを とっている。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の心拍・落雷吸収に対し、発光を使った意思疎通を追加",
+          "source_card_code": "CS1p 005/009"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1404,6 +1787,22 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・コロモリ／MG 005/016（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/28780",
+          "text": "コロモリの 鼻を くっつけた 体に ハート型の 跡がつくと いいことが 起こると いわれている。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の生息痕と異なり、ハート型の跡の言い伝えを追加",
+          "source_card_code": "MG 005/016"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1448,6 +1847,22 @@
           "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
           "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
           "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ココロモリ／BW4-B 036/069（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27796",
+          "text": "オスが メスに 求愛するとき 発する 超音波を 浴びると とても 楽しい 気分になる。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存の破壊的音波・飛行後疲労・鼻の幸運信仰と異なり、求愛音波の作用を追加",
+          "source_card_code": "BW4-B 036/069"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1483,6 +1898,37 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "excluded_generic_ability_effect_not_species_unique"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』「大空と大地のタッグバトル！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes09/",
+          "text": "突然、“ゆうもうポケモン”ウォーグルと“もぐらポケモン”モグリュー、そのトレーナーの、ソラン＆リーク兄弟が現れ、サトシとデントにタッグバトルを挑んできた！！",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "specific_fictional_episode",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「大空と大地のタッグバトル！」では、ソラン＆リーク兄弟が、ウォーグルと「もぐらポケモン」を連れてサトシとデントにタッグバトルを挑んできた。",
+          "quiz_enabled": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "タッグバトルに参加しただけという話題"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム スタートデッキ100・モグリュー（SI 229/414／ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/40707",
+          "text": "ツメで 地中を 掘り進むので 育てた 野菜が 傷むと 農業関係者は 嫌う。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261030",
+          "source_scope": "ポケモンカード下部に掲載されたポケモンの説明文（ワザ・特性の効果とは別）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存は地下を掘る移動速度の話",
+          "source_card_code": "SI 229/414"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1589,6 +2035,18 @@
           "require_special_form_image": true,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "「わかったり」で終わる不完全な原文断片。後続本文未確認"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『ポケットモンスター オメガルビー・アルファサファイア』公式サイト／メガタブンネのメガシンカ前紹介",
+          "url": "https://www.pokemon.co.jp/ex/oras/pokemon/24.html",
+          "text": "耳の触角で触れると、心臓の音で相手の体調や気持ちがわかったり、タマゴからポケモンがいつ出てくるのかもわかったりする。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "公式ゲームサイトの紹介文",
+          "distinctness_review": "触角による孵化予測の情報を含む。一般のタブンネへの帰属がページで明示"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1781,6 +2239,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn609162search0"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0536",
+          "text": "きれいな　こえで　なくこともある。　からだの　とっきが　おおきいほど　ひろい　おんいきで　なけるのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -1826,6 +2296,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn210391search1"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47958",
+          "text": "帯を 締めると パワーアップする。 野生の ナゲキは つる草を 編んで 自分の 帯を 作る。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ]
     },
@@ -1863,6 +2346,20 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "技名だけで対象ポケモンの固有の説明になっていない"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47668",
+          "text": "ダゲキが 修業する 山から 大岩や 大木に こぶしを 打ちつける 音が 聞こえてくる。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "山で大岩・大木を突く修業音。既存は修業妨害とパンチ力。"
         }
       ]
     },
@@ -1912,6 +2409,22 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_unresolved_fragment",
           "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・クルミル／SM11 006/094（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/36753",
+          "text": "葉っぱを かみ切り 口から 出す 粘着糸で 縫い合わせる。 自分で 服を 作る ポケモン。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の葉っぱの服を真似る行動に対し、口の粘着糸で縫う具体的手順を追加",
+          "source_card_code": "SM11 006/094"
         }
       ]
     },
@@ -1945,6 +2458,18 @@
           "audit_gate_reason": "作品内事件の出だしのみ",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0541",
+          "text": "木の　根本で　静かに　暮らす。　新鮮な　葉っぱよりも　軟らかく　なった　落ち葉を　エサに　好む。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2035,7 +2560,7 @@
           "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes02/",
           "text": "落ち着かない様子で敵意をむき出しにしている",
           "quiz_text": "アニメ『ベストウイッシュ』「ヒウンシティ！ フシデパニック！！」で、街の虫ポケモンの異変が起きた際、地下水道で敵意をあらわにしていたポケモン。",
-          "quiz_enabled": true,
+          "quiz_enabled": false,
           "quiz_review": "manual_primary_source_checked_2026-10-22",
           "source_scope": "アニメ特定話の異変",
           "section": "ヒウンシティ！ フシデパニック！！",
@@ -2047,7 +2572,40 @@
           "quiz_approved": false,
           "audit_gate_reason": "一般的な状態描写のみで識別不能",
           "quiz_attribution_scope": "作品内・個体に関する記述",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "一場面で落ち着かないという描写のみ"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』第24話",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes02/",
+          "text": "するとそこには１体の\"ムカデポケモン\"フシデの姿が。しかも、アーティの言うとおり落ち着かない様子で敵意をむき出しにしている！",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "specific_fictional_episode",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』第24話のヒウンシティ地下水道の場面では、するとそこには１体の\"ムカデポケモン\"フシデの姿が。しかも、アーティの言うとおり落ち着かない様子で敵意をむき出しにしている！",
+          "quiz_enabled": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "一場面で落ち着かないという描写のみ"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「闘う虹を見たか」・フシデ（SM3H 022/051／ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/33885",
+          "text": "頭と 尻尾の 触角で まわりの 様子を 探る。 非常に 凶暴な 性格。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261030",
+          "source_scope": "ポケモンカード下部に掲載されたポケモンの説明文（ワザ・特性の効果とは別）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存は天敵にも効く猛毒の話",
+          "source_card_code": "SM3H 022/051"
         }
       ]
     },
@@ -2065,6 +2623,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn713953search0"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "スタートデッキ100 バトルコレクション・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/49177",
+          "text": "高速で 回転し 相手に 突撃。 最高時速は およそ １００キロに 達する。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2025-12-19",
+          "release_proof_url": "https://www.pokemon-card.com/ex/mc/"
         }
       ]
     },
@@ -2101,6 +2672,20 @@
           "audit_gate_reason": "単発場面のみで種・作品の特性を特定しにくい",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47595",
+          "text": "素早い 動きで 敵を 追い詰め 頭の ツノで 攻撃する。 とどめを 刺すまで 容赦しない。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "俊敏に追い込む、頭部のツノを使う。既存は首のツメで獲物を挟む。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2217,12 +2802,31 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
+          "quiz_enabled": false,
           "quiz_approved": true,
           "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
           "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
           "topic_key": "進化石：たいようのいし",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "グッズの価格と商品名の紹介に過ぎず、生態や活躍ではない"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京『ベストウイッシュ』2012年5月24日「ポケモンソムリエ対決！テイスティングバトル！！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes07/",
+          "text": "“ねっこポケモン”チュリネがパートナーにふさわしいと断言するが",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「ポケモンソムリエ対決！テイスティングバトル!!」では、ポケモンソムリエのピノ・ノワールがモモッチのパートナーにふさわしいと推薦したポケモン。",
+          "source_scope": "アニメ作品に登場した個体についての人物の推薦",
+          "quality_review": "中：進化道具の単純な記録より、アニメの具体的な場面に関する知識",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": false,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "progressive_priority": 2,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "ソムリエが推薦しただけ。代わりに異なる図鑑説明が2件ある"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2367,6 +2971,20 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_full_text_from_search",
           "review_reference": "turn418734search3"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47597",
+          "text": "数匹で 群れを 作る。 眼球を カバーする 膜が 砂嵐から 目を 守る。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "群れと砂嵐から目を守る膜。既存は熱感知の膜。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2456,6 +3074,20 @@
           "audit_gate_reason": "技の実行についての文断片のみ",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47549",
+          "text": "体内で 炎が 燃えていると 落ち着かなく 走り回っている。 炎が 小さくなると 眠る。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "体内の炎量と睡眠の関係。既存は糞を懐炉にする習俗。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2539,6 +3171,19 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "アニメ個体のグループ名だけで、どのような特徴か説明していない"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/48093",
+          "text": "アップテンポの 踊りと 音で 花の タネを ねらう 天敵の とりポケモンを 追い払うのだ。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2575,6 +3220,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_unresolved_fragment",
           "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター ソード』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0557",
+          "text": "このみの　こいしに　あなを　あけて　すみかに　する。　ダンゴロや　タンドンに　とっては　てんてき。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2642,6 +3299,18 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "excluded_uninformative_facility_description_not_about_species"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "アニメ『ポケットモンスター ベストウイッシュ』第76話",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/sp/episodes/episodes07/",
+          "text": "ズルッグは、まだコントロールが完璧ではない「きあいだま」で勝負を掛ける！",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "specific_fictional_episode",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』第76話では、ズルッグは、まだコントロールが完璧ではない「きあいだま」で勝負を掛ける！"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2679,6 +3348,19 @@
           "audit_gate_reason": "単発事件の切り抜きのみで特定不能",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/48049",
+          "text": "縄張りに 入ってきた 相手を 集団で たたきのめす。 口から 酸性の 体液を 飛ばす。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2726,6 +3408,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn789519search2"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "拡張パック「超電ブレイカー」・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/46391",
+          "text": "夜な夜な 遺跡を さまよう。 もっている マスクは 人 だった ころの 自分の 顔 だという。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2024-10-18",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv8/index.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2836,6 +3531,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn962716search1"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0565",
+          "text": "みずのなかと　くらべて　うごきは　にぶいが　えものを　さがしもとめ　りくじょうでも　かつどうするぞ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2920,6 +3627,23 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "生態"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・アーケオス／SV11W 130/086（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/48042",
+          "text": "地上で 助走を つけてから 飛び立つ。 仲間と 協力して 獲物を しとめる 知能を 持つ。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の助走4km・走行40km/hに対し、協同狩猟を追加",
+          "source_card_code": "SV11W 130/086",
+          "question_text": "仲間と 協力して 獲物を しとめる 知能を 持つ。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2957,6 +3681,20 @@
           "audit_gate_reason": "個体の単発行動のみで判別しにくい",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47678",
+          "text": "不衛生な 場所を 好む。 ゲップのように 吐き出す ガスを 吸い込むと １週間 寝込む。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "不衛生環境、ガスの人体への作用。既存は化学変化による誕生。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -2996,6 +3734,20 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "「誰が」「何を」を補わないと不完全な文。作品の一場面であるだけ"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47679",
+          "text": "左腕で 相手を 絞めつけて 口から 吐き出す 悪臭の 毒ガスで とどめを 刺すのだ。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "左腕による拘束と毒ガスの攻撃。既存は新しい毒の生成。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3148,6 +3900,21 @@
           "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
           "topic_key": "進化石：ひかりのいし",
           "require_special_form_image": false
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京『ベストウイッシュ』2010年12月16日「チラーミィはきれいずき!?」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes01/",
+          "text": "口には大事そうにバッジケースをくわえている！",
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「チラーミィはきれいずき!?」では、埃まみれのバッジケースをくわえて持ち去り、サトシたちに追いかけられたポケモン。",
+          "source_scope": "アニメのベルとサトシに関するエピソード固有の行動",
+          "quality_review": "高：具体的な行動を示したエピソードで、進化条件の一文より会話素材にしやすい",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "progressive_priority": 2
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3213,6 +3980,19 @@
           "audit_gate_reason": "固有性のない場面の断片",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47660",
+          "text": "リボンのような 触角で サイコパワーを 増幅させる。 なにかを じっと 見つめている。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3230,6 +4010,20 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search3"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47661",
+          "text": "催眠術で ポケモンや 人を 操る。 眠ったまま ゴチミルに 連れ去られる 昔話が 各地に 残っている。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "ポケモンも催眠操作する、昔話として伝わる。既存は星明かりに子どもを連れ去る話。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3313,6 +4107,35 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search5"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0577",
+          "text": "サイコパワーを　放出して　襲ってきた　敵を　撃退。　テレパシーで　仲間と　会話する。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ユニラン／SV5K 030/071（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45176",
+          "text": "テレパシーで 意思を 送りあう。 強いショックを 受けると 体を 包む 液体が 漏れ出す。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑にもテレパシーはあるが、強いショックによる液体の漏出を追加",
+          "source_card_code": "SV5K 030/071",
+          "question_text": "強いショックを 受けると 体を 包む 液体が 漏れ出す。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3330,6 +4153,23 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search6"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0578",
+          "text": "２つに　分裂した　脳みそが　同じことを　考えたとき　最大パワーが　発揮される。",
+          "question_text": "『ポケットモンスター バイオレット』の図鑑では、2つに分裂した脳みそが同じことを考えたとき、最大パワーが発揮されると説明される。",
+          "source_scope": "ゲーム内図鑑の種の性質",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_webpage_directly_verified_2026_10_28",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "高：既存の異なる行動の説明と対になる独立した性質",
+          "source_locator": "公式ずかん・バイオレット欄"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3347,6 +4187,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn428178search7"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47578",
+          "text": "ランクルス 同士が 握手すると 脳みそが ネットワークで つながり サイコパワーが 増幅されるのだ。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3403,6 +4256,18 @@
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false,
           "quality_repair": "excluded_noncontextual_plot_fragment"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0580",
+          "text": "エサの　水苔を　探し　池の　深い場所を　泳ぎまわりながら　体を　鍛えているのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3469,12 +4334,47 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
-          "quiz_approved": true,
-          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "low_value_event_archived_2026-10-28",
           "source_scope": "2016年の『ポケとる』クリスマスバージョンの能力。通常個体の本編能力ではない。",
           "topic_key": "ポケとるクリスマス：むれをなす",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "official_archive_kept_not_eligible_for_question"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニメ『ベストウイッシュ』2011年5月12日放送あらすじ",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes03/",
+          "text": "ガマガルをゲットしようと\"しんせつポケモン\"バニプッチでバトルをしていたシューティーに遭遇！",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": false,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "source_scope": "アニメのシューティー所有の個体・2011年5月12日放送",
+          "quality_review": "中：トレーナーと物語の文脈がある",
+          "progressive_priority": 2,
+          "question_text": "アニメ『ポケットモンスター ベストウイッシュ』「ライバルバトル！バニプッチ、ドッコラー参戦!!」では、シューティーがガマガルをゲットしようとして使っていたポケモン。",
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "一度の捕獲バトルへの参加のみ"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム バトル強化デッキ60「ホワイトキュレムEX」・バニプッチ（BKW 005/018／ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/28394",
+          "text": "朝日を 浴びた 氷柱から 生まれたと されている ポケモン。 マイナス５０度の 息を 吐く。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261030",
+          "source_scope": "ポケモンカード下部に掲載されたポケモンの説明文（ワザ・特性の効果とは別）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "後半のマイナス50度の息は既存と重複するので設問には前半の一文のみ使用",
+          "source_card_code": "BKW 005/018",
+          "question_text": "朝日を 浴びた 氷柱から 生まれたと されている ポケモン。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3499,7 +4399,7 @@
           "source_title": "ポケモンカードゲーム公式・バニリッチ／SV4M 018/066・未来の一閃",
           "url": "https://www.pokemon-card.com/card-search/details.php/card/44330",
           "text": "マイナス１００度の 冷気で 敵を 凍らせるが 命までは 奪わない 優しい 気質。",
-          "question_text": "マイナス100度の冷気で敵を凍らせる一方、命までは奪わない優しい気質を持つ。",
+          "question_text": "マイナス１００度の 冷気で 敵を 凍らせるが 命までは 奪わない 優しい 気質。",
           "first_release_on": "2023-10-27",
           "release_proof_url": "https://www.pokemon-card.com/ex/sv4/",
           "verified_on": "2026-10-24",
@@ -3509,7 +4409,22 @@
           "quiz_enabled": true,
           "quiz_review": "official_source_checked_and_nonduplicate_manual_review_2026-10-24",
           "review_reason": "現在の収録文と主たる情報が異なり、具体的な特徴や習性を伝える",
-          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。"
+          "meaning_uniqueness_note": "同じ意味の既存説明文との重複をポケモン単位で照合。全組合せの人手審査は未実施。",
+          "card_text_role": "species_flavor",
+          "flavor_reviewed_on": "2026-10-30"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47647",
+          "text": "雪山に 生息する ポケモン。 大昔 氷河期の ときに 南の 土地に 移動してきた。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3527,6 +4442,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn388261search2"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47648",
+          "text": "水を 大量に 飲み込んで 体内で 雪雲を 作る。 猛吹雪で 敵を 苦しめる。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3719,6 +4647,18 @@
           "audit_gate_reason": "一般的な性格のみで特定困難",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0588",
+          "text": "くちから　はきだす　えきたいで　チョボマキの　からを　とかす。　なかみ　だけを　いただくのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3823,6 +4763,23 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "動作主体以外の状況説明がなく、文が途中で終わっている"
+        },
+        {
+          "kind": "アニメ公式",
+          "source_title": "テレビ東京アニメ『ベストウイッシュ シーズン2』「幻影の島！霧の中のゾロアーク！！」",
+          "url": "https://www.tv-tokyo.co.jp/anime/pokemon_bw/episodes/episodes11/",
+          "text": "“きのこポケモン”タマゲタケのきのこのほうしがキバゴに直撃！",
+          "question_text": "アニメ『ベストウイッシュ シーズン2』「幻影の島！霧の中のゾロアーク！！」では、森のポケモンが逃げ出す騒ぎの中、タマゲタケの「きのこのほうし」がキバゴに直撃した。",
+          "source_scope": "2013年5月23日放送回の個体・出来事（種全体の習性ではない）",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_webpage_directly_verified_2026_10_28",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "高：図鑑の毒胞子とは別の具体的な作品内エピソード",
+          "source_locator": "テレビ東京公式・2013年5月23日放送回あらすじ"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3851,12 +4808,29 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。表記を変更していない。",
           "verification_method": "株式会社ポケモン公式サイトの掲載テキストをwebで照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
+          "quiz_enabled": false,
           "quiz_approved": true,
           "quiz_review": "official_original_and_prior_topic_checked_2026-10-24",
           "source_scope": "2025年PJCS公式告知における2024年大会王者由来の個体。野生のモロバレル全般の特徴とはしない。",
           "topic_key": "WCS2024王者のポケモンをPJCS2025で紹介・配布",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "大会で配布されたという告知のみ"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカード公式「モロバレル」 SV11B 011/086・ブラックボルト",
+          "text": "両腕の モンスターボールに 似た カサを ゆらゆらと 動かして 獲物を 誘う ダンスを 踊る。",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47547/regu/all",
+          "first_release_on": "2025-06-06",
+          "verified_on": "2026-10-29",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "progressive_priority": 7,
+          "review_status": "official_card_original_checked",
+          "quality_note": "獲物を誘うという点は既存図鑑と関連。ただし「両腕のカサを揺らして踊る」という動作は新たな具体的描写であり大会配布告知より有益",
+          "question_text": "2025年発売の公式ポケモンカード「モロバレル」の説明では、両腕の モンスターボールに 似た カサを ゆらゆらと 動かして 獲物を 誘う ダンスを 踊る。",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3875,6 +4849,18 @@
           "verification_method": "official_pokedex_web_search_full_text_manual_transcription",
           "review_reference": "turn699844search7",
           "sha256_text": "9122a69a4b74114e982c770e6e40a10eb9799485294570c4f964ab63392fefaf"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0592",
+          "text": "かいていに　しずんだ　こだいとしの　じゅうみんが　ポケモンに　なったと　いう　いいつたえが　のこされている。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3891,6 +4877,18 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0593",
+          "text": "まんげつに　なると　むれを　ひきつれ　かいめんに　すがたを　みせる。　えものが　くるのを　まっているのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -3927,6 +4925,18 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "excluded_generic_ability_effect_not_species_unique"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0594",
+          "text": "大海原を　漂って　暮らす。　ママンボウの　まわりには　多くの　水ポケモンが　集まってくる。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4073,6 +5083,18 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0598",
+          "text": "はがねより　かたい　トゲを　もつ。　しょくしゅの　トゲを　つきさし　いわかべを　はって　いどうする。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L33",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4108,6 +5130,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_ambiguous_or_fragment",
           "quality_note": "複数種に共通する特性の説明で対象個体の識別力がない"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター ソード』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0599",
+          "text": "２つの　からだは　ふたごよりも　ちかい。　べつの　からだどうしだと　いまいち　うまく　かみあわない。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4124,6 +5158,34 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0600",
+          "text": "こうぎょうぎじゅつの　シンボルとして　おおくの　ガラルの　かいしゃで　きぎょうロゴに　さいよう　される。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・ギギアル／BW4-B 054/069（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27814",
+          "text": "ちびギアを 高速回転させて 弾き飛ばす 攻撃を 繰り出す。 ちびギアが 戻れないと 危険。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の本気時のギア噛合せと異なり、ちびギアの投射・回収リスクを追加",
+          "source_card_code": "BW4-B 054/069"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4140,6 +5202,18 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0601",
+          "text": "３つの　ギアを　こうそくかいてん。　あらたに　ふえた　トゲの　ついた　ギアは　いきものでは　ないのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4156,6 +5230,59 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『Pokémon GO』2024年7月コミュニティ・デイ公式告知",
+          "url": "https://pokemongo.com/ja/news/communityday-july-2024-tynamo",
+          "text": "でんきうおポケモンの「シビシラス」が、7月の「コミュニティ・デイ」で大量発生します！",
+          "question_text": "『Pokémon GO』の2024年7月21日「コミュニティ・デイ」では、シビシラスが野生でいつもより多く出現するポケモンとして発表された。",
+          "source_scope": "2024年7月のゲーム内イベントの告知（種一般の習性ではない）",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "quiz_review": "official_webpage_directly_verified_2026_10_28",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "出現イベント告知であり、ポケモン自身の情報ではない",
+          "source_locator": "公式ニュース記事・イベント紹介",
+          "editorial_status": "excluded_low_species_learning_value_20261029_v2"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "シビシラス／SV11B 117/086・拡張パック「ブラックボルト」",
+          "text": "１匹の 電力は 小さいが たくさんの シビシラスが つながると 雷と 同じ 威力になる。",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47941/regu/all",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": false,
+          "progressive_priority": 5,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "ポケモン自身の特徴",
+          "quality_note": "2024年GOイベント紹介を生態説明へ変更。既存図鑑と意味的な重複あり",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "editorial_status": "excluded_low_species_learning_value_20261029",
+          "editorial_note": "既存の集まって強い電気を放つという説明と意味が重複"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム バトル強化デッキ60「ゼクロムEX」・シビシラス（BKZ 008/018／ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27630",
+          "text": "群れで 行動する ポケモン。 電気を 作る 器官を 持ち ピンチになると 発電する。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261030",
+          "source_scope": "ポケモンカード下部に掲載されたポケモンの説明文（ワザ・特性の効果とは別）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "群れ行動の部分は既存と重複するので設問では後半の原文一文のみ使用",
+          "source_card_code": "BKZ 008/018",
+          "question_text": "電気を 作る 器官を 持ち ピンチになると 発電する。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4172,6 +5299,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_text_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "拡張パック「ブラックボルト」・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47570/regu/DP",
+          "text": "丸い 模様が 発電 器官。 相手に 巻きついてから 模様を 押しつけて 電気を 流すのだ。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html"
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -4321,6 +5461,20 @@
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変",
           "editorial_note": "メガシンカ前の姿の画像と混同させない",
           "source_scope": "メガシンカ後の粘液"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47571",
+          "text": "腕の 力で 海から はい出し 水辺の 獲物に 襲いかかる。 一瞬で 海へ 引きずり込む。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "水から這い出て獲物を海に引き込む。既存は吸盤と放電。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4396,6 +5550,20 @@
           "audit_gate_reason": "単発場面のみで判別しにくい",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47580",
+          "text": "相手の 記憶を 操作する。 ３色の 指を 点滅させて 仲間と 会話している らしい。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "三色の指の点滅を用いた仲間との会話。既存は記憶操作と麦畑での目撃。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4457,6 +5625,21 @@
           "source_scope": "ポケモンセンター公式商品名に示された進化先と進化のいしの対応。",
           "topic_key": "進化石：やみのいし",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ランプラー／SV6 020/101・拡張パック「変幻の仮面」",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45711",
+          "text": "魂を 吸いとり 火を灯す。 人が 死ぬのを 待つため 病院を うろつくようになった。",
+          "question_text": "拡張パック「変幻の仮面」の公式ポケモンカードの図鑑文には、魂を吸い取って火を灯し、人が死ぬのを待つため病院をうろつくと書かれている。",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "progressive_priority": 4,
+          "source_scope": "2024年発売のポケモンカードに記載されたポケモンの生態",
+          "verification_method": "公式カード個別ページと公式商品の発売日を原文照合",
+          "verified_on": "2026-10-28",
+          "first_release_on": "2024-04-26",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv6/index.html"
         }
       ],
       "data_status": "official_page_text_reviewed"
@@ -4530,6 +5713,22 @@
           "audit_gate_reason": "体験談の短い断片のみ",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・キバゴ／BW9-B 055/076（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/28726",
+          "text": "大きな キバは まだ もろく 折れたりするが 生え変わるごとに 硬く 丈夫に なっていく。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存図鑑の地中の巣・道具利用に対し、キバの生え替わりと強化を追加",
+          "source_card_code": "BW9-B 055/076"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4546,6 +5745,35 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0611",
+          "text": "太い　キバを　使って　獲物を　きれいに　捌いて　食べるものと　保存する　ものに　分けるのだ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・オノンド／BW2-B 057/066（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27417",
+          "text": "折れた キバは 生え変わらないので 戦いが 終わると 河原の 岩で キバを 丹念に 磨く。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存のキバを使い惜しむ行動と異なり、戦闘後の河原での手入れを追加",
+          "source_card_code": "BW2-B 057/066",
+          "question_text": "戦いが 終わると 河原の 岩で キバを 丹念に 磨く。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4576,6 +5804,18 @@
           "verified_on": "2026-10-24",
           "source_scope": "当該ゲーム作品の設定",
           "audit_gate_reason": "選択肢の意味的一意性未審査につき出題保留"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0612",
+          "text": "洞窟や　廃鉱山が　ねぐら。　おとなしいが　キバに　触れられると　激しく　怒るので　要注意。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4622,12 +5862,29 @@
           "source_excerpt_type": "公式掲載文章の連続した原文。引用部分の表記は変更していない。",
           "verification_method": "公式サイトの個別ページ本文を開き、対象ポケモンの表記と文脈を照合",
           "verified_on": "2026-10-24",
-          "quiz_enabled": true,
-          "quiz_approved": true,
-          "quiz_review": "primary_source_verbatim_distinct_topic_2026-10-24",
+          "quiz_enabled": false,
+          "quiz_approved": false,
+          "quiz_review": "low_value_event_archived_2026-10-28",
           "source_scope": "2016年の『ポケとる』クリスマスバージョンの能力。通常個体の本編能力ではない。",
           "topic_key": "ポケとるクリスマス：４つのちから＋",
-          "require_special_form_image": false
+          "require_special_form_image": false,
+          "quality_repair": "official_archive_kept_not_eligible_for_question"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "クマシュン／SV11B 028/086・拡張パック「ブラックボルト」",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47564",
+          "text": "具合が 悪くなると 鼻水が 水っぽくなり こおり技の 威力が 落ちてしまうのだ。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_enabled": true,
+          "quiz_approved": true,
+          "quiz_review": "official_page_manually_read_2026-10-28",
+          "verification_method": "official_web_page_direct_read",
+          "source_scope": "カードの図鑑説明文・種の性質",
+          "quality_review": "高：体調に伴う鼻水の状態とこおり技との関係",
+          "progressive_priority": 2
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4665,6 +5922,18 @@
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "question_text": "アニメ『ベストウイッシュ』では、サトシたちにツンベアーの群れが「こごえるかぜ」を放って襲いかかる場面がある。",
           "editorial_note": "前後の話数・登場人物について今回公式原文との再照合をしていないため表示用文は参考のみ。出題は保留。"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0614",
+          "text": "北国では　白い悪魔　と　恐れられる。　冷気を　まとった　ツメと　キバで　獲物を　襲う。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4738,6 +6007,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_unresolved_fragment",
           "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0616",
+          "text": "でんき　エネルギーに　はんのうする　ふしぎな　たいしつ。　カブルモと　ともに　いると　なぜか　しんかする。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4793,6 +6074,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47654",
+          "text": "皮膚が 硬いので 相撲取りに 踏まれても 平気。 電気を 流すとき 笑い顔に なる。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "相撲取りに踏まれても平気な皮膚、笑顔。既存は泥に潜む待ち伏せ。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4831,6 +6126,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_unresolved_fragment",
           "quality_note": "文脈のない原文断片・見出し。十分な公式本文の追加照合が必要"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0619",
+          "text": "山奥に　こもり　群れの　仲間と　修行に　励む。　群れによって　キックや　チョップの型が　違う。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4848,6 +6155,18 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn102276search4"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0620",
+          "text": "両手の　体毛を　ムチのように　使いこなし　連続攻撃を　はじめると　だれにも　止められない。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -4864,6 +6183,18 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター シールド』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0621",
+          "text": "きょうぼうで　ずるがしこい。　ほかの　ポケモンが　ほった　すあなを　うばって　すみかにする。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4880,6 +6211,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47581",
+          "text": "体内で 燃える エネルギーに よって 活動しているが どんな エネルギーなのかは 不明である。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4929,6 +6273,18 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0624",
+          "text": "刃の　刃こぼれは　命取り。　戦いが　終わると　お気に入りの　砥石で　念入りに　手入れする。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -4945,6 +6301,35 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0625",
+          "text": "体中の　鋭利な　刃で　容赦なく　相手を　切り刻む。　勝つために　手段は　選ばない。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム公式・キリキザン／BW2-B 049/066（ポケモン説明文）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/27409",
+          "text": "大勢の コマタナを 従えて 獲物を 群れで 追いつめる。 とどめは キリキザンが 刺す。",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_flavor_web_checked_20261030",
+          "review_status": "individual_official_card_web_page_read_20261030",
+          "source_scope": "ポケモンカード下部の生態・設定説明（技・特性ではない）",
+          "card_text_role": "species_flavor",
+          "progressive_priority": 10,
+          "content_distinctness_review": "既存の群れ・縄張り争いと異なり、群れでの狩りにおける役割分担を追加",
+          "source_card_code": "BW2-B 049/066",
+          "question_text": "大勢の コマタナを 従えて 獲物を 群れで 追いつめる。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -5091,6 +6476,18 @@
           "audit_gate_reason": "文の途中であり固有性が弱い",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0629",
+          "text": "食べ盛りの　育ち盛り。　体の　成長に　あわせて　ガイコツを　何度も　履き替えるよ。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L39",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -5118,6 +6515,20 @@
           "verification_method": "verbatim_excerpt_from_official_page_displayed_in_web_search",
           "quote_type": "direct_verbatim_excerpt",
           "learning_topic": "習性"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47600",
+          "text": "骨を 拾い 集めて 巣作り。 弱った 獲物を 脚で つかみ 骨の 巣まで 軽々と 運ぶ。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "骨を巣作りに利用。既存は弱った獲物を巣に運ぶ、骨の装飾。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5284,6 +6695,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_semantically_ambiguous",
           "quality_note": "単なる汎用技「はねやすめ」の効果であり、対象の固有生態・特徴ではない"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0635",
+          "text": "昔　人が　邪悪　そのものと　忌み嫌い　攻撃し続けたため　凶暴になったと　言われている。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L33",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5301,6 +6724,20 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "manual_transcription_from_official_full_text",
           "review_reference": "turn694871search0"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ブラックボルト」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47554",
+          "text": "太陽から 生まれた ポケモンと 信じられてきた。 進化するとき 全身が 炎に 包まれる。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "進化時に全身が炎に包まれる。既存は太陽の使いとして信仰、山火事。"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5338,6 +6775,18 @@
           "require_special_form_image": false,
           "quality_repair": "excluded_location_only_game_walkthrough_no_species_knowledge",
           "editorial_note": "既にゲーム攻略上の場所情報として出題外。"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0637",
+          "text": "暑い　土地では　燃える　体は　嫌がられるが　寒い　土地では　太陽の化身　と　崇められる。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L31",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5386,6 +6835,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47673",
+          "text": "人間 同士の 戦争によって 住処を 失った ポケモンたちを 守るため 人間と 戦った。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "人間同士の戦争で住処を失ったポケモンを守る。既存は城壁突破の力。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5423,6 +6886,20 @@
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "question_text": "ゲーム『ポケモン不思議のダンジョン マグナゲートと∞迷宮』では、ビリジオンが世界各地を冒険している。",
           "editorial_note": "作品の個体の冒険設定だけでは接客の会話で扱える固有の意外性が弱いため、調べもの用には残してクイズ外。"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ホワイトフレア」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47632",
+          "text": "仲間を 守るため 人間に 戦いを 挑んだ ポケモン。 伝説で 語り継がれている。",
+          "first_release_on": "2025-06-06",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv11/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "仲間を守るため人間へ戦いを挑んだ伝説。既存は機動力とツノ攻撃。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -5458,6 +6935,18 @@
           "audit_gate_reason": "比較対象とゲーム内仕様の文脈が欠落",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター Ｙ』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0641",
+          "text": "トルネロスの　しっぽから　ふきだした　エネルギーが　おおあらしを　おこす。　みんかを　ふきとばす　パワー。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "公式ゲーム図鑑原文",
+          "distinctness_review": "X図鑑の速度とは独立した尻尾の風・民家を吹き飛ばす描写"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5493,6 +6982,18 @@
           "audit_gate_reason": "文が途切れ比較内容不明",
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター Ｙ』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0642",
+          "text": "おおぞらを　とびまわりながら　あちこちに　カミナリを　おとして　やまかじを　おこすので　きらわれる。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "公式ゲーム図鑑原文",
+          "distinctness_review": "X図鑑にない山火事の描写"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -5690,6 +7191,18 @@
           "require_special_form_image": false,
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "editorial_note": "見出しの切り出し。元の出典本文との照合を終えるまで保留。"
+        },
+        {
+          "kind": "ゲーム内図鑑",
+          "source_title": "『ポケットモンスター Ｙ』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0646",
+          "text": "きょうりょくな　れいとうエネルギーを　たいないで　つくりだすが　もれだした　れいきで　からだが　こおっている。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "公式ゲーム図鑑原文",
+          "distinctness_review": "X図鑑の失われた体を英雄が埋める神話とは異なる"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -7050,6 +8563,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45053",
+          "text": "体から 放つ 良い香りが 小麦の 成長を 助けるため 農村で 大切にされてきた。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "小麦の成長を助け、農村で大切にされた。既存は香りによる相手の空腹感。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7268,6 +8795,20 @@
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "question_text": "公式短編小説『きみと雨上がりを』では、コジオが貴重な塩を分けてくれるため、昔の人たちに大事にされていたとネモが語っている。",
           "editorial_note": "小説における作中人物の発言。実際の全個体に一般化しない。"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「メガブレイブ」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47767",
+          "text": "地底の 岩塩層で 生まれた。 貴重な 塩を 分けてくれるため 昔は とくに 大事にされた。",
+          "first_release_on": "2025-08-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/m1/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "岩塩層生まれ、塩を分けた歴史。既存は地面に残る岩塩の道。"
         }
       ]
     },
@@ -7285,6 +8826,20 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn583825search3"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「メガブレイブ」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47768",
+          "text": "塩を 噴き出して 獲物に 浴びせ 塩漬けにしてしまう。 体内の 水分を 奪ってしまうのだ。",
+          "first_release_on": "2025-08-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/m1/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "塩を噴射して獲物の水分を奪う。既存は忘れっぽさ。"
         }
       ]
     },
@@ -7302,6 +8857,19 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn583825search4"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「メガブレイブ」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/48427",
+          "text": "指先を 擦りあわせて 塩を ケガした ポケモンに 振りかけると ひどい 傷も たちまち 治る。",
+          "first_release_on": "2025-08-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/m1/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ]
     },
@@ -7338,6 +8906,20 @@
           "audit_gate_reason": "元データで編集済みと明記。公式掲載原文との逐字照合が未了",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「超電ブレイカー」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/46360",
+          "text": "戦いになると 火力が 上がり 摂氏１０００度に 達する。 油分の多い 木の実を 好む。",
+          "first_release_on": "2024-10-18",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv8/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "戦闘時に1000度、油分のある木の実を好む。既存は炎の操作と人々との関係。"
         }
       ]
     },
@@ -7590,6 +9172,18 @@
           "audit_gate_reason": "元データで不適切または帰属誤りと確認",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0940",
+          "text": "翼の　骨は　風を　受けると　電気を　作る。　海に　飛び込み　獲物を　感電させて　捕らえる。",
+          "verified_on": "2026-10-28",
+          "verification_method": "official_zukan_direct_open_text_check",
+          "source_line_on_checked_page": "L37",
+          "quote_type": "direct_verbatim_excerpt",
+          "quiz_approved": true,
+          "quiz_review": "primary_source_direct_checked_2026_10_28"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -7632,6 +9226,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45081",
+          "text": "相手に 嘗められないように いつも しかめっ面をしているが 泣いている 子どもは その顔で 笑いだす。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "既存は仲間意識や威圧。泣いている子が笑う描写は新規",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7648,6 +9256,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45082",
+          "text": "子どもと 遊ぶことが 大好き。 普段は 温厚だが 家族を 守るとき 形相が 変わる。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "子どもとの遊びを好み、家族を守るとき形相が変わる。既存は家族への脅威への攻撃。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7664,6 +9286,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「メガブレイブ」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47776",
+          "text": "温厚だが 怒らせると 毒が 染みこんだ 鋭い 前歯で 咬みつき 痺れさせてくるぞ。",
+          "first_release_on": "2025-08-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/m1/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "温厚さと、怒らせた場合に毒を持つ前歯による麻痺。既存は大きな前歯による護身。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7753,6 +9389,15 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0947",
+          "text": "乾燥地帯を　放浪する。　ごくまれに　大量発生して　町ひとつを　埋めつくしてしまう。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7796,6 +9441,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター スカーレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0949",
+          "text": "森の奥に　集団で　暮らす　コロニーを　作る。　よそ者が　近寄ることを　ひどく　嫌う。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ]
     },
@@ -7926,6 +9580,20 @@
           "audit_gate_reason": "元データで不適切または帰属誤りと確認",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44726",
+          "text": "パルデアの 郷土料理は 抜け落ちた カプサイジの 前歯が 使われているので 激辛なのだ。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "抜け落ちた前歯を使うパルデア郷土料理。既存は感情の起伏。"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -7943,6 +9611,20 @@
           "review_status": "official_index_excerpt_reviewed",
           "verification_method": "official_page_text_via_web",
           "review_reference": "turn583041search1"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44994",
+          "text": "レッドヘッドは 辛み成分を 炎エネルギーに 変え 激辛の 火炎放射を まき散らす。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "既存は二つの頭の連携。辛み成分を炎へ変換する具体的機構は新規",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html"
         }
       ],
       "data_status": "official_index_excerpt_reviewed"
@@ -8100,6 +9782,20 @@
           "audit_gate_reason": "元データで不適切または帰属誤りと確認",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44617",
+          "text": "手作りの ハンマーを 振りまわして 身を 守るが 金属を 食べる ポケモンには よく 奪われる。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "official_source_verbatim_with_independent_semantic_review",
+          "review_status": "official_primary_site_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "既存は金属を見つけてハンマーを作る。ハンマーを奪われる描写は新規",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -8135,6 +9831,20 @@
           "audit_gate_reason": "元データで編集済みと明記。公式掲載原文との逐字照合が未了",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45058",
+          "text": "大きくて 頑丈な ハンマーを 作るために キリキザンの 群れを 襲って 金属を 集める。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "distinctness_review": "工場・倉庫を物色する既存の図鑑に対し、キリキザンの群れを襲う別の行動",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_exact_official_source_distinctness_review",
+          "review_status": "official_primary_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -8407,6 +10117,19 @@
           "review_status": "official_page_excerpt_directly_read",
           "verification_method": "original_japanese_excerpt_read_from_official_page_via_web",
           "quote_type": "direct_verbatim_excerpt"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "拡張パック「変幻の仮面」・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45768",
+          "text": "鋼の 体が 本体。 岩に 張りつき その成分を エネルギーに 変えて 活動する。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2024-04-26",
+          "release_proof_url": "https://www.pokemon-card.com/products/index.html?dateLowerD=1&dateLowerM=1&dateLowerY=2024&dateUpperD=3&dateUpperM=2&dateUpperY=2025&productType=expansion"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8485,6 +10208,20 @@
           "quiz_attribution_scope": "公式資料の説明",
           "require_special_form_image": false,
           "quality_repair": "excluded_low_information_generic_sentence"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム スタートデッキGenerations（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/46578",
+          "text": "大昔から 人を 背中に 乗せていたらしい。 １万年前の 壁画に 様子が 描かれている。",
+          "first_release_on": "2024-11-22",
+          "release_proof_url": "https://www.pokemon-card.com/ex/svm/",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "1万年前の壁画に騎乗の記録。既存は喉のエネルギーで長距離走れる仕組み。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8548,6 +10285,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「変幻の仮面」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45753",
+          "text": "毒成分の 結晶が まるで 花びらに 見える。 花粉のように 毒の粉を ばらまき 身を守る。",
+          "first_release_on": "2024-04-26",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8564,6 +10314,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「変幻の仮面」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45754",
+          "text": "毒エネルギーが 結晶化した 花びらは テラスタルの 宝石に 似ていると 最近 判明した。",
+          "first_release_on": "2024-04-26",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8634,6 +10397,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_direct_reviewed",
           "verification_method": "web_direct_open_or_official_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44621",
+          "text": "大切に 弔われた ポケモンが 生まれ変わった 姿。 頭の 突起を 触られるのは 嫌い。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_direct_reviewed"
@@ -8650,6 +10426,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/44806/regu/all",
+          "text": "お腹に 溜めた エネルギーが くちばしから 漏れないように 首を 根元で 結んでいるらしい。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card",
+          "review_status": "official_card_individual_page_checked_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8790,6 +10579,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム ハイクラスパック「シャイニートレジャーex」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45017",
+          "text": "大食らいだが エサを 取るのは 苦手。 シャリタツと コンビを 組んで 獲物を 捕らえるのだ。",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "シャリタツとの協力による狩り。既存は巨大さ・暴れると波を作る。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8824,6 +10627,20 @@
           "editorial_policy": "原文 text は変更しない。出題用 question_text は出典作品名と必要な主語・文脈のみ補う。",
           "answer_uniqueness_review": "individual_stem_reviewed; every_possible_distractor_not_manually_checked",
           "date_added": "2026-10-24"
+        },
+        {
+          "kind": "公式図鑑プロフィール",
+          "source_title": "公式ポケモンずかん／シャリタツ「しれいとう」",
+          "text": "登場したとき　味方に　ヘイラッシャが　いると　口の中に　入って　そこから　指令を　だす。",
+          "url": "https://zukan.pokemon.co.jp/detail/0978",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "progressive_priority": 6,
+          "review_status": "original_text_checked_on_publisher_website",
+          "quiz_review": "approved",
+          "quiz_attribution_scope": "ポケモン自身の特徴",
+          "quality_note": "シャリタツ自身の特性とヘイラッシャとの関係を説明する公式情報"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -8840,6 +10657,20 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ポケモンカードゲーム 拡張パック「ロケット団の栄光」（図鑑テキスト）",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/47440",
+          "text": "怒りのボルテージが 臨界点を 超えたとき 肉体という 枠に 縛られない パワーを 手に入れた。",
+          "first_release_on": "2025-04-18",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv10/index.html",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_source_wording_official_card_distinct_from_existing",
+          "review_status": "official_card_individual_page_checked_web_20261028",
+          "source_scope": "ポケモンカードの図鑑紹介文",
+          "distinctness_review": "身体の枠に縛られないパワーを獲得。既存は進化条件となる技。"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9117,6 +10948,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0986",
+          "text": "怪しい　雑誌が　恐竜と　キノコの　合成と　紹介した　ポケモンに　少し　似ているのだ。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9154,6 +10994,15 @@
           "audit_gate_reason": "元データで不適切または帰属誤りと確認",
           "quiz_attribution_scope": "作品内・個体に関する記述",
           "require_special_form_image": false
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0987",
+          "text": "オカルト雑誌で　取り上げられた　翼竜の　幽霊と　特徴だけは　似ているのだ。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9318,6 +11167,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0992",
+          "text": "ある探検記に　記された　テツノカイナという　物体と　似た点が　多い　ポケモン。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9334,6 +11192,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0993",
+          "text": "古い　書物に　記された　テツノコウベという　物体は　このポケモンかも　しれない。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9350,6 +11217,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0994",
+          "text": "捕獲例は　ゼロ。　データ不足。　古い　書物に　記された　物体と　特徴が　一致。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9366,6 +11242,15 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ゲーム内図鑑の補足",
+          "source_title": "『ポケットモンスター バイオレット』図鑑",
+          "url": "https://zukan.pokemon.co.jp/detail/0995",
+          "text": "ある　探検記で　テツノイバラと　紹介されている　物体と　一致する　特徴が　ある。",
+          "verified_on": "2026-10-28",
+          "review_status": "official_page_direct_reviewed",
+          "verification_method": "official_page_text_via_web_open"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9382,6 +11267,19 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "ハイクラスパック「シャイニートレジャーex」・ポケモン図鑑紹介文",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45019",
+          "text": "背びれで 熱を 吸収して 氷エネルギーに 変換する。 高温ほど エネルギーが 溜まる。",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_review": "approved_primary_official_source_20261028",
+          "review_status": "direct_official_page_inspection",
+          "source_scope": "official_card_species_description",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9398,6 +11296,29 @@
           "verified_on": "2026-10-21",
           "review_status": "official_page_search_reviewed",
           "verification_method": "web_official_page_search_result"
+        },
+        {
+          "kind": "ポケカ公式",
+          "source_title": "セゴール／SV4a 234/190／ハイクラスパック「シャイニートレジャーex」",
+          "url": "https://www.pokemon-card.com/card-search/details.php/card/45020",
+          "text": "まわりの 空気を 凍らせて 氷のマスクで 顔を 守り 背びれを 氷の剣に 変える。",
+          "question_text": "まわりの 空気を 凍らせて 氷のマスクで 顔を 守り 背びれを 氷の剣に 変える。",
+          "source_scope": "カード下部の生態説明・周囲の空気を凍らせる形成過程",
+          "first_release_on": "2023-12-01",
+          "release_proof_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+          "verified_on": "2026-10-30",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_card_species_flavor_reenabled_20261030",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "図鑑と装備については重複するが、周囲の空気を凍らせる形成過程が追加情報。",
+          "source_locator": "公式カード個別ページ・No.997の紹介",
+          "card_text_role": "species_flavor",
+          "review_status": "official_card_individual_page_rechecked_20261030",
+          "progressive_priority": 10,
+          "content_distinctness_review": "図鑑と氷のマスク・背びれの剣は重複。周囲の空気を凍らせて形成するという過程のみ新情報"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -9434,7 +11355,9 @@
           "require_special_form_image": true,
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "question_text": "『Pokémon LEGENDS Z-A M次元ラッシュ』では、メガセグレイブは「みぞおちグリップ」に氷エネルギーを集めて技を放つ。",
-          "editorial_note": "通常のセグレイブの生態と混同しない。"
+          "editorial_note": "通常のセグレイブの生態と混同しない。",
+          "progressive_allow_mega_hint": true,
+          "progressive_priority": 2
         },
         {
           "kind": "ゲーム公式HP",
@@ -9457,7 +11380,9 @@
           "question_text": "『Pokémon LEGENDS Z-A M次元ラッシュ』の公式紹介では、メガセグレイブはメガシンカによって氷エネルギーが内臓や神経まで広がり、反応速度と筋肉の瞬発力が強化される。",
           "question_text_policy": "verified_context_from_official_page",
           "question_text_note": "出典の公式HP/公式アニメ作品紹介の前後文を確認し、文脈不足を補完。元の原文textは不変",
-          "editorial_note": "公式段落の主語・前後の文脈を補完。"
+          "editorial_note": "公式段落の主語・前後の文脈を補完。",
+          "progressive_allow_mega_hint": true,
+          "progressive_priority": 3
         },
         {
           "kind": "ゲーム公式HP",
@@ -9480,6 +11405,23 @@
           "require_special_form_image": true,
           "quality_repair": "previous_candidate_retained_unverified_in_this_turn",
           "editorial_note": "切り出された断片で、付加情報と文脈の公式照合が未完了。"
+        },
+        {
+          "kind": "ゲーム公式HP",
+          "source_title": "『Pokémon LEGENDS Z-A M次元ラッシュ』公式・セグレイブナイトの入手方法",
+          "url": "https://www.pokemon.co.jp/ex/legends_z-a_dlc/ja/news/251106_01/",
+          "text": "ランクアップ報酬として手に入れることができます。",
+          "question_text": "『Pokémon LEGENDS Z-A M次元ラッシュ』公式サイトでは、セグレイブをメガシンカさせるメガストーン「セグレイブナイト」は、「Z-A Battle Club」のランクバトルのランクアップ報酬と案内された。",
+          "source_scope": "ゲーム内報酬／メガシンカの条件（通常形の生態情報ではない）",
+          "verified_on": "2026-10-28",
+          "quiz_approved": true,
+          "quiz_enabled": true,
+          "quiz_review": "official_source_accepted_but_low_information_value",
+          "source_excerpt_type": "公式公開テキストの連続する原文抜粋",
+          "verification_method": "webで公式ページを開いて原文を確認",
+          "require_special_form_image": false,
+          "editorial_note": "中：既存の溶岩を凍らせる性質とは別のゲーム内情報",
+          "source_locator": "公式ニュース・ランクバトルのセグレイブナイト項目"
         }
       ],
       "data_status": "official_page_search_reviewed"
@@ -11328,5 +13270,5 @@
       "data_status": "official_source_confirmed"
     }
   },
-  "build_note": "前回までの647件を一字も変更せず保持。テレビ東京公式あらすじで確認したモンメンの図鑑外説明1件を追加（計648件）。"
+  "build_note": "2026-10-28：元の公式文章786件をそのまま保持したうえで、公式サイトで原文確認した独立の追加情報を7件収録。残り0枠。ただしシビシラスはPokémon GOのイベント情報で、学習価値の高い生態情報への差し替え余地あり。過去の全文章の再照合・実ブラウザでの全機能テストは未完了。\n2026-10-30: 12 source-checked card flavor entries added, 1 pre-existing card flavor entry reenabled. All other records kept intact."
 }

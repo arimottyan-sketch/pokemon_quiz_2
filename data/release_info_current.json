@@ -1,0 +1,55 @@
+{
+  "release_date": "2026-10-29",
+  "source_policy": "Official sources only",
+  "count_pokemon": 280,
+  "total_saved_quotes": 809,
+  "previous_texts_preserved": 807,
+  "added_official_source_count": 2,
+  "independent_clue_species": 271,
+  "staged_fallback_species": 9,
+  "excluded_low_value_original_records": 14,
+  "missing_independent_source_pokemon": [
+    {
+      "id": 504,
+      "name": "ミネズミ"
+    },
+    {
+      "id": 510,
+      "name": "レパルダス"
+    },
+    {
+      "id": 512,
+      "name": "ヤナッキー"
+    },
+    {
+      "id": 515,
+      "name": "ヒヤップ"
+    },
+    {
+      "id": 529,
+      "name": "モグリュー"
+    },
+    {
+      "id": 543,
+      "name": "フシデ"
+    },
+    {
+      "id": 582,
+      "name": "バニプッチ"
+    },
+    {
+      "id": 602,
+      "name": "シビシラス"
+    },
+    {
+      "id": 997,
+      "name": "セゴール"
+    }
+  ],
+  "review_note": "All 280 quiz slots playable, but only 271 slots currently have two editorially acceptable independent official passages. 9 use explicitly marked staged reveal instead of a low-quality or duplicated passage.",
+  "incomplete_validation": [
+    "Existing 807 original records not all rechecked at their sources in this turn",
+    "No actual browser end-to-end interaction",
+    "Hidden ability coverage not fully verified through official pages"
+  ]
+}

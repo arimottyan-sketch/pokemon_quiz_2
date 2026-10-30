@@ -20,8 +20,18 @@ class ProgressiveTests(unittest.TestCase):
             a, b = progressive_pair(self.db, pid)
             self.assertNotEqual(question_passage(a, pid, self.db),
                                 question_passage(b, pid, self.db))
-            self.assertIn(a, self.db['pokemon'][str(pid)]['quotes'])
-            self.assertIn(b, self.db['pokemon'][str(pid)]['quotes'])
+            originals = self.db['pokemon'][str(pid)]['quotes']
+            if a.get('progressive_staged'):
+                # Original text is never modified. The two stages are exact
+                # progressively longer views of that one source record.
+                for stage in (a,b):
+                    self.assertTrue(stage['progressive_staged'])
+                    self.assertIn({k:v for k,v in stage.items()
+                                   if k not in ('progressive_staged','question_text')}, originals)
+                self.assertTrue(b['text'].startswith(a['question_text'][:-1]))
+            else:
+                self.assertIn(a, originals)
+                self.assertIn(b, originals)
             if a['kind'] not in ('ゲーム内図鑑', 'ゲーム内図鑑の補足'):
                 self.assertIs(a.get('quiz_approved'), True)
                 self.assertIsNot(a.get('quiz_enabled'), False)
@@ -59,6 +69,39 @@ class ProgressiveTests(unittest.TestCase):
         self.assertEqual(obj['abilities'], ['ダウンロード'])
         self.assertIsNone(parse_official_zukan_html(html, 'https://example.net/detail/0649'))
         self.assertIsNone(parse_official_zukan_html('<html>unknown</html>', 'https://zukan.pokemon.co.jp/detail/0649'))
+
+    def test_all_displayed_abilities_two_or_three_and_no_false_positives(self):
+        # Simulate the exact text structure of the official page for No.0506.
+        html = '''<html><body><div>No.0506 ヨーテリー</div>
+        <span>タイプ：</span><span>ノーマル</span><div>高さ：</div><span>0.4m</span>
+        <div>特性：</div>
+        <div>やるき <span>?</span> 特性</div><h2>やるき</h2>
+        <p>やる気を だすことに よって ねむり状態に ならない。</p>
+        <div>ものひろい <span>?</span> 特性</div><h2>ものひろい</h2>
+        <p>相手の 使った 道具を 拾ってくることが ある。</p>
+        <p>ゆうかん かつ しんちょう。</p><div>HP</div>
+        <h2>進化</h2><h2>ものひろい</h2>
+        </body></html>'''
+        obj = parse_official_zukan_html(html, 'https://zukan.pokemon.co.jp/detail/0506')
+        self.assertEqual(obj['abilities'], ['やるき', 'ものひろい'])
+        self.assertEqual(obj['abilities_scope'], 'official_zukan_displayed')
+        self.assertFalse(obj['hidden_abilities_verified'])
+        # A third displayed ability is likewise retained (regression test).
+        html = html.replace('<p>ゆうかん かつ しんちょう。</p>',
+                 '<div>きもったま <span>?</span> 特性</div><h2>きもったま</h2><p>ダメージ。</p>')
+        obj = parse_official_zukan_html(html, 'https://zukan.pokemon.co.jp/detail/0506')
+        self.assertEqual(obj['abilities'], ['やるき', 'ものひろい', 'きもったま'])
+
+    def test_unverified_hidden_abilities_are_not_fabricated(self):
+        for pid in (495, 506, 649, 909):
+            row = self.db['pokemon'][str(pid)]
+            profile = get_official_profile(row, lambda _: '''<div>No.0495 ツタージャ</div><p>タイプ：</p><b>くさ</b><p>高さ：</p>
+                        <b>0.6m</b><p>特性：</p><b>しんりょく</b><h2>しんりょく</h2>
+                        <p>HPが減ったとき。 </p><div>HP</div>''')
+            self.assertFalse(profile['hidden_abilities_verified'])
+        self.assertEqual(get_official_profile(self.db['pokemon']['506'],
+                        lambda _: self.fail('should not fetch'))['abilities'],
+                         ['やるき', 'ものひろい'])
 
     def test_official_verified_cases_no_remote_request(self):
         for pid in (649, 909):

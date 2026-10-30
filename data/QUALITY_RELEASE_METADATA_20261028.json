@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-28",
+  "scope": "Official sources only",
+  "previous_quotes": 793,
+  "all_quotes": 801,
+  "new_verified": 8,
+  "pokemon": 280,
+  "independent_clues": 280,
+  "legacy_record_texts_preserved": 793,
+  "reviewed_all_pairs_automatically": true,
+  "original_sources_directly_read_this_turn": 8,
+  "limits": [
+    "Original 793 citations not all revalidated",
+    "Live browser test not run",
+    "All hidden abilities from official publications not yet exhaustive"
+  ],
+  "selection_quality_risks": [
+    "シビシラス"
+  ]
+}

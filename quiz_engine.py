@@ -77,7 +77,10 @@ def three_year_cutoff(today=None):
 
 
 def is_recent(rec, today=None):
-    """図鑑や公式設定は年代無制限。カードと大会実績だけ近3年に限定。"""
+    """Official card species flavor is timeless; card mechanics and events are time-limited."""
+    if rec.get('kind') == 'ポケカ公式' and rec.get('card_text_role') == 'species_flavor':
+        return bool(rec.get('quiz_approved') is True and rec.get('verified_on')
+                    and rec.get('url', '').startswith('https://www.pokemon-card.com/card-search/details.php/card/'))
     if rec.get('kind') not in SENSITIVE_KINDS:
         return True
     key = 'first_release_on' if rec['kind'] == 'ポケカ公式' else 'event_date'
@@ -137,10 +140,16 @@ def validate_db(data):
             if '（略）' in rec['text'] or '[省略]' in rec['text']:
                 raise ValueError(f'省略した説明文: {pid}')
             if rec['kind'] == 'ポケカ公式':
-                parse_date(rec.get('first_release_on'), 'first_release_on')
-                if not rec.get('release_proof_url') or not source_is_allowed({
-                    'url': rec['release_proof_url'], 'kind': 'ポケカ公式'}):
-                    raise ValueError(f'カードの初登場日を裏付ける公式資料がありません: {pid}')
+                # Manually verified species flavor is not age-gated. Do not invent a release date.
+                if rec.get('card_text_role') == 'species_flavor':
+                    if not (rec.get('quiz_approved') is True and rec.get('verified_on')
+                            and rec['url'].startswith('https://www.pokemon-card.com/card-search/details.php/card/')):
+                        raise ValueError(f'カード説明文の個別公式出典・確認が不足: {pid}')
+                else:
+                    parse_date(rec.get('first_release_on'), 'first_release_on')
+                    if not rec.get('release_proof_url') or not source_is_allowed({
+                        'url': rec['release_proof_url'], 'kind': 'ポケカ公式'}):
+                        raise ValueError(f'カードの初登場日を裏付ける公式資料がありません: {pid}')
             if rec['kind'] == '大会公式':
                 parse_date(rec.get('event_date'), 'event_date')
     return True
@@ -151,7 +160,7 @@ def pokedex_records(row):
 
 
 def supplementary_records(row, today=None):
-    """公式HP/アニメは無期限、カード・大会は3年以内のもののみ。"""
+    """Non-dex sources; species-flavor card texts are age-unlimited, card effects are not."""
     return [q for q in row['quotes'] if q['kind'] not in ('ゲーム内図鑑', 'ゲーム内図鑑の補足') and q.get('quiz_review')!='excluded_verified_wrong_species_assignment' and is_recent(q, today)]
 
 
@@ -416,9 +425,31 @@ def is_standalone_question(rec):
             and not text.endswith(('おり', '技です。')))
 
 
+# Generic move mechanics do not teach players about the particular Pokemon.
+# Only the named, confirmed low-value source passages below are suppressed;
+# the official original data is preserved verbatim for auditing.
+_GENERIC_MOVE_BY_SPECIES = {
+    504: ('おさきにどうぞ',),
+    511: ('アクロバット',),
+    513: ('はじけるほのお',),
+    515: ('ねっとう',),
+    978: ('いっちょうあがり',),
+    602: ('コミュニティ・デイ',),
+    # Official page says Raikou's ancestor-like Pokemon *learns* this move;
+    # it does not explicitly verify its exclusivity. Avoid claiming 'signature'.
+    1021: ('じんらい', '長い首の先にある体毛'),
+}
+
+def generic_move_only(rec, row):
+    text = rec.get('question_text') or rec.get('text', '')
+    return any(term in text for term in _GENERIC_MOVE_BY_SPECIES.get(row['id'], ()))
+
+
 def eligible_extra(row):
     return [rec for rec in supplementary_records(row)
             if rec['kind'] in EXTRA_KINDS and rec.get('quiz_approved') is True
+            and rec.get('quiz_enabled') is not False
+            and not generic_move_only(rec, row)
             and is_standalone_question(rec)]
 
 

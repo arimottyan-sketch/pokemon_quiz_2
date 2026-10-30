@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-26",
+  "records": {
+    "561": {
+      "name": "シンボラー",
+      "additional_abilities": [
+        "いろめがね"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/ar_searcher/characters/tokusei.html",
+      "source_title": "ポケモンARサーチャー公式サイト：シンボラー",
+      "note": "ARサーチャー公式には「特性いろめがね」と記載。冒頭に一部を除き隠れ特性とあるため、隠れ特性という断定は採用しない。",
+      "displayed_abilities": [
+        "ミラクルスキン",
+        "マジックガード"
+      ],
+      "types": [
+        "エスパー",
+        "ひこう"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0561"
+    }
+  }
+}

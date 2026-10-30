@@ -1,0 +1,21 @@
+{
+  "records": {
+    "512": {
+      "name": "ヤナッキー",
+      "official_zukan_url": "https://zukan.pokemon.co.jp/detail/0512",
+      "official_types": [
+        "くさ"
+      ],
+      "official_displayed_abilities": [
+        "くいしんぼう"
+      ],
+      "hidden_abilities": [
+        "しんりょく"
+      ],
+      "hidden_ability_source_url": "https://yakkun.com/ch/zukan/search/?ch=0&egg=0&final_evo=1&group_n%5B%5D=5&group_n%5B%5D=6&machine=0&move=164&page=100&present=0&search=1&tutors=0",
+      "source_type": "user_permitted_secondary_for_abilities_only",
+      "evidence_note": "徹底攻略一覧で くいしんぼう / *しんりょく を確認。*は隠れ特性の表記。図鑑本文やゲームエピソードの根拠としては使用しない。",
+      "verified_on": "2026-10-30"
+    }
+  }
+}

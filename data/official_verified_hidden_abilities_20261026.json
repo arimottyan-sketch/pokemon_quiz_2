@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-26",
+  "scope": "Seven explicit official references to hidden abilities. Verified form-specific; not a complete Pokédex.",
+  "records": {
+    "497": {
+      "name": "ジャローダ",
+      "hidden_abilities": [
+        "あまのじゃく"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/oras/campaign/20141219_01.html?bs001=news",
+      "source_title": "ORAS公式サイト：隠れ特性「あまのじゃく」のジャローダ",
+      "source_section": "隠れ特性「あまのじゃく」のジャローダ",
+      "displayed_abilities": [
+        "しんりょく"
+      ],
+      "types": [
+        "くさ"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0497"
+    },
+    "500": {
+      "name": "エンブオー",
+      "hidden_abilities": [
+        "すてみ"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/oras/campaign/20141219_01.html?bs001=news",
+      "source_title": "ORAS公式サイト：隠れ特性「すてみ」のエンブオー",
+      "source_section": "隠れ特性「すてみ」のエンブオー",
+      "displayed_abilities": [
+        "もうか"
+      ],
+      "types": [
+        "ほのお",
+        "かくとう"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0500"
+    },
+    "503": {
+      "name": "ダイケンキ",
+      "hidden_abilities": [
+        "シェルアーマー"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/oras/campaign/20141219_01.html?bs001=news",
+      "source_title": "ORAS公式サイト：隠れ特性「シェルアーマー」のダイケンキ",
+      "source_section": "隠れ特性「シェルアーマー」のダイケンキ",
+      "displayed_abilities": [
+        "げきりゅう"
+      ],
+      "types": [
+        "みず"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0503"
+    },
+    "555": {
+      "name": "ヒヒダルマ",
+      "hidden_abilities": [
+        "ダルマモード"
+      ],
+      "source_url": "https://zukan.pokemon.co.jp/detail/0555",
+      "source_title": "ポケモン公式ずかん：ヒヒダルマ ノーマルモード",
+      "source_section": "「隠れ特性：ダルマモード」を持ったヒヒダルマ",
+      "displayed_abilities": [
+        "ちからずく"
+      ],
+      "types": [
+        "ほのお"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0555"
+    },
+    "641": {
+      "name": "トルネロス",
+      "hidden_abilities": [
+        "まけんき"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/ar_searcher/characters/katsuyaku.html",
+      "source_title": "ポケモンARサーチャー公式サイト：トルネロスけしんフォルムの隠れ特性",
+      "source_section": "トルネロス　＜けしんフォルム＞　隠れ特性：まけんき",
+      "displayed_abilities": [
+        "いたずらごころ"
+      ],
+      "types": [
+        "ひこう"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0641"
+    },
+    "642": {
+      "name": "ボルトロス",
+      "hidden_abilities": [
+        "まけんき"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/ar_searcher/characters/katsuyaku.html",
+      "source_title": "ポケモンARサーチャー公式サイト：ボルトロスけしんフォルムの隠れ特性",
+      "source_section": "ボルトロス　＜けしんフォルム＞　隠れ特性：まけんき",
+      "displayed_abilities": [
+        "いたずらごころ"
+      ],
+      "types": [
+        "でんき",
+        "ひこう"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0642"
+    },
+    "645": {
+      "name": "ランドロス",
+      "hidden_abilities": [
+        "ちからずく"
+      ],
+      "source_url": "https://www.pokemon.co.jp/ex/ar_searcher/characters/katsuyaku.html",
+      "source_title": "ポケモンARサーチャー公式サイト：ランドロスけしんフォルムの隠れ特性",
+      "source_section": "ランドロス　＜けしんフォルム＞　隠れ特性：ちからずく",
+      "displayed_abilities": [
+        "すなのちから"
+      ],
+      "types": [
+        "じめん",
+        "ひこう"
+      ],
+      "zukan_url": "https://zukan.pokemon.co.jp/detail/0645"
+    }
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "records": {
+    "498": {
+      "name": "ポカブ",
+      "types": [
+        "ほのお"
+      ],
+      "displayed_abilities": [
+        "もうか"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0498",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "499": {
+      "name": "チャオブー",
+      "types": [
+        "ほのお",
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "もうか"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0499",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "500": {
+      "name": "エンブオー",
+      "types": [
+        "ほのお",
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "もうか"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0500",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "504": {
+      "name": "ミネズミ",
+      "types": [
+        "ノーマル"
+      ],
+      "displayed_abilities": [
+        "にげあし",
+        "するどいめ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0504",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "507": {
+      "name": "ハーデリア",
+      "types": [
+        "ノーマル"
+      ],
+      "displayed_abilities": [
+        "いかく",
+        "すなかき"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0507",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "509": {
+      "name": "チョロネコ",
+      "types": [
+        "あく"
+      ],
+      "displayed_abilities": [
+        "じゅうなん",
+        "かるわざ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0509",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "510": {
+      "name": "レパルダス",
+      "types": [
+        "あく"
+      ],
+      "displayed_abilities": [
+        "じゅうなん",
+        "かるわざ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0510",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "529": {
+      "name": "モグリュー",
+      "types": [
+        "じめん"
+      ],
+      "displayed_abilities": [
+        "すなかき",
+        "すなのちから"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0529",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "536": {
+      "name": "ガマガル",
+      "types": [
+        "みず",
+        "じめん"
+      ],
+      "displayed_abilities": [
+        "すいすい",
+        "うるおいボディ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0536",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "538": {
+      "name": "ナゲキ",
+      "types": [
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "こんじょう",
+        "せいしんりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0538",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "539": {
+      "name": "ダゲキ",
+      "types": [
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "がんじょう",
+        "せいしんりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0539",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "541": {
+      "name": "クルマユ",
+      "types": [
+        "むし",
+        "くさ"
+      ],
+      "displayed_abilities": [
+        "リーフガード",
+        "ようりょくそ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0541",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "545": {
+      "name": "ペンドラー",
+      "types": [
+        "むし",
+        "どく"
+      ],
+      "displayed_abilities": [
+        "どくのトゲ",
+        "むしのしらせ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0545",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "552": {
+      "name": "ワルビル",
+      "types": [
+        "じめん",
+        "あく"
+      ],
+      "displayed_abilities": [
+        "いかく",
+        "じしんかじょう"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0552",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "557": {
+      "name": "イシズマイ",
+      "types": [
+        "むし",
+        "いわ"
+      ],
+      "displayed_abilities": [
+        "がんじょう",
+        "シェルアーマー"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0557",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "565": {
+      "name": "アバゴーラ",
+      "types": [
+        "みず",
+        "いわ"
+      ],
+      "displayed_abilities": [
+        "ハードロック",
+        "がんじょう"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0565",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "568": {
+      "name": "ヤブクロン",
+      "types": [
+        "どく"
+      ],
+      "displayed_abilities": [
+        "あくしゅう",
+        "ねんちゃく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0568",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "592": {
+      "name": "プルリル",
+      "types": [
+        "みず",
+        "ゴースト"
+      ],
+      "displayed_abilities": [
+        "ちょすい",
+        "のろわれボディ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0592",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "598": {
+      "name": "ナットレイ",
+      "types": [
+        "くさ",
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "てつのトゲ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0598",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "604": {
+      "name": "シビルドン",
+      "types": [
+        "でんき"
+      ],
+      "displayed_abilities": [
+        "ふゆう"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0604",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "611": {
+      "name": "オノンド",
+      "types": [
+        "ドラゴン"
+      ],
+      "displayed_abilities": [
+        "とうそうしん",
+        "かたやぶり"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0611",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "612": {
+      "name": "オノノクス",
+      "types": [
+        "ドラゴン"
+      ],
+      "displayed_abilities": [
+        "とうそうしん",
+        "かたやぶり"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0612",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "614": {
+      "name": "ツンベアー",
+      "types": [
+        "こおり"
+      ],
+      "displayed_abilities": [
+        "ゆきがくれ",
+        "ゆきかき"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0614",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "932": {
+      "name": "コジオ",
+      "types": [
+        "いわ"
+      ],
+      "displayed_abilities": [
+        "きよめのしお",
+        "がんじょう"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0932",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "935": {
+      "name": "カルボウ",
+      "types": [
+        "ほのお"
+      ],
+      "displayed_abilities": [
+        "もらいび"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0935",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "940": {
+      "name": "カイデン",
+      "types": [
+        "でんき",
+        "ひこう"
+      ],
+      "displayed_abilities": [
+        "ふうりょくでんき",
+        "ちくでん"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0940",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "577": {
+      "name": "ユニラン",
+      "types": [
+        "エスパー"
+      ],
+      "displayed_abilities": [
+        "ぼうじん",
+        "マジックガード"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0577",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "580": {
+      "name": "コアルヒー",
+      "types": [
+        "みず",
+        "ひこう"
+      ],
+      "displayed_abilities": [
+        "するどいめ",
+        "はとむね"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0580",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "588": {
+      "name": "カブルモ",
+      "types": [
+        "むし"
+      ],
+      "displayed_abilities": [
+        "むしのしらせ",
+        "だっぴ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0588",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "593": {
+      "name": "ブルンゲル",
+      "types": [
+        "みず",
+        "ゴースト"
+      ],
+      "displayed_abilities": [
+        "ちょすい",
+        "のろわれボディ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0593",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "594": {
+      "name": "ママンボウ",
+      "types": [
+        "みず"
+      ],
+      "displayed_abilities": [
+        "いやしのこころ",
+        "うるおいボディ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0594",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "599": {
+      "name": "ギアル",
+      "types": [
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "プラス",
+        "マイナス"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0599",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "600": {
+      "name": "ギギアル",
+      "types": [
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "プラス",
+        "マイナス"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0600",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "601": {
+      "name": "ギギギアル",
+      "types": [
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "プラス",
+        "マイナス"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0601",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "621": {
+      "name": "クリムガン",
+      "types": [
+        "ドラゴン"
+      ],
+      "displayed_abilities": [
+        "さめはだ",
+        "ちからずく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0621",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "637": {
+      "name": "ウルガモス",
+      "types": [
+        "むし",
+        "ほのお"
+      ],
+      "displayed_abilities": [
+        "ほのおのからだ"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0637",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "616": {
+      "name": "チョボマキ",
+      "types": [
+        "むし"
+      ],
+      "displayed_abilities": [
+        "うるおいボディ",
+        "シェルアーマー"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0616",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "619": {
+      "name": "コジョフー",
+      "types": [
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "せいしんりょく",
+        "さいせいりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0619",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "620": {
+      "name": "コジョンド",
+      "types": [
+        "かくとう"
+      ],
+      "displayed_abilities": [
+        "せいしんりょく",
+        "さいせいりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0620",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "624": {
+      "name": "コマタナ",
+      "types": [
+        "あく",
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "まけんき",
+        "せいしんりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0624",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "625": {
+      "name": "キリキザン",
+      "types": [
+        "あく",
+        "はがね"
+      ],
+      "displayed_abilities": [
+        "まけんき",
+        "せいしんりょく"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0625",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "629": {
+      "name": "バルチャイ",
+      "types": [
+        "あく",
+        "ひこう"
+      ],
+      "displayed_abilities": [
+        "はとむね",
+        "ぼうじん"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0629",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    },
+    "635": {
+      "name": "サザンドラ",
+      "types": [
+        "あく",
+        "ドラゴン"
+      ],
+      "displayed_abilities": [
+        "ふゆう"
+      ],
+      "url": "https://zukan.pokemon.co.jp/detail/0635",
+      "verified_on": "2026-10-28",
+      "scope": "official_pokedex_displayed_only"
+    }
+  }
+}
