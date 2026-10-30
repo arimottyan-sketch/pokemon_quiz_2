@@ -6,7 +6,8 @@ from pathlib import Path
 from quiz_engine import *
 from progressive_quiz import (PROGRESSIVE_MODE, PROGRESSIVE_LABEL, MAX_HINTS,
                               plan_progressive_session, progressive_ids,
-                              get_official_profile, get_official_profile_from_zukan, hint_points)
+                              get_official_profile, get_official_profile_from_zukan,
+                              official_zukan_url, hint_points)
 
 st.set_page_config(page_title='ポケモンクイズ', page_icon='📘', layout='centered')
 # GitHub's browser upload may reject .streamlit/: keep the color palette in
@@ -61,32 +62,61 @@ for key, default in {
     if key not in st.session_state:
         st.session_state[key] = default
 
-@st.cache_data(ttl=21600, show_spinner=False)
-def official_artwork_url(pid, name):
-    """Return an illustration linked from the official Pokédex page, if found.
 
-    Never use nonofficial mirrors or synthesize unverified CDN paths.
-    """
+@st.cache_data(ttl=21600, show_spinner=False)
+def official_artwork_url(official_page, name, base_name=None):
+    """Fetch only the exact form's artwork from its official Pokedex page."""
+    import re
     from bs4 import BeautifulSoup
     from urllib.parse import urljoin, urlparse
-    official_page=f'https://zukan.pokemon.co.jp/detail/{int(pid):04d}'
+
+    if not re.fullmatch(
+        r'https://zukan\.pokemon\.co\.jp/detail/\d{4}(?:-\d+)?',
+        official_page or ''
+    ):
+        return None
+
     try:
-        soup=BeautifulSoup(cached_webpage(official_page),'html.parser')
-        images=soup.find_all('img')
-        exact=[t for t in images if t.get('alt','').strip()==name]
-        for tag in exact:
-            src=tag.get('src') or tag.get('data-src') or tag.get('data-original')
-            if not src:continue
-            url=urljoin(official_page,src)
-            if url.startswith('https://') and urlparse(url).hostname=='zukan.pokemon.co.jp':
+        soup = BeautifulSoup(
+            cached_webpage(official_page),
+            'html.parser'
+        )
+
+        names = {name, base_name or name}
+
+        for tag in soup.find_all('img'):
+            if tag.get('alt', '').strip() not in names:
+                continue
+
+            src = (
+                tag.get('src')
+                or tag.get('data-src')
+                or tag.get('data-original')
+            )
+            if not src:
+                continue
+
+            url = urljoin(official_page, src)
+
+            if (
+                urlparse(url).scheme == 'https'
+                and urlparse(url).hostname == 'zukan.pokemon.co.jp'
+            ):
                 return url
+
     except Exception:
         pass
+
     return None
 
 
 def artwork(row):
-    return official_artwork_url(national_number(row),row['name'])
+    page = official_zukan_url(row)
+    return official_artwork_url(
+        page,
+        row['name'],
+        row.get('base_name')
+    ) if page else None
 
 
 def art_display(row, *, full=False):
